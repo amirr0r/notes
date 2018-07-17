@@ -1,9 +1,9 @@
 # Mastering inux
 
 ## Videos Playlist
-[ ][Linux by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D)
-[ ][The Linux Basics Course: Beginner to Sysadmin, Step by Step](https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK)
-[ ][LINUX SECURITY](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
+[ ] [Linux by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D)
+[ ] [The Linux Basics Course: Beginner to Sysadmin, Step by Step](https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK)
+[ ] [LINUX SECURITY](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
 
 ## Exercises
 - [ ][GameScript (fr)](https://github.com/justUmen/GameScript)
