@@ -10,11 +10,11 @@
 - [ ] [Linux Journey](https://linuxjourney.com/)
 
 ## Books
- - [ ] [How Linux Works, 2nd Edition](https://github.com/KnowNo/How-Linux-Works-2nd-Edition/blob/master/How.Linux.Works.What.Every.Superuser.Should.Know.2nd.Edition.PDF.pdf)
  - [ ] [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
+ - [ ] [How Linux Works, 2nd Edition](https://github.com/KnowNo/How-Linux-Works-2nd-Edition/blob/master/How.Linux.Works.What.Every.Superuser.Should.Know.2nd.Edition.PDF.pdf)
+ - [ ] [UNIX and Linux System Administration Handbook](https://doc.lagout.org/operating%20system%20/linux/UNIX%20and%20Linux%20System%20Administration%20Handbook.pdf)
 
 ## Useful links
-
 - [TLDR : Simplified man pages](https://tldr.ostera.io/)
 - [Explainshell](https://explainshell.com/)
 - [Luke Smith Channel](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA)
