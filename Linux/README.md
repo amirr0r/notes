@@ -1,4 +1,4 @@
-# Mastering Linux
+# Linux
 
 ## Videos Playlist
 - [ ] [Linux by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D) 6 **heures** 15 **minutes** 33 **secondes**
@@ -8,6 +8,8 @@
 ## Exercises
 - [ ] [GameScript (fr)](https://github.com/justUmen/GameScript)
 - [ ] [Linux Journey](https://linuxjourney.com/)
+- [ ] [Little penguin](https://cdn.intra.42.fr/pdf/pdf/765/little_penguin_1.en.pdf)
+- [ ] [Linux From Scratch](http://www.linuxfromscratch.org)
 
 ## Books
  - [ ] [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
