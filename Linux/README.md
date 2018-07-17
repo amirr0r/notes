@@ -10,8 +10,8 @@
 - [ ] [Linux Journey](https://linuxjourney.com/)
 
 ## Books
- -[ ] [How Linux Works, 2nd Edition](https://github.com/KnowNo/How-Linux-Works-2nd-Edition/blob/master/How.Linux.Works.What.Every.Superuser.Should.Know.2nd.Edition.PDF.pdf)
- -[ ] [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
+ - [ ] [How Linux Works, 2nd Edition](https://github.com/KnowNo/How-Linux-Works-2nd-Edition/blob/master/How.Linux.Works.What.Every.Superuser.Should.Know.2nd.Edition.PDF.pdf)
+ - [ ] [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
 
 ## Useful links
 
