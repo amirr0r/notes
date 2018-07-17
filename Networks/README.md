@@ -1,4 +1,4 @@
-# Mastering Linux
+# Linux
 
 ## Videos Playlist
 - [ ] [Linux by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D) 6 **heures** 15 **minutes** 33 **secondes**
