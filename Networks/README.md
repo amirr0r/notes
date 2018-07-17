@@ -1,11 +1,11 @@
 # Networks
 
 ## Videos Playlist
-- [ ] [Comprendre comment marche Internet](https://www.youtube.com/playlist?list=PL2972E0D013FE7DE7)
+- [ ] [Comprendre comment marche Internet](https://www.youtube.com/playlist?list=PL2972E0D013FE7DE7) 5**h**11**m**11**s**
 - [ ] [Network Fundamentals + MORE](https://www.youtube.com/playlist?list=PLrFtH050YOyEChYKJsejtq5DV_es0Jl6b)
-- [ ] [Networking by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLF360ED1082F6F2A5)
-- [ ] [Servers by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLC71D7CFB6AF935E6)
-- [ ] [Telephone Systems  by Eli the Computer Guy](https://www.youtube.com/playlist?list=PL08C86258934DD006)
+- [ ] [Networking by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLF360ED1082F6F2A5) 18**h**34**m**48**s**
+- [ ] [Servers by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLC71D7CFB6AF935E6) 6**h**27**m**3**s**
+- [ ] [Telephone Systems  by Eli the Computer Guy](https://www.youtube.com/playlist?list=PL08C86258934DD006) 2**h**56**m**15**s**
 
 ## Exercises
 - [ ] []()
