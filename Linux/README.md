@@ -21,3 +21,4 @@
 - [TLDR : Simplified man pages](https://tldr.ostera.io/)
 - [Explainshell](https://explainshell.com/)
 - [Luke Smith Channel](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA)
+- [What are the differences between various VM software ?](https://unix.stackexchange.com/questions/5741/what-are-the-differences-between-various-vm-software)
