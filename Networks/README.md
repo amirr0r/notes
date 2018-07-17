@@ -1,25 +1,20 @@
-# Networks
+# Mastering Linux
 
 ## Videos Playlist
-- [ ] [Comprendre comment marche Internet](https://www.youtube.com/playlist?list=PL2972E0D013FE7DE7) 5 **heures** 11 **minutes** 11 **secondes**
-- [ ] [Network Fundamentals + MORE](https://www.youtube.com/playlist?list=PLrFtH050YOyEChYKJsejtq5DV_es0Jl6b) 8 **heures** 52 **minutes** 361 **secondes**
-- [ ] [Networking by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLF360ED1082F6F2A5) 18  **heures** 34  **minutes** 48  **secondes**
-- [ ] [Servers by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLC71D7CFB6AF935E6) 6  **heures** 27  **minutes** 3  **secondes**
-- [ ] [Telephone Systems  by Eli the Computer Guy](https://www.youtube.com/playlist?list=PL08C86258934DD006) 2  **heures** 56  **minutes** 15  **secondes**
+- [ ] [Linux by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D) 6 **heures** 15 **minutes** 33 **secondes**
+- [ ] [The Linux Basics Course: Beginner to Sysadmin, Step by Step](https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK) 10 **heures** 8 **minutes** 38 **secondes**
+- [ ] [LINUX SECURITY](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa) 2 **heures** 24 **minutes** 8 **secondes**
 
 ## Exercises
-- [ ] []()
-
+- [ ] [GameScript (fr)](https://github.com/justUmen/GameScript)
+- [ ] [Linux Journey](https://linuxjourney.com/)
 
 ## Books
-- [TCP/IP Guide](http://index-of.es/Magazines/hakin9/books/No.Starch.TCP.IP.Guide.Oct.2005.pdf)
-- [TCP/IP Illustrated Volume 1](http://www.r-5.org/files/books/computers/internals/net/Richard_Stevens-TCP-IP_Illustrated-EN.pdf)
-- [TCP/IP Illustrated Volume 2](https://leaksource.files.wordpress.com/2014/08/tcp_ip-illustrated-vol-2.pdf)
-- [TCP/IP Illustrated Volume 3](https://leaksource.files.wordpress.com/2014/08/tcp_ip-illustrated-vol-3.pdf)
- 
+ - [ ] [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
+ - [ ] [How Linux Works, 2nd Edition](https://github.com/KnowNo/How-Linux-Works-2nd-Edition/blob/master/How.Linux.Works.What.Every.Superuser.Should.Know.2nd.Edition.PDF.pdf)
+ - [ ] [UNIX and Linux System Administration Handbook](https://doc.lagout.org/operating%20system%20/linux/UNIX%20and%20Linux%20System%20Administration%20Handbook.pdf)
 
 ## Useful links
-
-- [how DNS works](https://howdns.works)
-- [Coming soon ... *TCP/IP in Pictures*](https://nostarch.com/tcpipinpictures)
-
+- [TLDR : Simplified man pages](https://tldr.ostera.io/)
+- [Explainshell](https://explainshell.com/)
+- [Luke Smith Channel](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA)
