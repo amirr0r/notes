@@ -20,5 +20,6 @@ Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se pas
 
 
 
-
+``js
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
+``
