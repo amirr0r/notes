@@ -6,19 +6,20 @@ Sudo vim XXX (opens a file, or creates file)
 ## Editing Files
 Sudo -- sometimes you need, sometimes not... if you use it it will always work...
 To change ownership of a file (Sometimes needed to edit .ini and configuration files)- Sudo chown user file
+- `a`/`:i` : insert
+- `esc` : exit insert
 
 ## Searching in Files
-- `a` : insert, esc : exit insert
-- `:/` : find (use wildcards)
-- `:/?` : Find backward
+- `:/` : find (use wildcards) 🠗
+- `:/?` : Find backward 🠕
 - `n` : next
 
 ## Opening, Saving and Exiting Files
 - `:q` : quit
-- `:q!` : quit no save
+- `:q!` : force quit no save
 - `:wq` : save and quit
-- `:e` :open file
-- `:w` :save as
+- `:e` : open file
+- `:w` : save as
 
 ## Resources
 
