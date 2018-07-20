@@ -9,3 +9,15 @@ Il permet la communication entre le matériel et le logiciel.
 Il fait aussi plein d'autres choses, mais nous nous appuierons dessus plus tard. 
 Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se passe dans votre OS.
 
+### Utilisateurs novices :
+Debian 🠖 Ubuntu 🠖 Mint
+      |_ Kali Linux (pentest)
+openSUSE (utilisateur novice)
+
+### Utilisateurs calés :
+Fedora 🠖 Red Hat (entreprise)
+Arch Linux 🠖 Manjaro
+      |_ BlackArch (pentest)
+Gentoo
+
+
