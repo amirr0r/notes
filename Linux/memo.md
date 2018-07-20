@@ -11,12 +11,14 @@ Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se pas
 
 ### Utilisateurs novices :
 Debian 🠖 Ubuntu 🠖 Mint
+
       |_ Kali Linux (pentest)
 openSUSE (utilisateur novice)
 
 ### Utilisateurs calés :
 Fedora 🠖 Red Hat (entreprise)
 Arch Linux 🠖 Manjaro
+
       |_ BlackArch (pentest)
 Gentoo
 
