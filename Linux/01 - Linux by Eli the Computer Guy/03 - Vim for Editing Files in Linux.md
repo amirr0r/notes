@@ -25,3 +25,5 @@ To change ownership of a file (Sometimes needed to edit .ini and configuration f
 
 - Vim Website: http://www.vim.org/
 - Vim Manual: http://vimdoc.sourceforge.net/vimum.html"
+- Learn Vim (4w plan) : https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85
+
