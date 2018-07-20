@@ -9,6 +9,7 @@ Example of usage: man ping
 q quits man pages
 
 ## Installing software using tasksel
+taskel (part of Ubuntu disto)
 The tasksel command installs numerous programs at one time to create a server (LAMP or such)
 Example: sudo tasksel
 
