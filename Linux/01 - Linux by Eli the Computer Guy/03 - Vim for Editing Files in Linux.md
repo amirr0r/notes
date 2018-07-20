@@ -22,5 +22,5 @@ To change ownership of a file (Sometimes needed to edit .ini and configuration f
 
 ## Resources
 
-Vim Website: http://www.vim.org/
-Vim Manual: http://vimdoc.sourceforge.net/vimum.html"
+- Vim Website: http://www.vim.org/
+- Vim Manual: http://vimdoc.sourceforge.net/vimum.html"
