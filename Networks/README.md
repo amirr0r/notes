@@ -2,7 +2,7 @@
 
 ## Videos Playlist
 - [ ] [Comprendre comment marche Internet](https://www.youtube.com/playlist?list=PL2972E0D013FE7DE7) 5 **heures** 11 **minutes** 11 **secondes**
-- [ ] [Network Fundamentals + MORE](https://www.youtube.com/playlist?list=PLrFtH050YOyEChYKJsejtq5DV_es0Jl6b) 8 **heures** 52 **minutes** 361 **secondes**
+- [ ] [Network Fundamentals + MORE](https://www.youtube.com/playlist?list=PLrFtH050YOyEChYKJsejtq5DV_es0Jl6b) 8 **heures** 52 **minutes** 36 **secondes**
 - [ ] [Networking by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLF360ED1082F6F2A5) 18  **heures** 34  **minutes** 48  **secondes**
 - [ ] [Servers by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLC71D7CFB6AF935E6) 6  **heures** 27  **minutes** 3  **secondes**
 - [ ] [Telephone Systems  by Eli the Computer Guy](https://www.youtube.com/playlist?list=PL08C86258934DD006) 2  **heures** 56  **minutes** 15  **secondes**
