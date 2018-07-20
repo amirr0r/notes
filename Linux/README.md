@@ -12,10 +12,10 @@
 - [ ] [Linux From Scratch](http://www.linuxfromscratch.org)
 
 ## Books
- - [ ] [The Hackademy School - Linux](https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/The%20Hackademy%20School%20-%20Linux.pdf)
- - [ ] [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
- - [ ] [How Linux Works, 2nd Edition](https://github.com/KnowNo/How-Linux-Works-2nd-Edition/blob/master/How.Linux.Works.What.Every.Superuser.Should.Know.2nd.Edition.PDF.pdf)
- - [ ] [UNIX and Linux System Administration Handbook](https://doc.lagout.org/operating%20system%20/linux/UNIX%20and%20Linux%20System%20Administration%20Handbook.pdf)
+ - [The Hackademy School - Linux](https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/The%20Hackademy%20School%20-%20Linux.pdf)
+ - [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)
+ - [How Linux Works, 2nd Edition](https://github.com/KnowNo/How-Linux-Works-2nd-Edition/blob/master/How.Linux.Works.What.Every.Superuser.Should.Know.2nd.Edition.PDF.pdf)
+ - [UNIX and Linux System Administration Handbook](https://doc.lagout.org/operating%20system%20/linux/UNIX%20and%20Linux%20System%20Administration%20Handbook.pdf)
 
 ## Useful links
 - [TLDR : Simplified man pages](https://tldr.ostera.io/)
