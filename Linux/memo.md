@@ -10,14 +10,12 @@ Il fait aussi plein d'autres choses, mais nous nous appuierons dessus plus tard.
 Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se passe dans votre OS.
 
 ### Utilisateurs novices :
-- Debian 🠖 Ubuntu 🠖 Mint
-      |_ Kali Linux (pentest)
+- Debian 🠖 [Ubuntu 🠖 Mint] / [Kali Linux (pentest)]
 - openSUSE (utilisateur novice)
 
 ### Utilisateurs calés :
 - Fedora 🠖 Red Hat (entreprise)
-- Arch Linux 🠖 Manjaro
-      |_ BlackArch (pentest)
+- Arch Linux 🠖 [Manjaro (user friendly)] / [BlackArch (pentest)]
 - Gentoo
 
 
