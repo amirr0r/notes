@@ -63,8 +63,9 @@ In `/etc/passwd` :
 ```bash
 username:(x = password is encrypted | '' = no passwords | * = doesn't have login access):UID:GID:GECOS:/user_home:/user_shell
 ```
+Check [/etc/shadow](https://linuxjourney.com/lesson/etc-shadow-file)
 
 ```js
-// get description of a youtub video
+// get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
 ```
