@@ -28,6 +28,7 @@ Numbers = owner/group/everyone else
 - 4 = read
 - 2 = write
 - 1 = execute
+
 To Chanege Permissions of a File or Folder = `sudo chmod 777 file/folder` (-R for recursive)
 
 ## Changing User and Group Ownership for Files and Folders
