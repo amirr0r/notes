@@ -56,10 +56,12 @@ $ mv -b repertoire1 repertoire2
 > Don't forget the filename, `/dev/null` for instance.
 
 ## Users
+- `visudo`
+- `vipw`
 
 In `/etc/passwd` :
 ```bash
-username:encrypted_password:UID:GID:GECOS:/user_home:/user_shell
+username:(x = password is encrypted | '' = no passwords | * = doesn't have login access):UID:GID:GECOS:/user_home:/user_shell
 ```
 
 ```js
