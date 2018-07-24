@@ -9,14 +9,29 @@ Il permet la communication entre le matériel et le logiciel.
 Il fait aussi plein d'autres choses, mais nous nous appuierons dessus plus tard. 
 Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se passe dans votre OS.
 
-### Utilisateurs novices :
-- Debian 🠖 [Ubuntu 🠖 Mint] / [Kali Linux (pentest)]
-- openSUSE (utilisateur novice)
+```bash
+/Linux
+# Utilisateurs novices
+|-- Debian
 
-### Utilisateurs calés :
-- Fedora 🠖 Red Hat (entreprise)
-- Arch Linux 🠖 [Manjaro (user friendly)] / [BlackArch (pentest)]
-- Gentoo
+    |-- Ubuntu
+        |-- Mint
+    |-- Kali Linux # pentest
+
+|-- openSUSE
+# Utilisateurs calés
+|-- Fedora
+
+    |-- Red Hat # entreprise
+
+|-- Arch Linux
+
+    |-- Manjaro
+
+    |-- BlackArch # pentest
+
+|-- Gentoo
+```
 
 Comme la commande `cp`, si vous déplacer un fichier ou répertoire, il va écraser le fichier/répertoire ayant le même nom. Donc vous pouvez utiliser le paramètre `-i` qui demande votre accord avant d'écraser.
 ```bash
