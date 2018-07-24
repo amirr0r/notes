@@ -65,6 +65,8 @@ username:(x = password is encrypted | '' = no passwords | * = doesn't have login
 ```
 Check [/etc/shadow](https://linuxjourney.com/lesson/etc-shadow-file)
 
+Le droit d'écriture donne le droit de __suppression__
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
