@@ -75,6 +75,8 @@ There is another UID, called **the real user ID** this is the ID of the user tha
 
 One last UID is **the saved user ID**, this allows a process to switch between the effective UID and real UID, vice versa. This is useful because we don't want our process to run with elevated privileges all the time, it's just good practice to use special privileges at specific times.
 
+There is also what we called [the Sticky Bit](https://linuxjourney.com/lesson/sticky-bit)
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
