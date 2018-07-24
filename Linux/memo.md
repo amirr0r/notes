@@ -50,6 +50,7 @@ $ mv -b repertoire1 repertoire2
 - `expand` + filename : change your TABs to spaces
 - `uniq` + filename : remove/count... duplicates
 > **Note** : uniq does not detect duplicate lines unless they are adjacent. 
+- `nl` + filename : display a file whith number lines
 
 ```bash
 ```
