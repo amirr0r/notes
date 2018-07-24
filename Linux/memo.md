@@ -48,6 +48,7 @@ $ mv -b repertoire1 repertoire2
 > Don't forget the filename, `/dev/null` for instance.
 
 - `expand` + filename : change your TABs to spaces
+- `uniq` + filename : remove/count... duplicates
 
 ```bash
 ```
