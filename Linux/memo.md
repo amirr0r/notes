@@ -44,8 +44,9 @@ $ mv -b repertoire1 repertoire2
 ```
 
 - `2>` : stderr
+- `2>&1` or `&>`: both (stdout & stderr)
+> Don't forget the filename, `/dev/null` for instance.
 
-- ``
 ```bash
 ```
 
