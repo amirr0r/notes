@@ -55,7 +55,7 @@ $ mv -b repertoire1 repertoire2
 - `2>&1` or `&>`: both (stdout & stderr)
 > Don't forget the filename, `/dev/null` for instance.
 
-2>&1 redirigera la sortie erreur standard vers la sortie standard, et 1>&2 redirigera la sortie standard vers
+`2>&1` redirigera la sortie erreur standard vers la sortie standard, et `1>&2` redirigera la sortie standard vers
 la sortie erreur standard.
 
 ## Users
