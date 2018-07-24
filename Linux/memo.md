@@ -43,6 +43,9 @@ Disons que vous avez voulu déplacer un fichier en écrasant l'existant. Vous po
 $ mv -b repertoire1 repertoire2
 ```
 
+- `2>` : stderr
+
+- ``
 ```bash
 ```
 
