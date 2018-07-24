@@ -33,6 +33,8 @@ Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se pas
 |-- Gentoo
 ```
 
+## Commands tricks
+
 Comme la commande `cp`, si vous déplacer un fichier ou répertoire, il va écraser le fichier/répertoire ayant le même nom. Donc vous pouvez utiliser le paramètre `-i` qui demande votre accord avant d'écraser.
 ```bash
 cp -i monfichiercool /home/pete/Pictures
@@ -42,17 +44,22 @@ Disons que vous avez voulu déplacer un fichier en écrasant l'existant. Vous po
 ```bash
 $ mv -b repertoire1 repertoire2
 ```
-
-- `2>` : stderr
-- `2>&1` or `&>`: both (stdout & stderr)
-> Don't forget the filename, `/dev/null` for instance.
-
 - `expand` + filename : change your TABs to spaces
 - `uniq` + filename : remove/count... duplicates
 > **Note** : uniq does not detect duplicate lines unless they are adjacent. 
 - `nl` + filename : display a file whith number lines
 
+## I/O
+
+- `2>` : stderr
+- `2>&1` or `&>`: both (stdout & stderr)
+> Don't forget the filename, `/dev/null` for instance.
+
+## Users
+
+In `/etc/passwd` :
 ```bash
+username:encrypted_password:UID:GID:GECOS:/user_home:/user_shell
 ```
 
 ```js
