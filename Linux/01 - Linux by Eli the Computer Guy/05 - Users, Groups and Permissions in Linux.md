@@ -19,7 +19,9 @@ Edit Users Configuration File = `sudo vim /etc/passwd` (shows usernames, names o
 - `Sudo groupdel groupname`
 
 ## Adding and Deleting Users from Groups
-
+- `sudo adduser username groupname`
+- `sudo deluser username groupname`
+> **deluser** != **userdel**
 ## Editing the group Configuration File
 `Sudo vim /etc/group` (shows groups and users)
 
