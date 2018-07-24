@@ -45,3 +45,8 @@ $ mv -b repertoire1 repertoire2
 
 ```bash
 ```
+
+```js
+// get description of a youtub video
+document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
+```
