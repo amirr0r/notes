@@ -77,6 +77,10 @@ One last UID is **the saved user ID**, this allows a process to switch between t
 
 There is also what we called [the Sticky Bit](https://linuxjourney.com/lesson/sticky-bit) : only the owner or the root user can delete or modify the file.
 
+## Processes
+
+Les **processus** sont les programmes qui s'exécutent sur votre machine. Ils sont **gérés par le noyau** et chaque processus est associé à un identifiant appelé **l'identifiant de processus (PID)**. Ce PID est assigné dans l'ordre où les processus sont créés.
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
