@@ -88,6 +88,7 @@ Les **processus** sont les programmes qui s'exécutent sur votre machine. Ils so
 
 The `nice` command is used to set priority for a new process. The `renice` command is used to set priority on an existing process.
 
+**The `/proc` directory is how the kernel is views the system, so there is a lot more information here than what you would see in `ps`.**
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
