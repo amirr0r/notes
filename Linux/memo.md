@@ -84,6 +84,8 @@ There is also what we called [the Sticky Bit](https://linuxjourney.com/lesson/st
 
 Les **processus** sont les programmes qui s'exécutent sur votre machine. Ils sont **gérés par le noyau** et chaque processus est associé à un identifiant appelé **l'identifiant de processus (PID)**. Ce PID est assigné dans l'ordre où les processus sont créés.
 
+**Niceness** is a pretty weird name, but what it means is that processes have a number to determine their priority for the CPU. A high number means the process is nice and has a lower priority for the CPU and a low or negative number means the process is not very nice and it wants to get as much of the CPU as possible.
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
