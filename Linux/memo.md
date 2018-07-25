@@ -23,7 +23,8 @@ Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se pas
 |-- Fedora
 
     |-- Red Hat # entreprise
-
+        |-- CentOS
+        
 |-- Arch Linux
 
     |-- Manjaro
