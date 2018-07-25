@@ -93,6 +93,9 @@ The `nice` command is used to set priority for a new process. The `renice` comma
 
 `bg` & `fg` commands
 
+## Install Packages
+From source code ↦ Makefile ↦ sudo checkinstall
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
