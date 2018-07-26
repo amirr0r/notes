@@ -98,6 +98,10 @@ The `nice` command is used to set priority for a new process. The `renice` comma
 ## Install Packages
 From source code ↦ Makefile ↦ sudo checkinstall
 
+## Env
+
+La commande `type`+ commande, nous permet de comprendre où se trouve la commande/l'executable.
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
