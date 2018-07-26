@@ -131,6 +131,8 @@ The `/sys` filesystem basically contains all the information for all devices on 
 
 What is this swap partition? Well swap is what we used to allocate virtual memory to our system. If you are low on memory, the system uses this partition to "swap" pieces of memory of idle processes to the disk, so you're not bogged for memory.
 
+The `fsck` command is used to check the integrity of a filesystem.
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
