@@ -169,6 +169,10 @@ $ strace ls
 
 Kernel modules are pieces of code that can be loaded and unloaded into the kernel on demand.
 
+Just as we wouldn't meld a bike rack to our car. Kernel modules are pieces of code that can be loaded and unloaded into the kernel on demand.
+
+They allow us to extend the functionality of the kernel without actually adding to the core kernel code. We can also add modules and not have to reboot the system (in most cases).
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
