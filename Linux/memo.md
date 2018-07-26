@@ -144,6 +144,16 @@ A **hardlink** just creates another file with a link to the same inode. So if I 
 3. **Kernel** : When the kernel is loaded, it immediately initializes devices and memory. The main job of the kernel is to load up the init process.
 
 4. **Init** : is the first process that gets started, init starts and stops essential service process on the system. There are three major implementations of init in Linux distributions.
+
+## Kernel
+
+### Syscalls
+
+You can actually view the system calls that a process makes with the `strace` command (very useful for debugging how a program executed).
+```bash
+$ strace ls
+```
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
