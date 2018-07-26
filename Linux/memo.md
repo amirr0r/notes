@@ -149,6 +149,15 @@ A **hardlink** just creates another file with a link to the same inode. So if I 
 
 `uname -r` to see what kernel version you have on your system.
 > The `uname` command prints system information, the `-r` command will print out all of the kernel release version.
+What happens when you install a new kernel? Well it actually adds a couple of files to your system, these files are usually added to the /boot directory.
+
+You will see multiple files for different kernel versions:
+
+- vmlinuz - this is the actual linux kernel
+- initrd - as we've discussed before, the initrd is used as a temporary file system, used before loading the kernel
+- System.map - symbolic lookup table
+- config - kernel configuration settings, if you are compiling your own kernel, you can set which modules can be loaded
+
 ### Syscalls
 
 You can actually view the system calls that a process makes with the `strace` command (very useful for debugging how a program executed).
