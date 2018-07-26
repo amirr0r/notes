@@ -147,6 +147,8 @@ A **hardlink** just creates another file with a link to the same inode. So if I 
 
 ## Kernel
 
+`uname -r` to see what kernel version you have on your system.
+> The `uname` command prints system information, the `-r` command will print out all of the kernel release version.
 ### Syscalls
 
 You can actually view the system calls that a process makes with the `strace` command (very useful for debugging how a program executed).
