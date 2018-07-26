@@ -102,6 +102,10 @@ From source code ↦ Makefile ↦ sudo checkinstall
 
 La commande `type`+ commande, nous permet de comprendre où se trouve la commande/l'executable.
 
+## Peripherals / Devices
+
+The `/sys` filesystem basically contains all the information for all devices on your system, such as the manufacturer and model, where the device is plugged in, the state of the device, the hierarchy of devices and more. 
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
