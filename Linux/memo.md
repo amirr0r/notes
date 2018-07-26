@@ -165,6 +165,10 @@ You can actually view the system calls that a process makes with the `strace` co
 $ strace ls
 ```
 
+### Modules
+
+Kernel modules are pieces of code that can be loaded and unloaded into the kernel on demand.
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
