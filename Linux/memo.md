@@ -106,6 +106,28 @@ La commande `type`+ commande, nous permet de comprendre où se trouve la command
 
 The `/sys` filesystem basically contains all the information for all devices on your system, such as the manufacturer and model, where the device is plugged in, the state of the device, the hierarchy of devices and more. 
 
+## Filesystem
+
+- `/` : Le répertoire racine de toute la hiérarchie du système de fichiers, tout est niché sous ce répertoire.
+- `/bin` : Les programmes essentiels prêt-à-l'emploi (binaires), incluent les commandes les plus basiques telles que ls et cp.
+- `/boot` : Contient les fichiers du chargeur de démarrage du noyau.
+- `/dev` : Fichiers de périphériques.
+- `/etc` : Le répertoire de configuration du système central ne doit contenir que des fichiers de configuration et non des fichiers binaires.
+- `/home` : Répertoires personnels pour les utilisateurs, contenant vos documents, fichiers, paramètres, etc.
+- `/lib` : Contient les fichiers de bibliothèque que les binaires peuvent utiliser.
+- `/media` : Utilisé comme point de fixation pour les supports amovibles tels que les clés USB.
+- `/mnt` : Systèmes de fichiers montés temporairement.
+- `/opt` : Applications optionnels.
+- `/proc` : Informations sur les processus en cours d'exécution.
+- `/root` : Répertoire de base de l'utilisateur racine.
+- `/run` : Informations sur le système en cours d'exécution depuis le dernier démarrage.
+- `/sbin` : Contient les binaires système essentiels, ne peut généralement être exécuté que par root.
+- `/srv` : Données spécifiques au site qui sont servies par le système. *?*
+- `/tmp` : Stockage des fichiers temporaires
+- `/usr` : Le plus souvent il ne contient pas de fichiers utilisateur dans le sens d'un dossier de départ. Ceci est destiné aux logiciels et utilitaires installés par l'utilisateur, mais cela ne veut pas dire que vous ne pouvez pas y ajouter de répertoires personnels. Dans ce répertoire se trouvent des sous-répertoires pour `/ usr `/ bin, `/ usr `/ local, etc.
+`/var` - Répertoire de variables, il est utilisé pour la journalisation du système, le suivi des utilisateurs, les caches, etc. Essentiellement tout ce qui est sujet à changement tout le temps.
+
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
