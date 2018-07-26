@@ -133,6 +133,8 @@ What is this swap partition? Well swap is what we used to allocate virtual memor
 
 The `fsck` command is used to check the integrity of a filesystem.
 
+A **hardlink** just creates another file with a link to the same inode. So if I modified the contents of myfile2 or myhardlink, the change would be seen on both, but if I deleted myfile2, the file would still be accessible through myhardlink. Here is where our link count in the ls command comes into play. The link count is the number of **hardlinks** that an inode has, when you remove a file, it will decrease that link count. The inode only gets deleted when all **hardlinks** to the inode have been deleted. When you create a file, it's link count is 1 because it is the only file that is pointing to that inode. Unlike **symlinks**, hardlinks do not span filesystems because inodes are unique to the filesystem.
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
