@@ -28,7 +28,7 @@ gateway 192.168.1.1 = Default Gateway.  Generally Your ISP Modem or Router
 ## Editing the resolv.conf File for DNS
 To Edit the DNS Resolution File = `sudo vim /etc/resolv.conf`
 
-## Changing the Serves Hostname'
+## Changing the Serves Hostname
 - To See Current Hostname = `sudo /bin/hostname`
 - To Change Hostname = `sudo /bin/hostname newhostname`
 
