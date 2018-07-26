@@ -173,6 +173,9 @@ Just as we wouldn't meld a bike rack to our car. Kernel modules are pieces of co
 
 They allow us to extend the functionality of the kernel without actually adding to the core kernel code. We can also add modules and not have to reboot the system (in most cases).
 
+- `lsmod` : list of currently loaded modules
+- `sudo modprobe <module_name>` : load a module
+
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
