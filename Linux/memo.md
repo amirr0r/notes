@@ -59,6 +59,8 @@ $ mv -b repertoire1 repertoire2
 `2>&1` redirigera la sortie erreur standard vers la sortie standard, et `1>&2` redirigera la sortie standard vers
 la sortie erreur standard.
 
+`|&` est en fait équivalent à `2>&1 |`.
+
 ## Users
 - `visudo`
 - `vipw`
