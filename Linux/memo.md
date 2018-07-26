@@ -127,6 +127,9 @@ The `/sys` filesystem basically contains all the information for all devices on 
 - `/usr` : Le plus souvent il ne contient pas de fichiers utilisateur dans le sens d'un dossier de départ. Ceci est destiné aux logiciels et utilitaires installés par l'utilisateur, mais cela ne veut pas dire que vous ne pouvez pas y ajouter de répertoires personnels. Dans ce répertoire se trouvent des sous-répertoires pour `/ usr `/ bin, `/ usr `/ local, etc.
 - `/var` - Répertoire de variables, il est utilisé pour les logs, le suivi des utilisateurs, les caches, etc. Essentiellement tout ce qui est sujet à changement tout le temps.
 
+### Partitions
+
+What is this swap partition? Well swap is what we used to allocate virtual memory to our system. If you are low on memory, the system uses this partition to "swap" pieces of memory of idle processes to the disk, so you're not bogged for memory.
 
 ```js
 // get description of a youtube video
