@@ -135,6 +135,15 @@ The `fsck` command is used to check the integrity of a filesystem.
 
 A **hardlink** just creates another file with a link to the same inode. So if I modified the contents of myfile2 or myhardlink, the change would be seen on both, but if I deleted myfile2, the file would still be accessible through myhardlink. Here is where our link count in the ls command comes into play. The link count is the number of **hardlinks** that an inode has, when you remove a file, it will decrease that link count. The inode only gets deleted when all **hardlinks** to the inode have been deleted. When you create a file, it's link count is 1 because it is the only file that is pointing to that inode. Unlike **symlinks**, hardlinks do not span filesystems because inodes are unique to the filesystem.
 
+## Boot process
+
+1. **BIOS**(stands for "Basic Input/Output System") initializes the hardware and makes sure with a Power-on self test (POST) that all the hardware is good to go. The main job of the BIOS is to load up the bootloader.
+
+2. **Bootloader** : loads the kernel into memory and then starts the kernel with a set of kernel parameters. One of the most common bootloaders is GRUB, which is a universal Linux standard.
+
+3. **Kernel** : When the kernel is loaded, it immediately initializes devices and memory. The main job of the kernel is to load up the init process.
+
+4. **Init** : is the first process that gets started, init starts and stops essential service process on the system. There are three major implementations of init in Linux distributions.
 ```js
 // get description of a youtube video
 document.querySelector('.content.style-scope.ytd-video-secondary-info-renderer').textContent
