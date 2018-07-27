@@ -114,6 +114,7 @@ Let's say you plugged in a USB drive and starting working on some files, once yo
 [ls*](https://www.cyberciti.biz/open-source/command-line-hacks/linux-ls-commands-examples/)
 
 - `ps m` : to view process threads
+- `iostat` : view I/O and CPU usage
 
 ## Install Packages
 From source code ↦ Makefile ↦ sudo checkinstall
