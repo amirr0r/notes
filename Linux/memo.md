@@ -100,6 +100,7 @@ Let's say you plugged in a USB drive and starting working on some files, once yo
 - `lsof` : list open files
 - `fuser` (file user) : show you information about the process that is using the file or the file user.
 
+[ls*](https://www.cyberciti.biz/open-source/command-line-hacks/linux-ls-commands-examples/)
 
 ## Install Packages
 From source code ↦ Makefile ↦ sudo checkinstall
