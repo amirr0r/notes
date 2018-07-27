@@ -93,7 +93,13 @@ The `nice` command is used to set priority for a new process. The `renice` comma
 
 **The `/proc` directory is how the kernel is views the system, so there is a lot more information here than what you would see in `ps`.**
 
-`bg` & `fg` commands
+- `bg` & `fg` commands
+
+Let's say you plugged in a USB drive and starting working on some files, once you were done, you go and unmount the USB device and you're getting an error "Device or Resource Busy". How would you find out which files in the USB drive are still in use? There are actually two tools you can use for this:
+
+- `lsof` : list open files
+- `fuser` (file user) : show you information about the process that is using the file or the file user.
+
 
 ## Install Packages
 From source code ↦ Makefile ↦ sudo checkinstall
