@@ -1,5 +1,15 @@
 # Memo
 
+## Bash conditions
+- `-eq` : is equal
+- `-ne` : (Not Equal / pas égal).
+- `-lt` : (Less than / plus petit que)
+- `-gt` : (Greater Than / plus grand que) 
+- `-ge` : (Greater or Equal / plus grand ou égal)
+- `-le` : (Less or Equal / moins ou égal)
+
+## Linux
+
 En 1969, Ken Thompson et Dennis Ritchie de Bell Laboratories ont développé le système d'exploitation **UNIX**. 
 >Il a été plus tard réécrit en C pour le rendre plus portable et finalement pour devenir un des systèmes d'exploitation les plus utilisés dans le monde.
 
