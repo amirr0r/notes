@@ -8,6 +8,7 @@
 - `-ge` : (Greater or Equal / plus grand ou égal)
 - `-le` : (Less or Equal / moins ou égal)
 
+écrire `test $X -eq 2` revient à écrire  `if [ $X -eq 2 ]`
 ## Linux
 
 En 1969, Ken Thompson et Dennis Ritchie de Bell Laboratories ont développé le système d'exploitation **UNIX**. 
