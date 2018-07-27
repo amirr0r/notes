@@ -113,11 +113,28 @@ Let's say you plugged in a USB drive and starting working on some files, once yo
 - `lsof` : list open files
 - `fuser` (file user) : show you information about the process that is using the file or the file user.
 
-[ls*](https://www.cyberciti.biz/open-source/command-line-hacks/linux-ls-commands-examples/)
+[ls* Commands Are Even More Useful Than You May Have Thought](https://www.cyberciti.biz/open-source/command-line-hacks/linux-ls-commands-examples/)
 
 - `ps m` : to view process threads
 - `iostat` : view I/O and CPU usage
 - `vmstat` : view memory utilization
+
+### Cron jobs
+
+Il y a un service qui exécute des programmes pour vous à n'importe quelle heure que vous programmez. Ceci est vraiment utile si vous avez un script que vous voulez exécuter une fois par jour qui doit exécuter quelque chose pour vous.
+
+Pour créer un cronjob, il suffit de modifier le fichier crontab: `crontab -e`
+Les champs sont les suivants de gauche à droite: 
+
+- Minute - (0-59)
+- Heure - (0-23)
+- Jour du mois - (1-31)
+- Mois - (1-12)
+- Jour de la semaine - (0-7). 0 et 7 sont notés comme dimanche
+
+Exemple :
+`30 08 * * * /home/chinmi/scripts/change_wallpaper`
+L'astérisque dans le champ signifie correspondre à chaque valeur. Donc, dans mon exemple ci-dessus, je veux que cela se passe tous les jours dans chaque mois à 8h30.
 
 ## Install Packages
 From source code ↦ Makefile ↦ sudo checkinstall
