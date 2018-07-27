@@ -106,6 +106,8 @@ The `nice` command is used to set priority for a new process. The `renice` comma
 
 - `bg` & `fg` commands
 
+### Process utilization
+
 Let's say you plugged in a USB drive and starting working on some files, once you were done, you go and unmount the USB device and you're getting an error "Device or Resource Busy". How would you find out which files in the USB drive are still in use? There are actually two tools you can use for this:
 
 - `lsof` : list open files
@@ -115,6 +117,7 @@ Let's say you plugged in a USB drive and starting working on some files, once yo
 
 - `ps m` : to view process threads
 - `iostat` : view I/O and CPU usage
+- `vmstat` : view memory utilization
 
 ## Install Packages
 From source code ↦ Makefile ↦ sudo checkinstall
