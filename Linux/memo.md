@@ -222,6 +222,7 @@ They allow us to extend the functionality of the kernel without actually adding 
 - **rsyslog** is an advanced version of **syslog**, most Linux distributions should be using this new version.
 - To find out what files are maintained by our system logger, look at the configuration files in `/etc/rsyslog.d`
 - `logger` : to manually log a message
+- `dmesg` : to view kernel bootup messages
 
 ```js
 // get description of a youtube video
