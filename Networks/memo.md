@@ -45,3 +45,5 @@ Les **paquets** sont utilisés pour transmettre des données à travers les rés
 Un paquet se compose : 
 - d'un **header** ou *en-tête* = informations sur l'endroit où le paquet va et d'où il vient.
 - et d'un **payload** ou *charge utile*  = donnée réelle en cours de transfert.
+
+Même si nous savons où nous envoyons nos données via des adresses IP, elles ne sont pas assez spécifiques pour envoyer nos données à certains processus ou services. Les services (tels que HTTP) utilisent un canal de communication via les [**ports**](https://fr.wikipedia.org/wiki/Port_(logiciel)).
