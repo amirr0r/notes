@@ -41,7 +41,7 @@ spécifie comment envoyer des données à travers un composant matériel physiqu
 
 ***
 
-Les **paquets** sont utilisés pour transmettre des données à travers les réseaux. 
+**packets** ou *paquets* sont utilisés pour transmettre des données à travers les réseaux. 
 Un paquet se compose : 
 - d'un **header** ou *en-tête* = informations sur l'endroit où le paquet va et d'où il vient.
 - et d'un **payload** ou *charge utile*  = donnée réelle en cours de transfert.
