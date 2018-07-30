@@ -7,6 +7,15 @@
 
 The Internet is based on the **TCP/IP** model.
 
+**1.Application Layer** *ou couche Applicative*
+
+**2.Transport Layer** *ou couche *
+
+**3.Network Layer** *ou couche Réseau*
+
+**4.Link Layer** *ou couche de Liaison*
+
+
 ## Hardware
 
 - **Router** : permet aux ordinateurs d’un réseau de communiquer entre eux, mais aussi avec d’autres réseaux, comme votre réseau privé avec internet.
