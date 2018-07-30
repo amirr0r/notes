@@ -27,4 +27,5 @@ spécifie comment envoyer des données à travers un composant matériel physiqu
 ## Hardware
 
 - **Router** : permet aux ordinateurs d’un réseau de communiquer entre eux, mais aussi avec d’autres réseaux, comme votre réseau privé avec internet.
+
 - **Switch** : permet aux ordinateurs d’un réseau de communiquer entre eux.
