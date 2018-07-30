@@ -37,3 +37,11 @@ spécifie comment envoyer des données à travers un composant matériel physiqu
 - **Router** : permet aux ordinateurs d’un réseau de communiquer entre eux, mais aussi avec d’autres réseaux, comme votre réseau privé avec internet.
 
 - **Switch** : permet aux ordinateurs d’un réseau de communiquer entre eux.
+
+
+***
+
+Les **paquets** sont utilisés pour transmettre des données à travers les réseaux. 
+Un paquet se compose : 
+- d'un en-tête 
+- et d'une charge utile.
