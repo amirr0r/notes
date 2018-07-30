@@ -7,19 +7,17 @@
 
 The Internet is based on the **TCP/IP** model.
 
-**1. Application Layer** *ou couche Applicative* détermine comment les programmes de votre ordinateur interagissent avec les services de la couche de transport pour afficher les données envoyées ou reçues.
-  
-  Protocoles utilisés : HTTP, SMTP...
+**1. Application Layer** *ou couche Applicative*:
+détermine comment les programmes de votre ordinateur interagissent avec les services de la couche de transport pour afficher les données envoyées ou reçues. Protocoles utilisés : HTTP, SMTP...
 
-**2. Transport Layer** *ou couche Transport* vérifie la façon dont les données seront transmises (ports, intégrité des données..)
-
-  Protocoles utilisés : TCP, UDP...
+**2. Transport Layer** *ou couche Transport* 
+vérifie la façon dont les données seront transmises (ports, intégrité des données..). Protocoles utilisés : TCP, UDP...
     
-**3. Network Layer** *ou couche Réseau* : spécifie comment déplacer les paquets entre les hôtes et entre les réseaux.
-
-   Protocoles utilisés : IP, ICMP...
+**3. Network Layer** *ou couche Réseau* : 
+spécifie comment déplacer les paquets entre les hôtes et entre les réseaux. Protocoles utilisés : IP, ICMP...
     
-**4. Link Layer** *ou couche de Liaison* spécifie comment envoyer des données à travers un composant matériel physique.
+**4. Link Layer** *ou couche de Liaison* : 
+spécifie comment envoyer des données à travers un composant matériel physique.
     
 
 ## Hardware
