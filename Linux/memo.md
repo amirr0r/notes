@@ -218,7 +218,8 @@ They allow us to extend the functionality of the kernel without actually adding 
 - `sudo modprobe <module_name>` : load a module
 ## Logs
 
-`/var/log/syslog` : human readable journal of the events that are happening on our system
+- `/var/log/syslog` : human readable journal of the events that are happening on our system
+- **rsyslog** is an advanced version of **syslog**, most Linux distributions should be using this new version.
 
 ```js
 // get description of a youtube video
