@@ -6,7 +6,7 @@
 - **WLAN** : LAN qui utilise la transmission Wi-Fi. Exemple : hôtels, centre comercial, McDo...
 
 - **MAC** address : identifiant unique et *immuable* du hardware. Exemple : 00:C4:B5:45:B2:43
-- **IP** address : identifiant *variable* d'une machine sur un réseau. Exemple (IPv4) : 10.24.12.4 | (IPv6) : FE80:0000:0000:0000:0202:B3FF:FE1E:8329
+- **IP** address : identifiant *variable* d'une machine sur un réseau. Exemple (IPv4) : 10.24.12.4
 
 The Internet is based on the **TCP/IP** model.
 
