@@ -216,6 +216,9 @@ They allow us to extend the functionality of the kernel without actually adding 
 
 - `lsmod` : list of currently loaded modules
 - `sudo modprobe <module_name>` : load a module
+## Logs
+
+`/var/log/syslog` : human readable journal of the events that are happening on our system
 
 ```js
 // get description of a youtube video
