@@ -5,6 +5,9 @@
 - **WAN** : Wide Area Network, (en français réseau étendu), tout ce qu'il y a entre votre routeur et un réseau plus large
 - **WLAN** : LAN qui utilise la transmission Wi-Fi. Exemple : hôtels, centre comercial, McDo...
 
+- **MAC** address : identifiant unique et *immuable* du hardware. Exemple : 00:C4:B5:45:B2:43
+- **IP** address : identifiant *variable* d'une machine sur un réseau. 
+
 The Internet is based on the **TCP/IP** model.
 
 **1. Application Layer** *ou couche Applicative*:
