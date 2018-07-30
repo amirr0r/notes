@@ -220,6 +220,7 @@ They allow us to extend the functionality of the kernel without actually adding 
 
 - `/var/log/syslog` : human readable journal of the events that are happening on our system
 - **rsyslog** is an advanced version of **syslog**, most Linux distributions should be using this new version.
+- To find out what files are maintained by our system logger, look at the configuration files in `/etc/rsyslog.d`
 
 ```js
 // get description of a youtube video
