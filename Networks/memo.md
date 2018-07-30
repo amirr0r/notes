@@ -7,13 +7,13 @@
 
 The Internet is based on the **TCP/IP** model.
 
-**1.Application Layer** *ou couche Applicative*
+**1. Application Layer** *ou couche Applicative*
 
-**2.Transport Layer** *ou couche *
+**2. Transport Layer** *ou couche *
 
-**3.Network Layer** *ou couche Réseau*
+**3. Network Layer** *ou couche Réseau*
 
-**4.Link Layer** *ou couche de Liaison*
+**4. Link Layer** *ou couche de Liaison*
 
 
 ## Hardware
