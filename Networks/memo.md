@@ -1,5 +1,6 @@
 # Memo network
 
+[Networking Fundamentals](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBpuvPW0aHa7mKdn_k9SPKO)
 
 - **LAN** : Local Area Network (en français réseau local). Exemple : réseau de l'école est un LAN
 - **WAN** : Wide Area Network, (en français réseau étendu), tout ce qu'il y a entre votre routeur et un réseau plus large
@@ -8,9 +9,11 @@
 - **MAC** address : identifiant unique et *immuable* du hardware. Exemple : 00:C4:B5:45:B2:43
 - **IP** address : identifiant *variable* d'une machine sur un réseau. Exemple (IPv4) : 10.24.12.4
 
+## TCP/IP
+
+- **Protocols** : the rules for communication.
+
 The Internet is based on the **TCP/IP** model.
-
-
 
 **1. Application Layer** *ou couche Applicative*:
 
