@@ -2,7 +2,7 @@
 
 
 - **LAN** : Local Area Network (en français réseau local). Exemple : réseau de l'école est un LAN
-- **WAN** : Wide Area Network, (en français réseau étendu). Exemple : tout entre votre routeur et un réseau plus large tel Internet
+- **WAN** : Wide Area Network, (en français réseau étendu), tout ce qu'il y a entre votre routeur et un réseau plus large
 - **WLAN** : LAN qui utilise la transmission Wi-Fi. Exemple : hôtels, centre comercial, McDo...
 
 The Internet is based on the **TCP/IP** model.
