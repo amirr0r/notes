@@ -49,5 +49,12 @@ Un paquet se compose :
 Même si nous savons où nous envoyons nos données via des adresses IP, elles ne sont pas assez spécifiques pour envoyer nos données à certains processus ou services. Les services (tels que HTTP) utilisent un canal de communication via les [**ports**](https://fr.wikipedia.org/wiki/Port_(logiciel)).
 
 ***
+## Subnetting
 
 Pourquoi diable faisons-nous des sous-réseaux? Le sous-réseau est utilisé pour segmenter les réseaux et contrôler le flux de trafic au sein de ce réseau. Un hôte sur un sous-réseau ne peut donc pas interagir avec un autre hôte sur un sous-réseau différent.
+
+### CIDR
+
+Vous pouvez voir les sous-réseaux notés en notation **CIDR**, où un sous-réseau tel que **10.42.3.0/255.255.255.0** est écrit comme **10.42.3.0/24**.
+
+Rappelez-vous qu'une adresse IP se compose de 4 octets ou 32 bits, CIDR indique la quantité de bits utilisés comme préfixe de réseau. Donc, 123.12.24.0**/23** signifie que les **23** premiers bits sont utilisés.
