@@ -60,3 +60,8 @@ Vous pouvez voir les sous-réseaux notés en notation **CIDR**, où un sous-rés
 Rappelez-vous qu'une adresse IP se compose de 4 octets ou 32 bits, CIDR indique la quantité de bits utilisés comme préfixe de réseau. Donc, 123.12.24.0/**23** signifie que les **23** premiers bits sont utilisés.
 
 Une astuce simple consiste à soustraire le total des bits qu'une adresse IP peut avoir (32) à partir de l'adresse CIDR (23), ce qui laisse 9 bits, 2 ^ 9 = 512, mais nous devons supprimer 2 adresses (adresse de sous-réseau et diffusion adresse) donc nous avons 510 hôtes utilisables.
+
+***
+
+**NAT** is used to represent a single private address to the Internet. Think of NAT is like a receptionist in a large office, if someone wants to contact you, they only know the number to the whole office, the receptionist would then have to look for your extension number and forward the call to you.
+
