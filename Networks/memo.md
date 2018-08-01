@@ -68,3 +68,7 @@ Une astuce simple consiste à soustraire le total des bits qu'une adresse IP peu
 
 **NAT** is used to represent a single private address to the Internet. Think of NAT is like a receptionist in a large office, if someone wants to contact you, they only know the number to the whole office, the receptionist would then have to look for your extension number and forward the call to you.
 
+***
+## Routing
+
+**Gateway** (= **Passerelle**) => where are packets routed to if our routing table doesn't know
