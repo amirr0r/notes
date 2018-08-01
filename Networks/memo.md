@@ -58,3 +58,5 @@ Pourquoi diable faisons-nous des sous-réseaux? Le sous-réseau est utilisé pou
 Vous pouvez voir les sous-réseaux notés en notation **CIDR**, où un sous-réseau tel que **10.42.3.0/255.255.255.0** est écrit comme **10.42.3.0/24**.
 
 Rappelez-vous qu'une adresse IP se compose de 4 octets ou 32 bits, CIDR indique la quantité de bits utilisés comme préfixe de réseau. Donc, 123.12.24.0/**23** signifie que les **23** premiers bits sont utilisés.
+
+Une astuce simple consiste à soustraire le total des bits qu'une adresse IP peut avoir (32) à partir de l'adresse CIDR (23), ce qui laisse 9 bits, 2 ^ 9 = 512, mais nous devons supprimer 2 adresses (adresse de sous-réseau et diffusion adresse) donc nous avons 510 hôtes utilisables.
