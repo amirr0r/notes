@@ -47,6 +47,8 @@ Pour l'instant, retenez juste que le kernel contrôle plutôt tout ce qui se pas
 
 ## Commands tricks
 
+`man -f` est équivalent à `whatis`
+
 Comme la commande `cp`, si vous déplacer un fichier ou répertoire, il va écraser le fichier/répertoire ayant le même nom. Donc vous pouvez utiliser le paramètre `-i` qui demande votre accord avant d'écraser.
 ```bash
 cp -i monfichiercool /home/pete/Pictures
