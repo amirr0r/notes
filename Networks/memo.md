@@ -6,8 +6,11 @@
 - **WAN** : Wide Area Network, (en français réseau étendu), tout ce qu'il y a entre votre routeur et un réseau plus large
 - **WLAN** : LAN qui utilise la transmission Wi-Fi. Exemple : hôtels, centre comercial, McDo...
 
-- **MAC** address : identifiant unique et *immuable* du hardware. Exemple : 00:C4:B5:45:B2:43
-- **IP** address : identifiant *variable* d'une machine sur un réseau. Exemple (IPv4) : 10.24.12.4
+- **MAC** address : identifiant unique et *immuable* du hardware. Exemple : `00:C4:B5:45:B2:43`
+- **IP** address : identifiant *variable* d'une machine sur un réseau. 
+
+Exemple (IPv4) : `10.24.12.4`
+Exemple (IPv6) : `2dde:1235:1256:3:200:f8ed:fe23:59cf`
 
 ## TCP/IP
 
