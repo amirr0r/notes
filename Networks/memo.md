@@ -47,3 +47,7 @@ Un paquet se compose :
 - et d'un **payload** ou *charge utile*  = donnée réelle en cours de transfert.
 
 Même si nous savons où nous envoyons nos données via des adresses IP, elles ne sont pas assez spécifiques pour envoyer nos données à certains processus ou services. Les services (tels que HTTP) utilisent un canal de communication via les [**ports**](https://fr.wikipedia.org/wiki/Port_(logiciel)).
+
+***
+
+Pourquoi diable faisons-nous des sous-réseaux? Le sous-réseau est utilisé pour segmenter les réseaux et contrôler le flux de trafic au sein de ce réseau. Un hôte sur un sous-réseau ne peut donc pas interagir avec un autre hôte sur un sous-réseau différent.
