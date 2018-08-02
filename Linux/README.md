@@ -8,8 +8,8 @@
 ## Exercises
 - [x] [GameScript (fr)](https://github.com/justUmen/GameScript)
 - [x] [Linux Journey](https://linuxjourney.com/)
-- [ ] [Little penguin](https://cdn.intra.42.fr/pdf/pdf/765/little_penguin_1.en.pdf)
-- [ ] [Linux From Scratch](http://www.linuxfromscratch.org)
+- [Little penguin](https://cdn.intra.42.fr/pdf/pdf/765/little_penguin_1.en.pdf)
+- [Linux From Scratch](http://www.linuxfromscratch.org)
 
 ## Books
  - [The Hackademy School - Linux](https://repo.zenk-security.com/Linux%20et%20systemes%20d.exploitations/The%20Hackademy%20School%20-%20Linux.pdf)
