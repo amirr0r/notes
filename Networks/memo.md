@@ -107,3 +107,11 @@ https           443/tcp
 
 ..etc..
 ```
+
+**netstat** displays various network related information such network connections, routing tables, information about network interfaces and more, it's the swiss army knife of networking tools.
+
+A **socket** is an interface that allows programs to send and receive data while a port is used to identify which application should send or receive data. The socket address is the combination of the IP address and port. 
+
+Every connection between a host and destination requires a unique socket. 
+
+For example, HTTP is a service that runs on port 80, however we can have many HTTP connections and to maintain each connection a socket gets created per connection.
