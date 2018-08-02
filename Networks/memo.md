@@ -115,3 +115,7 @@ A **socket** is an interface that allows programs to send and receive data while
 Every connection between a host and destination requires a unique socket. 
 
 For example, HTTP is a service that runs on port 80, however we can have many HTTP connections and to maintain each connection a socket gets created per connection.
+
+***
+
+Les **VPN**s permettent de passer par des serveurs tiers et ainsi de "masquer" son adresse IP.
