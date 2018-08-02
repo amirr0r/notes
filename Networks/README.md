@@ -1,9 +1,9 @@
 # Networks
 
 ## Videos Playlist
-- [ ] [How The Internet Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
+- [ ] [How The Internet Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7) 47 **minutes** 40 **secondes**
 - [ ] [Comprendre comment marche Internet](https://www.youtube.com/playlist?list=PL2972E0D013FE7DE7) 5 **heures** 11 **minutes** 11 **secondes**
-- [ ] [Computer Networking Playlist](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBpuvPW0aHa7mKdn_k9SPKO)
+- [ ] [Computer Networking Playlist](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBpuvPW0aHa7mKdn_k9SPKO) 4 **heures** 1 **minute** 34 **secondes**
 - [ ] [Network Fundamentals + MORE](https://www.youtube.com/playlist?list=PLrFtH050YOyEChYKJsejtq5DV_es0Jl6b) 8 **heures** 52 **minutes** 36 **secondes**
 - [ ] [Networking by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLF360ED1082F6F2A5) 18  **heures** 34  **minutes** 48  **secondes**
 - [ ] [Servers by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLC71D7CFB6AF935E6) 6  **heures** 27  **minutes** 3  **secondes**
