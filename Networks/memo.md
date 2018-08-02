@@ -89,3 +89,21 @@ A network interface is how the kernel links up the software side of networking t
 The loopback interface is used to represent your computer, it just loops you back to yourself. This is good for debugging or connecting to servers running locally.
 
 **nm-tool** reports NetworkManager's state and it's devices.
+
+You can get a list of well-known ports by looking at the file **/etc/services**:
+```
+
+ftp             21/tcp
+
+ssh             22/tcp
+
+smtp            25/tcp 
+
+domain          53/tcp  # DNS
+
+http            80/tcp
+
+https           443/tcp
+
+..etc..
+```
