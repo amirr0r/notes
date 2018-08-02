@@ -80,3 +80,12 @@ Without BGP, these systems would not know how to talk to each other, they would 
 Let's say you were on your home network and I'm working from Starbucks, I want to be able to communicate with you, so I send an email and the network packet travels through Starbuck's network, it bounces around there and goes through the routing tables in Starbuck's network until it finally reaches a point at the border of the Starbucks network and passes it to a Border Gateway router. 
 
 This router contains the information for my packet to leave the Starbucks network and traverse other networks.
+
+***
+## Network Config
+
+A network interface is how the kernel links up the software side of networking to the hardware side.
+
+The loopback interface is used to represent your computer, it just loops you back to yourself. This is good for debugging or connecting to servers running locally.
+
+**nm-tool** reports NetworkManager's state and it's devices.
