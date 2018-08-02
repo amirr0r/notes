@@ -8,7 +8,9 @@
 - [ ] [Telephone Systems  by Eli the Computer Guy](https://www.youtube.com/playlist?list=PL08C86258934DD006) 2  **heures** 56  **minutes** 15  **secondes**
 
 ## Exercises
-[//]: #  ([ ] []())
+[//]: # ([ ] []())
+[//]: <> (This is also a comment.)
+[comment]: <> (This is a comment, it will not be included)
 
 
 ## Books
