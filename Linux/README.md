@@ -7,7 +7,7 @@
 
 ## Exercises
 - [x] [GameScript (fr)](https://github.com/justUmen/GameScript)
-- [ ] [Linux Journey](https://linuxjourney.com/)
+- [x] [Linux Journey](https://linuxjourney.com/)
 - [ ] [Little penguin](https://cdn.intra.42.fr/pdf/pdf/765/little_penguin_1.en.pdf)
 - [ ] [Linux From Scratch](http://www.linuxfromscratch.org)
 
