@@ -11,6 +11,13 @@
 
 - `poweroff` = `shutdown -h now`
 
+## [Video 6](https://www.youtube.com/watch?v=EbOEqycEFeM&index=6&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK)
+
+- `w` : who is logged on / what they are doing
+- `netstat` : Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+    + `-tupln` : **t**cp / **u**dp ports + **p**rogramms that's attached to that port +  **l**istening ports + **n**umerical addresses
+
+
 ## Questions I have
 
 - **What is the usefulness of a symbolic link ? Why use them ?**
