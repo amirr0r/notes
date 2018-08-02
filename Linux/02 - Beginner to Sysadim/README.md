@@ -14,7 +14,7 @@
 ## [Video 6](https://www.youtube.com/watch?v=EbOEqycEFeM&index=6&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK)
 
 - `w` : who is logged on / what they are doing
-- `netstat` : Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+- `netstat` : displays various network related information such network connections, routing tables, interfaces...
     + `-tupln` : **t**cp / **u**dp ports + **p**rogramms that's attached to that port +  **l**istening ports + **n**umerical addresses
 
 
