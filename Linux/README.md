@@ -20,6 +20,9 @@
 ## Useful links
 - [TLDR : Simplified man pages](https://tldr.ostera.io/)
 - [Explainshell](https://explainshell.com/)
+- [Bash Shell Reference](https://courses.cs.washington.edu/courses/cse390a/14au/bash.html)
+
+## Culture
 - [Unix vs Linux](https://www.youtube.com/watch?v=jowCUo_UGts)
 - [Luke Smith Channel](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA)
 - [What are the differences between various VM software ?](https://unix.stackexchange.com/questions/5741/what-are-the-differences-between-various-vm-software)
