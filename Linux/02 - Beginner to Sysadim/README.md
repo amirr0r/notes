@@ -25,6 +25,24 @@ In **/etc/shadow**, replace the encrypted password by a `!` and it will lock the
 
 `man hier` : description of the filesystem hierarchy
 
+## [Video 23](https://www.youtube.com/watch?v=kXWZz8RcW4o&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=23)
+
+Read this first: 
+http://catb.org/~esr/faqs/smart-quest... 
+
+Stack Exchange Sites: 
+- http://serverfault.com/ 
+- http://unix.stackexchange.com/ 
+- http://stackoverflow.com/ 
+
+RFCs 
+- http://www.ietf.org/rfc.html 
+- http://www.faqs.org/rfcs/ 
+ 
+Manpages 
+- https://www.kernel.org/doc/man-pages/ 
+- http://linux.die.net/man/
+
 ## Questions I have
 
 - **What is the usefulness of a symbolic link ? Why use them ?**
