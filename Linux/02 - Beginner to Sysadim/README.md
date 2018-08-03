@@ -21,6 +21,9 @@
 
 In **/etc/shadow**, replace the encrypted password by a `!` and it will lock the account / command.
 
+## [Video 19](https://www.youtube.com/watch?v=svh8sSuz5BI&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=19)
+
+`man hier` : description of the filesystem hierarchy
 
 ## Questions I have
 
