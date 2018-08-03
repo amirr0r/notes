@@ -17,6 +17,10 @@
 - `netstat` : displays various network related information such network connections, routing tables, interfaces...
     + `-tupln` : **t**cp / **u**dp ports + **p**rogramms that's attached to that port +  **l**istening ports + **n**umerical addresses
 
+## [Video 13](https://www.youtube.com/watch?v=UN1QB5BIvps&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=13)
+
+In **/etc/shadow**, replace the encrypted password by a `!` and it will lock the account / command.
+
 
 ## Questions I have
 
