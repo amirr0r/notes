@@ -151,6 +151,10 @@ Shell Tricks
 - `Ctrl + x + e` : open a buffer in your $EDITOR
 - `Alt + .` : give the arguments from the previous command
 
+## [Video 54](https://www.youtube.com/watch?v=tweyWNr6X18&list=PLtK75qxsQaMIlFCcFZpTBLnaCJ0I0uiaY&index=10&t=0s)
+
+- `script` : record and replay shell sessions
+
 - `` :
 ## Questions I have
 
