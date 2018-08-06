@@ -1,7 +1,5 @@
 # [The Linux Basics Course: Beginner to Sysadmin, Step by Step](https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK)
 
-- `` :
-
 ## [Video 5](https://www.youtube.com/watch?v=ZeZVkA1zjWg&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=5)
 
 - `Ctrl + e` : (end of line)
@@ -140,6 +138,20 @@ But it doesn't meen that VPN's are useless !
 
 He's using Mullvad.
 
+### [Video 53](https://www.youtube.com/watch?v=V8EUdia_kOE)
+
+Shell Tricks
+
+- `sudo !!` : run the previous command with sudo
+- `Ctrl + k` : Cut/Kill to the end of the line
+- `Ctrl + u` : Cut/Kill to the beginning of the line
+- `Ctrl + w` : Cut/Kill a word backwards
+- `Ctrl + u + Ctrl + y` : Cut/KIll & Paste
+- `less +F` : load the file from the end + `Ctrl + c` or scroll to navigate or just `less` and then `Shift + F`
+- `Ctrl + x + e` : open a buffer in your $EDITOR
+- `Alt + .` : give the arguments from the previous command
+
+- `` :
 ## Questions I have
 
 - **What is the usefulness of a symbolic link ? Why use them ?**
