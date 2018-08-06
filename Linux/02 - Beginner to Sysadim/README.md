@@ -44,13 +44,13 @@ Manpages
 - http://linux.die.net/man/
 
 
-## [Video 26]()
+## [Video 26](https://www.youtube.com/watch?v=norO25P7xHg&t=0s&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=27)
 
 - `tmux list-sessions`
 - `tmux new-session -s [session name]`
 - `tmux attach -t [session name]`
 
-## [Video 27]()
+## [Video 27](https://www.youtube.com/watch?v=tSRlNwaUgPQ&t=0s&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=27)
 
 **archiving** vs **compression**
 
@@ -59,7 +59,7 @@ Manpages
 pattern)*
 
 
-## [Video 30]()
+## [Video 30](https://www.youtube.com/watch?v=MYWvVgIL_Ys&t=0s&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=30)
 
 ```bash
 $> myvariable='hey'
@@ -76,14 +76,14 @@ there is 4 file(s) in this folder
 $>
 ```
 
-## [Video 32]()
+## [Video 32](https://www.youtube.com/watch?v=Vbu8rfVaABw&t=0s&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=32)
 
 Bash Scripting
 
 - `$#` : number of arguments
 - `$1` : first argument
 
-## [Video 33]()
+## [Video 33](https://www.youtube.com/watch?v=VMZBFjYgjR4&t=0s&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=33)
 
 Bash condition
 
@@ -94,7 +94,7 @@ You can use `(())` instead of `[]`.
 > With `(())` there are `==, !=, <= ...`
 
 
-## [Video 34]()
+## [Video 34](https://www.youtube.com/watch?v=9EfN5clA710&t=0s&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=34)
 
 - `$@` : all arguments
 
