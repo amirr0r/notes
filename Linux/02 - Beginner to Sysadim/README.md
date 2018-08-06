@@ -161,9 +161,6 @@ Configure your own SSH server . Install `openssh-server` (Ubuntu). The config fi
 
 ## [LXC](https://www.youtube.com/playlist?list=PLtK75qxsQaMLwF_uCB_CK8wIE17D-afuJ)
 
-
-
-- `` :
 ## Questions I have
 
 - **What is the usefulness of a symbolic link ? Why use them ?**
