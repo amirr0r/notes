@@ -155,6 +155,14 @@ Shell Tricks
 
 - `script` : record and replay shell sessions
 
+## [SSH Basics](https://www.youtube.com/playlist?list=PLtK75qxsQaMII75AbcuIruao1k2qdxwjg)
+
+Configure your own SSH server . Install `openssh-server` (Ubuntu). The config file is located at `/etc/ssh/sshd_config`.
+
+## [LXC](https://www.youtube.com/playlist?list=PLtK75qxsQaMLwF_uCB_CK8wIE17D-afuJ)
+
+
+
 - `` :
 ## Questions I have
 
