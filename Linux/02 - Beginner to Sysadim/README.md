@@ -126,7 +126,7 @@ When you use a VPN every server you connect to on the Internet sees your traffic
 
 Despite occasional marketing claims to the contrary, **a VPN can't totally prtocet your privacy and it certainly does make you anonymous online.**
 
-Tracking technos like flash cookies, browser fingerprinting, various taffic correlation techniques (*transparent DNS proxies for instance*)...those all still allow third-party advertisers to spy on some of your traffic and foil your attempts at anonymity.
+Tracking technos like flash cookies, browser fingerprinting, various taffic correlation techniques (*transparent DNS proxies for instance*) still allow third-party advertisers to spy on some of your traffic and foil your attempts at anonymity.
 
 But it doesn't meen that VPN's are useless !
 
