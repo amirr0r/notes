@@ -112,6 +112,34 @@ function function_name() {
 }
 ```
 
+## [Video 51](https://www.youtube.com/watch?v=9VkswePNh80&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=51)
+
+ISP only sees your VPN Server vs ISP sees all sites you visit.
+
+When you connect to a VPN and tunnel all your traffic through it before hitting that same web server it's like using a courier to deliver a message instead. 
+
+The recipients never sees you, they only meet the courier that's delivering  your message. 
+
+In Networking this is called **proxy**, because you're *proxying* through the courier in the same way you're *proxying* through a VPN.
+
+When you use a VPN every server you connect to on the Internet sees your traffic as coming from the IP of the VPN server you're using, not the IP that you actually have sitting at home (*the one that your ISP give you*).
+
+### Limitations
+
+Despite occasional marketing claims to the contrary, **a VPN can't totally prtocet your privacy and it certainly does make you anonymous online.**
+
+Tracking technos like flash cookies, browser fingerprinting, various taffic correlation techniques (*transparent DNS proxies for instance*)...those all still allow third-party advertisers to spy on some of your traffic and foil your attempts at anonymity.
+
+But it doesn't meen that VPN's are useless !
+
+### Tips
+
+1. You must tunnel DNS through the VPN. 
+2. Check the history / country of the company => strong privacys laws.
+3. Good VPN will cost money.
+
+He's using Mullvad.
+
 ## Questions I have
 
 - **What is the usefulness of a symbolic link ? Why use them ?**
