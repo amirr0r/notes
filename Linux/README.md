@@ -2,7 +2,7 @@
 
 ## Videos Playlist
 - [x] [Linux by Eli the Computer Guy](https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D) 6 **heures** 15 **minutes** 33 **secondes**
-- [ ] [The Linux Basics Course: Beginner to Sysadmin, Step by Step](https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK) 10 **heures** 8 **minutes** 38 **secondes**
+- [x] [The Linux Basics Course: Beginner to Sysadmin, Step by Step](https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK) 10 **heures** 8 **minutes** 38 **secondes**
 - [ ] [LINUX SECURITY](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa) 2 **heures** 24 **minutes** 8 **secondes**
 
 ## Exercises
