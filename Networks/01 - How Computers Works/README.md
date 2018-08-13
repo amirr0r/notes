@@ -23,6 +23,7 @@ Nowadays, almost nobody deals directly with **1** and **0**.
 **Ones** and **Zeroes** do play a big role in *how computers work* on the inside.
 
 Inside computers are electric wires and circuits that carry all the information.
+___
 
 ### ... *But how do you store or represent information using electricity ?*
 
@@ -33,6 +34,7 @@ This state is called a **BIT** and it's **the smallest piece of information a co
 **More wires** you have, **more bits** you can store ! And with more bits, you can represent more complex information.
 
 With 8 wires, you can store numbers from 0 to 255. With just 32 wires, you can store all the way from 0 to 4 billions.
+___
 
 ### ... *But what about Text, Images or Sound ?*
 
