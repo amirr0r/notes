@@ -72,5 +72,10 @@ ___
 The machine **translate** the **ones and zeros** into **radio waves** of different frequencies.
 
 The receiving machines reverse the process and convert it back into binary code.
+___
 
+## [IP Addresses & DNS](https://www.youtube.com/watch?v=5o8CwafCxnU&index=3&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
 
+The Internet is a design philosophy and a architecture expressed in a set of **protocols**.
+
+A **protocol** is a well known set of rules and standards, will allow them to communicate without trouble (*if all parties agree to use it*)
