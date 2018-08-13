@@ -78,4 +78,6 @@ ___
 
 The Internet is a design philosophy and a architecture expressed in a set of **protocols**.
 
-A **protocol** is a well known set of rules and standards, will allow them to communicate without trouble (*if all parties agree to use it*)
+**Protocol** : set of rules and standards used to communicate between machines.
+
+All the different devices on ther Internet have **unique addresses** which is just a number like a phone number.
