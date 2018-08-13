@@ -10,7 +10,7 @@ The utility of the net is that any device can communicate with any other device 
 
 > What's interesting about the system is that it's fully distributed. There's no central control that is deciding how packets are routed or where pieces of the network are built or even who interconnects with whom. These are all business decisions that are made independently by the operators.
 
-Thereby, **anybody** and **everybody** are in charge of the Internet.
+In conclusion, **the Internet is a networks of networks** and ehereby **anybody** and **everybody** are in charge of it.
 ___
 
 ## [Wires, Cables & Wifi](https://www.youtube.com/watch?v=ZhEf7e4kopM&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=2)
@@ -72,3 +72,5 @@ ___
 The machine **translate** the **ones and zeros** into **radio waves** of different frequencies.
 
 The receiving machines reverse the process and convert it back into binary code.
+
+
