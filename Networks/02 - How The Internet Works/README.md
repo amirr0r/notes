@@ -31,3 +31,30 @@ However, instead of boxes and envelopes the Internet **ships binary information*
 Today we **physically send bits** by **electricty, light and radio waves**.
 
 #### *... how can we send five zeros in a row ?*
+
+The solution is to introduce a clock or a timer. 
+
+The operators can agree that the sender will send one bit per second, the receiver will sit down and record every single second and see what's on the line.
+
+Obviously we'd like to send things a little bit faster than one bit per second so we need to increase our **bandwidth**.
+
+**Bandwidth** : maximum transmission capacity of a device.
+
+**Bandwidth** is measured by **bit rate**.
+
+**Bit rate** : number of bits that we can send over a given period time *usually measured in seconds*.
+
+**Latency** (*different measure of speed is the latency*) : times it takes for a bit to travel from one place to another.
+
+#### *... what sort of cable to send these messages over ? and how the signals can go ?*
+
+With an **Ethernet wire**, you see really measurable signal loss over just a few hundred feet.
+
+If we want the Internet to work over the entire world, we need a different way of sending this information really long distances (*across the oceans for instance*). 
+
+**Light** move faster than **Electricity**.
+
+A **Fiber optic cable** is a thread of glass engineered to reflect light.
+
+With a **Fiber optic cable**, we can send bits as light beams from one place o another.
+
