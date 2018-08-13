@@ -106,3 +106,22 @@ DNS Servers are connected in a distributed hierarchy and are divided into zones,
 
 **DNS Spoofing** is an attack when a "*hacker*" taps into a DNS Server and changes it to match a domain name with the wrong IP address.
 ___
+
+## [Packets, Routing & Reliability](https://www.youtube.com/watch?v=AYdF7b3nMto&index=4&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
+
+If the Internet were made of direct, dedicated connections, it would be impossible to keep things working as millions of users join.
+
+>Especially since there is no guarantee that every wire and computer is working all the time.
+
+**Data travels on the Internet in a much less direct fashion**.
+
+Example : Airplane / Image + roads (traffics)
+
+Special computers called **Routers** act like traffic managers to keep packets moving through the networks smoothly.
+
+**More routers** we add, the **more  reliable** the Internet becomes.
+___
+
+## [HTTP & HTML](https://www.youtube.com/watch?v=kBXQZMmiA4s&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=5)
+
+
