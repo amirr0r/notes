@@ -24,7 +24,7 @@ Nowadays, almost nobody deals directly with **1** and **0**.
 
 Inside computers are electric wires and circuits that carry all the information.
 
-### ... But how do you store or represent information using electricity ?
+### ... *But how do you store or represent information using electricity ?*
 
 If a we take **a single wire** with **electricity flowing through it**, the **signal** can be **ON** or **OFF**, **YES** or **NO**, **TRUE** or **FALSE**, **1** or **0**. Anything else with only two options.
 
@@ -34,7 +34,7 @@ This state is called a **BIT** and it's **the smallest piece of information a co
 
 With 8 wires, you can store numbers from 0 to 255. With just 32 wires, you can store all the way from 0 to 4 billions.
 
-### ... But what about Text, Images or Sound ?
+### ... *But what about Text, Images or Sound ?*
 
 All these can be represented by numbers
 
