@@ -80,4 +80,15 @@ The Internet is a design philosophy and a architecture expressed in a set of **p
 
 **Protocol** : set of rules and standards used to communicate between machines.
 
-All the different devices on ther Internet have **unique addresses** which is just a number like a phone number.
+All the different devices on ther Internet have **unique addresses** which are just numbers like phone numbers.
+
+One of the most important protocols used in Internet communication simply call **IP** (**I**nternet **P**rotocol).
+
+Just like a home address has a country, a city, a street, and a house number, an **IP adress** has many parts.
+
+- **Earlier numbers** usually **identify** the **country** and **regional** network of the device.
+- Then come the **subnetworks**.
+- And finally the adress of the **specific device**.
+
+This is the **IPv4** version, designed in **1973** and adopted in the **1980**'s and provides more than 4 billion unique adresses.
+
