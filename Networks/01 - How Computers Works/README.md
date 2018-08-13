@@ -50,3 +50,11 @@ A **typical Imag**e has **millions of these pixels**, and a **typical video** sh
 Vibrations can be represented graphically as a waveform. 
 
 Any point on this waveform can be represented by a number. And this way, any sound can be broken down into a series of numbers.
+
+## [Circuits and Logic](https://www.youtube.com/watch?v=ZoqMiFKspAA&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-&index=4)
+
+Today computer circuits are microscopic in size, and way way faster. Smaller compters are also fasters because the smaller circuit is, the less distance the electrical signal has to go.
+
+**Electricty** moves at just about **the speed of light** which is why modern circuits can perform billions of calculations per second !
+
+
