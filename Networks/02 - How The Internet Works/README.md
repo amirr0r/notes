@@ -92,3 +92,6 @@ Just like a home address has a country, a city, a street, and a house number, an
 
 This is the **IPv4** version, designed in **1973** and adopted in the **1980**'s and provides more than 4 billion unique adresses.
 
+**IPv6** has recently appeared to fill the void of available addresses. It uses **128 bits**/**16 bytes** per address and provides over **340 undecillion unique addresses**.
+
+> 3,4 x 10^38 équivaut à un nombre illimité puisque pour saturer le système, il faudrait placer plus de 667 millions de milliards d'appareils connectés à internet sur chaque millimètre carré de surface terrestre.
