@@ -38,14 +38,14 @@ With 8 wires, you can store numbers from 0 to 255. With just 32 wires, you can s
 
 All these can be represented by numbers
 
-- **Text in binary** : You can assign a number to each letter. Every works can be a sequence of numbers.
-- **Images in binary** : Photos, Videos, Graphics are made of teeny dots called **pixels**. 
+- `Text in binary` : You can assign a number to each letter. Every works can be a sequence of numbers.
+- `Images in binary` : Photos, Videos, Graphics are made of teeny dots called **pixels**. 
 
 Each pixels has a color. Each of the colors can be represented with numbers (**r**ed, **g**reen, **b**lue combinations).
 
 A **typical Imag**e has **millions of these pixels**, and a **typical video** shows **30 images per second** so more than **3 billion of pixels per minute**.
 
-- **Sound in binary** : Every sound is basically a series of vibrations in the air. 
+- `Sound in binary` : Every sound is basically a series of vibrations in the air. 
 
 Vibrations can be represented graphically as a waveform. 
 
