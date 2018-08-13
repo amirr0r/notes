@@ -11,6 +11,7 @@ The utility of the net is that any device can communicate with any other device 
 > What's interesting about the system is that it's fully distributed. There's no central control that is deciding how packets are routed or where pieces of the network are built or even who interconnects with whom. These are all business decisions that are made independently by the operators.
 
 Thereby, **anybody** and **everybody** are in charge of the Internet.
+___
 
 ## [Wires, Cables & Wifi](https://www.youtube.com/watch?v=ZhEf7e4kopM&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=2)
 
@@ -30,6 +31,8 @@ However, instead of boxes and envelopes the Internet **ships binary information*
 
 Today we **physically send bits** by **electricty, light and radio waves**.
 
+___
+
 #### *... how can we send five zeros in a row ?*
 
 The solution is to introduce a clock or a timer. 
@@ -46,6 +49,8 @@ Obviously we'd like to send things a little bit faster than one bit per second s
 
 **Latency** (*different measure of speed is the latency*) : times it takes for a bit to travel from one place to another.
 
+___
+
 #### *... what sort of cable to send these messages over ? and how the signals can go ?*
 
 With an **Ethernet wire**, you see really measurable signal loss over just a few hundred feet.
@@ -58,3 +63,4 @@ A **Fiber optic cable** is a thread of glass engineered to reflect light.
 
 With a **Fiber optic cable**, we can send bits as light beams from one place o another.
 
+___
