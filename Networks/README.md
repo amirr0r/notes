@@ -1,7 +1,7 @@
 # Networks
 
 ## Videos Playlist 
-- [ ] [How Computers Work ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-) 26 **minutes** 55 **secondes**
+- [x] [How Computers Work ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-) 26 **minutes** 55 **secondes**
 - [ ] [How The Internet Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7) 47 **minutes** 40 **secondes**
 - [ ] [Comprendre comment marche Internet](https://www.youtube.com/playlist?list=PL2972E0D013FE7DE7) 5 **heures** 11 **minutes** 11 **secondes**
 - [ ] [Computer Networking Playlist](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBpuvPW0aHa7mKdn_k9SPKO) 4 **heures** 1 **minute** 34 **secondes**
