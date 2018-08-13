@@ -57,4 +57,14 @@ Today computer circuits are microscopic in size, and way way faster. Smaller com
 
 **Electricty** moves at just about **the speed of light** which is why modern circuits can perform billions of calculations per second.
 
+## [Hardware and Software](https://www.youtube.com/watch?v=xnyFYiK2rSY&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-&index=6)
 
+The **Hardware** is composed by *circuits, chips, wires, speakers, plugs...* and all sorts of other stuff.
+
+**Software** is all of the computer programs, or code, running on this machine.
+
+The **C**entral **P**rocessing **U**nit is the master chip that controls all the other parts of the computer. 
+
+A **CPU** needs to do diferent things so inside it has smaller, simpler parts that handle specific tasks :
+- circuits for Math and Logic
+- other circuits to send and receive information to and from different parts of the computer.
