@@ -64,3 +64,11 @@ A **Fiber optic cable** is a thread of glass engineered to reflect light.
 With a **Fiber optic cable**, we can send bits as light beams from one place o another.
 
 ___
+
+#### *... how do we send things wirelessly ?*
+
+**Wireless bits sending machines** typically use a radio signal to send bits from one place to another.
+
+The machine **translate** the **ones and zeros** into **radio waves** of different frequencies.
+
+The receiving machines reverse the process and convert it back into binary code.
