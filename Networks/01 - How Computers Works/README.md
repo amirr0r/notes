@@ -55,6 +55,6 @@ Any point on this waveform can be represented by a number. And this way, any sou
 
 Today computer circuits are microscopic in size, and way way faster. Smaller compters are also fasters because the smaller circuit is, the less distance the electrical signal has to go.
 
-**Electricty** moves at just about **the speed of light** which is why modern circuits can perform billions of calculations per second !
+**Electricty** moves at just about **the speed of light** which is why modern circuits can perform billions of calculations per second.
 
 
