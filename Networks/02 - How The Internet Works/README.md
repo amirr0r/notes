@@ -95,3 +95,14 @@ This is the **IPv4** version, designed in **1973** and adopted in the **1980**'s
 **IPv6** has recently appeared to fill the void of available addresses. It uses **128 bits**/**16 bytes** per address and provides over **340 undecillion unique addresses**.
 
 > 3,4 x 10^38 équivaut à un nombre illimité puisque pour saturer le système, il faudrait placer plus de 667 millions de milliards d'appareils connectés à internet sur chaque millimètre carré de surface terrestre.
+
+___
+
+A system called **DNS** or **D**omain **N**ame **S**ystem associates names like [www.example.com](http://www.example.com) with the corresponding addresses.
+
+You must know that there is no way one DNS Server can handle all the requests from all devices. 
+
+DNS Servers are connected in a distributed hierarchy and are divided into zones, splitting up reponsabilities for the major domaines such as **.org**, **.com**, **.net** etc.
+
+**DNS Spoofing** is an attack when a "*hacker*" taps into a DNS Server and changes it to match a domain name with the wrong IP address.
+___
