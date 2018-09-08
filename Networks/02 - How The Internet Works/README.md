@@ -4,7 +4,7 @@ In the early 70s, **Vint Cerf** and **Bob Kahn** work on the design of what we c
 
 It was a result of another experiment called the **ARPANET** *which stood for **A**dvanced **R**esearch **P**roject **A**gency **N**etwork*.
 
-The **Internet** is made up of an incredibly large number of independently operated networks. 
+The **Internet** is made up of an incredibly large number of independently operated networks.
 
 The utility of the net is that any device can communicate with any other device and move information.
 
@@ -35,7 +35,7 @@ ___
 
 #### *... how can we send five zeros in a row ?*
 
-The solution is to introduce a clock or a timer. 
+The solution is to introduce a clock or a timer.
 
 The operators can agree that the sender will send one bit per second, the receiver will sit down and record every single second and see what's on the line.
 
@@ -55,7 +55,7 @@ ___
 
 With an **Ethernet wire**, you see really measurable signal loss over just a few hundred feet.
 
-If we want the Internet to work over the entire world, we need a different way of sending this information really long distances (*across the oceans for instance*). 
+If we want the Internet to work over the entire world, we need a different way of sending this information really long distances (*across the oceans for instance*).
 
 **Light** move faster than **Electricity**.
 
@@ -102,7 +102,7 @@ ___
 ### DNS
 A system called **DNS** or **D**omain **N**ame **S**ystem associates names like [www.example.com](http://www.example.com) with the corresponding addresses.
 
-You must know that there is no way one DNS Server can handle all the requests from all devices. 
+You must know that there is no way one DNS Server can handle all the requests from all devices.
 
 DNS Servers are connected in a distributed hierarchy and are divided into zones, splitting up reponsabilities for the major domaines such as **.org**, **.com**, **.net** etc.
 
@@ -115,13 +115,44 @@ If the Internet were made of direct, dedicated connections, it would be impossib
 
 >Especially since there is no guarantee that every wire and computer is working all the time.
 
-**Data travels on the Internet in a much less direct fashion**.
+### Packets
 
-Example : Airplane / Image + roads (traffics)
+Data travels on the Internet in a much less direct fashion. Informations goes from one computer to another, in what we called a **packet** of information.
+
+And a **packet** travels a lot like you get from one place to another in a car, depending on :
+- traffic congestion
+- road conditions
+
+You might *choose* **or be forced** to take a different route to get to the same place each time you travel.
+
+And just as you can transport all of stuffs inside a car, many kinds of digital information can be sent with **IP Packets** (*Music, E-Book, Videos...*), but __there are some limits__.
+
+> **Example :** *What if you have to send a space shuttle from where it was built to where it will be launched ?*
+The shuttle will not fit in one truck, so it needs to be `shrunk` (*broken down*) into pieces, transported using a fleet or trucks. They could all take different routes and might get to the destination at different times. But once all pieces are there, you can reassemble the pieces into the complete shuttle.
+
+Each packet has the **IP** (*internet address*) of __where it came from and where it's going !__
+
+### Routers
 
 Special computers called **Routers** act like traffic managers to keep packets moving through the networks smoothly.
 
-**More routers** we add, the **more  reliable** the Internet becomes.
+As part of the **Internet Protocol**, each routers keeps track of **multiple paths** for sending packets, and it chooses the **cheapest available path** for each piece of data, *based on destination IP address of the packet*.
+
+**Cheapest** in this case doesn't mean ~~cost~~, but __time and non-technincal factors such as politics and relationships between companies.__
+
+>Often the best route for data to travel isn't necessarily the most direct !
+
+Having __options__ for paths makes the network __fault tolerant__. Which means the networks can keep sending packets even if something goes horribly wrong.
+
+### Reliability (a key principle of the Internet)
+
+**TCP** or **T**ransmission **C**ontrol **P**rotocol, manages the sending and recieving of all you data as packets.
+> Unlike **UDP** which is connectionless.
+
+Which is great about the **TCP and Routers** system is they're **scalable**. They can work with 8 devices or 8 billion devices.
+
+In fact, because of these principles of fault tolerance and redundancy, the **more routers** we add, the **more  reliable** the Internet becomes.
+
 ***
 
 ## [HTTP & HTML](https://www.youtube.com/watch?v=kBXQZMmiA4s&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=5)
