@@ -106,7 +106,7 @@ You must know that there is no way one DNS Server can handle all the requests fr
 
 DNS Servers are connected in a distributed hierarchy and are divided into zones, splitting up reponsabilities for the major domaines such as **.org**, **.com**, **.net** etc.
 
-**DNS Spoofing** is an attack when a "*hacker*" taps into a DNS Server and changes it to match a domain name with the wrong IP address.
+**DNS Spoofing**, also referred to as **DNS cache poisoning**, is an attack when a "*hacker*" taps into a DNS Server and changes it to match a domain name with the wrong IP address.
 ***
 
 ## [Packets, Routing & Reliability](https://www.youtube.com/watch?v=AYdF7b3nMto&index=4&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
