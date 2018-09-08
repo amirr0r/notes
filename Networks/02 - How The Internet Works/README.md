@@ -145,7 +145,9 @@ As part of the **Internet Protocol**, each routers keeps track of **multiple pat
 >Often the best route for data to travel isn't necessarily the most direct !
 
 Having __options__ for paths makes the network __fault tolerant__. Which means the networks can keep sending packets even if something goes horribly wrong.
+
 ![Broken routes](Something_Horrible.png)
+
 ---
 ### Reliability (a key principle of the Internet)
 
