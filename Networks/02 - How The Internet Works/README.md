@@ -200,9 +200,10 @@ Even if you had a 100,000 super computers and each of them was able to try a mil
 > Of course computer chips get twice as fast and half the size every year or so. If that pace of exponential progress continues, today's impossible problems will be solvable just a few hundred years in the future and 256 bits won't be enough to be safe.
 
 The good news is, **using a longer key doesn't make encrypting messages much harder**, but **it exponentially increases the number of guesses that it would take to crack a cipher**.
-
+___
 ### Asymetric Encryption
 
 Nowadays, computers use **Asymmetric keys**, a **public key** that can be exchanged with anybody and a **private key** that is not shared :
 - The **Public Key** is used to **encrypt data** and anybody can use it to create a secret message.
 - The **secret** can only be **decrypted** by a computer with access to the **private key**.
+___
