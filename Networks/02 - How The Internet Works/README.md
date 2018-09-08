@@ -185,7 +185,7 @@ When a website asks your browser to engage in a secure connection, it first prov
 > Digital certificates are published by certificate authorities, which are trusted entities that verify the identities of websites and issue certificates for them. Just like a government can issue IDs or passports. Now if a website tries to start a secure connection without a properly issued digital certificate, your browser will warn you.
 
 ___
-## [The Internet: Encryption & Public Keys](https://www.youtube.com/watch?v=ZghMPWGXexs&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=6)
+## [Encryption & Public Keys](https://www.youtube.com/watch?v=ZghMPWGXexs&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=6)
 
 An average computer today, would take just a few seconds to try all 10 billion possibilities.
 
