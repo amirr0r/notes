@@ -163,4 +163,24 @@ In fact, because of these principles of fault tolerance and redundancy, the **mo
 ---
 ## [HTTP & HTML](https://www.youtube.com/watch?v=kBXQZMmiA4s&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=5)
 
+>The Internet is completly open. All of its connection are shared and information is sent in plain text.
+This makes it possible for "hackers" to snoop on any personal information that you send over the internet.
+
+Safe websites prevent **snooping** and **tampering**, by asking your web browser to communicate on a secure channel.
+
+When you see this little lock in your Web Browser address bar :
+
+![secure green lock](secure_lock.png)
+
+It mean that the website is using **HTTPS** (**H**yper **T**ext **T**ransfer **P**rotocol) and more precisely :
+- **SSL**(***S** ecure **S**ockets **L**ayer*) 
+- and its successor **TLS** (**T**ransport **L**ayer **S**ecurity).
+
+___
+### Certificate
+
+When a website asks your browser to engage in a secure connection, it first provides **a digital certificate**.
+**A digital certificate** is an official ID card proving that it's the website it claims to be.
+
+> Digital certificates are published by certificate authorities, which are trusted entities that verify the identities of websites and issue certificates for them. Just like a government can issue IDs or passports. Now if a website tries to start a secure connection without a properly issued digital certificate, your browser will warn you.
 
