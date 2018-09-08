@@ -145,12 +145,14 @@ As part of the **Internet Protocol**, each routers keeps track of **multiple pat
 >Often the best route for data to travel isn't necessarily the most direct !
 
 Having __options__ for paths makes the network __fault tolerant__. Which means the networks can keep sending packets even if something goes horribly wrong.
-
+![Broken routes](Something_Horrible.png)
 ---
 ### Reliability (a key principle of the Internet)
 
 **TCP** or **T**ransmission **C**ontrol **P**rotocol, manages the sending and recieving of all you data as packets.
 > Unlike **UDP** which is connectionless.
+
+![TCP](TCP.png)
 
 Which is great about the **TCP and Routers** system is they're **scalable**. They can work with 8 devices or 8 billion devices.
 
