@@ -76,6 +76,8 @@ ___
 
 ## [IP Addresses & DNS](https://www.youtube.com/watch?v=5o8CwafCxnU&index=3&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
 
+### IP Addresses
+
 The Internet is a design philosophy and a architecture expressed in a set of **protocols**.
 
 **Protocol** : set of rules and standards used to communicate between machines.
@@ -97,7 +99,7 @@ This is the **IPv4** version, designed in **1973** and adopted in the **1980**'s
 > 3,4 x 10^38 équivaut à un nombre illimité puisque pour saturer le système, il faudrait placer plus de 667 millions de milliards d'appareils connectés à internet sur chaque millimètre carré de surface terrestre.
 
 ___
-
+### DNS
 A system called **DNS** or **D**omain **N**ame **S**ystem associates names like [www.example.com](http://www.example.com) with the corresponding addresses.
 
 You must know that there is no way one DNS Server can handle all the requests from all devices. 
