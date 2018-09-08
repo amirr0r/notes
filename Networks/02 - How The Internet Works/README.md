@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-- [Wires, Cables & Wifi]()
-- [IP Addresses & DNS]()
-- [Packets, Routing & Reliability]()
-- [HTTP & HTML]()
-- [Encryption & Public Keys]()
-- [Cybersecurity & Crime]()
-- [How Search Works]()
+- [Wires, Cables & Wifi](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#wires-cables--wifi)
+- [IP Addresses & DNS]()https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#ip-addresses--dns
+- [Packets, Routing & Reliability](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#packets-routing--reliability)
+- [HTTP & HTML](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#http--html)
+- [Encryption & Public Keys](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#encryption--public-keys)
+- [Cybersecurity & Crime](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#cybersecurity--crime)
+- [How Search Works](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#how-search-works)
 
 In the early 70s, **Vint Cerf** and **Bob Kahn** work on the design of what we called the Internet.
 
