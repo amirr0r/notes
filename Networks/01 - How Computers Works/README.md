@@ -40,7 +40,7 @@ ___
 
 All these can be represented by numbers
 
-- `Text in binary` : You can assign a number to each letter. Every works can be a sequence of numbers.
+- `Text in binary` : You can assign a number to each letter. Every words can be a sequence of numbers.
 - `Images in binary` : Photos, Videos, Graphics are made of teeny dots called **pixels**. 
 
 Each pixels has a color. Each of the colors can be represented with numbers (**r**ed, **g**reen, **b**lue combinations).
