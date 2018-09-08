@@ -173,7 +173,7 @@ When you see this little lock in your Web Browser address bar :
 ![secure green lock](secure_lock.png)
 
 It mean that the website is using **HTTPS** (**H**yper **T**ext **T**ransfer **P**rotocol) and more precisely :
-- **SSL**(***S** ecure **S**ockets **L**ayer*) 
+- **SSL**(***S** ecure **S**ockets **L**ayer*)
 - and its successor **TLS** (**T**ransport **L**ayer **S**ecurity).
 
 ___
@@ -214,7 +214,7 @@ ___
 ___
 ## [How Search Works](https://www.youtube.com/watch?v=LVV_93mBfSU&index=8&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
 
-Let's ask a simple question."How long does it take to travel to Mars?" 
+Let's ask a simple question."How long does it take to travel to Mars?"
 
 ### ...*where did these results come from and why was this listed before the other one?*
 
@@ -234,9 +234,9 @@ For each page of the spider visits, it **records** any information it might need
 
 ### Ranking Algorithms
 
-When you ask "how long does it take to travel to Mars", the search engine looks each of those words in the search index to immediately get a list of all the pages on the internet containing those words. 
+When you ask "how long does it take to travel to Mars", the search engine looks each of those words in the search index to immediately get a list of all the pages on the internet containing those words.
 
-But just looking for these search terms could return millions of results... 
+But just looking for these search terms could return millions of results...
 
 The search engine's **ranking algorithm** might check :
 - if your search term shows up in the page title
@@ -249,3 +249,7 @@ Google invented the most famous algorithm for choosing the most relevant results
 The idea is that if lots of websites think that a web page is interesting, then it's probably the one you're looking for.
 
 > This algorithm was called "Page Rank", not because it ranks web pages, but because it was named after its inventor, Larry Page, who is one of the founders of Google.
+
+# Conclusion
+
+![Conclusion image](Conclusion.png)
