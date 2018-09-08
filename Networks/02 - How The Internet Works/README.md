@@ -21,7 +21,7 @@ The **Internet** is a lot like the **postal service** !
 
 However, instead of boxes and envelopes the Internet **ships binary information**.
 
-**Information is made of bits** *like we saw in* [How Computers works ?](https://github.com/kecro/notes/tree/master/Networks/01%20-%20How%20Computers%20Works#how-computers-work-).
+**Information is made of bits** *like we saw in* [How Computers works ?](https://github.com/kecro/notes/tree/master/Networks/01%20-%20How%20Computers%20Works#binary--data).
 
 ```
 8 bits = 1 byte
