@@ -1,0 +1,1 @@
+# 1 - Accéder à un site web statique - Comprendre comment marche Internet
