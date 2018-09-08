@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Wires, Cables & Wifi](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#wires-cables--wifi)
-- [IP Addresses & DNS]()https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#ip-addresses--dns
+- [IP Addresses & DNS](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#ip-addresses--dns)
 - [Packets, Routing & Reliability](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#packets-routing--reliability)
 - [HTTP & HTML](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#http--html)
 - [Encryption & Public Keys](https://github.com/kecro/notes/tree/master/Networks/02%20-%20How%20The%20Internet%20Works#encryption--public-keys)
