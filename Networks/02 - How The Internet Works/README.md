@@ -107,14 +107,15 @@ You must know that there is no way one DNS Server can handle all the requests fr
 DNS Servers are connected in a distributed hierarchy and are divided into zones, splitting up reponsabilities for the major domaines such as **.org**, **.com**, **.net** etc.
 
 **DNS Spoofing**, also referred to as **DNS cache poisoning**, is an attack when a "*hacker*" taps into a DNS Server and changes it to match a domain name with the wrong IP address.
-***
 
+---
 ## [Packets, Routing & Reliability](https://www.youtube.com/watch?v=AYdF7b3nMto&index=4&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
 
 If the Internet were made of direct, dedicated connections, it would be impossible to keep things working as millions of users join.
 
 >Especially since there is no guarantee that every wire and computer is working all the time.
 
+---
 ### Packets
 
 Data travels on the Internet in a much less direct fashion. Informations goes from one computer to another, in what we called a **packet** of information.
@@ -132,6 +133,7 @@ The shuttle will not fit in one truck, so it needs to be `shrunk` (*broken down*
 
 Each packet has the **IP** (*internet address*) of __where it came from and where it's going !__
 
+---
 ### Routers
 
 Special computers called **Routers** act like traffic managers to keep packets moving through the networks smoothly.
@@ -144,6 +146,7 @@ As part of the **Internet Protocol**, each routers keeps track of **multiple pat
 
 Having __options__ for paths makes the network __fault tolerant__. Which means the networks can keep sending packets even if something goes horribly wrong.
 
+---
 ### Reliability (a key principle of the Internet)
 
 **TCP** or **T**ransmission **C**ontrol **P**rotocol, manages the sending and recieving of all you data as packets.
@@ -153,8 +156,7 @@ Which is great about the **TCP and Routers** system is they're **scalable**. The
 
 In fact, because of these principles of fault tolerance and redundancy, the **more routers** we add, the **more  reliable** the Internet becomes.
 
-***
-
+---
 ## [HTTP & HTML](https://www.youtube.com/watch?v=kBXQZMmiA4s&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=5)
 
 
