@@ -184,3 +184,25 @@ When a website asks your browser to engage in a secure connection, it first prov
 
 > Digital certificates are published by certificate authorities, which are trusted entities that verify the identities of websites and issue certificates for them. Just like a government can issue IDs or passports. Now if a website tries to start a secure connection without a properly issued digital certificate, your browser will warn you.
 
+___
+## [The Internet: Encryption & Public Keys](https://www.youtube.com/watch?v=ZghMPWGXexs&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=6)
+
+An average computer today, would take just a few seconds to try all 10 billion possibilities.
+
+### How can you encrypt messages so securely that they're too hard to crack ?
+
+Now **"too hard"** means that there are **too many possibilities to compute in a reasonable amount of time**.
+
+Today's secure communications are encrypted using 256 bit keys. That means a bad guy's computer that intercepts your message would need to try this many possible options... until they discover the key and crack the message.
+
+Even if you had a 100,000 super computers and each of them was able to try a million billion keys every second it would take trillions of trillions of trillions of years to try every option, just to crack a single message protected with 256 bit encryption.
+
+> Of course computer chips get twice as fast and half the size every year or so. If that pace of exponential progress continues, today's impossible problems will be solvable just a few hundred years in the future and 256 bits won't be enough to be safe.
+
+The good news is, **using a longer key doesn't make encrypting messages much harder**, but **it exponentially increases the number of guesses that it would take to crack a cipher**.
+
+### Asymetric Encryption
+
+Nowadays, computers use **Asymmetric keys**, a **public key** that can be exchanged with anybody and a **private key** that is not shared :
+- The **Public Key** is used to **encrypt data** and anybody can use it to create a secret message.
+- The **secret** can only be **decrypted** by a computer with access to the **private key**.
