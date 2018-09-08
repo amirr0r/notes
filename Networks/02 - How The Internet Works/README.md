@@ -207,3 +207,8 @@ Nowadays, computers use **Asymmetric keys**, a **public key** that can be exchan
 - The **Public Key** is used to **encrypt data** and anybody can use it to create a secret message.
 - The **secret** can only be **decrypted** by a computer with access to the **private key**.
 ___
+## [Cybersecurity & Crime](https://www.youtube.com/watch?v=AuYNXgO_f3Y&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=7)
+
+**Jenny Martin**, the director of cybersecurity investigations at Symantec said "*the next World War may not be fought with traditional weapons, but with computers used to shut down national water supplies, energy grids, and transportation systems.*"
+
+___
