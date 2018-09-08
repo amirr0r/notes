@@ -212,3 +212,40 @@ ___
 **Jenny Martin**, the director of cybersecurity investigations at Symantec said "*the next World War may not be fought with traditional weapons, but with computers used to shut down national water supplies, energy grids, and transportation systems.*"
 
 ___
+## [How Search Works](https://www.youtube.com/watch?v=LVV_93mBfSU&index=8&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
+
+Let's ask a simple question."How long does it take to travel to Mars?" 
+
+### ...*where did these results come from and why was this listed before the other one?*
+
+When you do a search, the search engine isn't actually going out to the World Wide Web to run your search in real time !
+
+So to make your search faster, search engines are constantly scanning the web in advance to record the information that might help with your search later.
+
+### "Spiders"
+
+The internet is a web of **pages connected to each other by hyperlinks**.
+
+Search engines are **constantly running** a program called **"spider"** that **crawls through** these web **pages** to **collect information** about them.
+
+Each time it finds a hyperlink, it follows it until it has visited every page it can find on the entire internet.
+
+For each page of the spider visits, it **records** any information it might need for a search by adding it to a **special database** called a **search index**.
+
+### Ranking Algorithms
+
+When you ask "how long does it take to travel to Mars", the search engine looks each of those words in the search index to immediately get a list of all the pages on the internet containing those words. 
+
+But just looking for these search terms could return millions of results... 
+
+The search engine's **ranking algorithm** might check :
+- if your search term shows up in the page title
+- if all of the words show up next to each other
+
+or any number of other calculations that helped it better determine which pages you'll want to see and which you won't.
+
+Google invented the most famous algorithm for choosing the most relevant results for a search, by taking into account how many other web pages link to a given page.
+
+The idea is that if lots of websites think that a web page is interesting, then it's probably the one you're looking for.
+
+> This algorithm was called "Page Rank", not because it ranks web pages, but because it was named after its inventor, Larry Page, who is one of the founders of Google.
