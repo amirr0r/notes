@@ -1,5 +1,15 @@
 # [How The Internet Works ?](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
 
+## Table of Contents
+
+- [Wires, Cables & Wifi]()
+- [IP Addresses & DNS]()
+- [Packets, Routing & Reliability]()
+- [HTTP & HTML]()
+- [Encryption & Public Keys]()
+- [Cybersecurity & Crime]()
+- [How Search Works]()
+
 In the early 70s, **Vint Cerf** and **Bob Kahn** work on the design of what we called the Internet.
 
 It was a result of another experiment called the **ARPANET** *which stood for **A**dvanced **R**esearch **P**roject **A**gency **N**etwork*.
@@ -252,4 +262,6 @@ The idea is that if lots of websites think that a web page is interesting, then 
 
 # Conclusion
 
-![Conclusion image](Conclusion.png)
+<div style="text-align:center">
+    <img src="Conclusion.png" alt="Conclusion image" />
+</div>
