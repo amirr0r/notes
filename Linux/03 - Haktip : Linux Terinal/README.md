@@ -1,7 +1,13 @@
+- ``
+
 # Linux Terminal 101
 
 ## [0 - Getting Started](https://www.youtube.com/watch?v=b5NmtmNwMgU&t=0s&index=2&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `date`
+- `cal` : calendar
+- `free` : show the current free memory amount1
+- `cd ~username` : go to `/home/username`
 
 ## [1 - File Manipulation](https://www.youtube.com/watch?v=e13o3DcjT6Y&t=0s&index=3&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
