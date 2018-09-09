@@ -1,5 +1,3 @@
-- ``
-
 # Linux Terminal 101
 
 ## [0 - Getting Started](https://www.youtube.com/watch?v=b5NmtmNwMgU&t=0s&index=2&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
@@ -15,14 +13,12 @@ There is 8 section for man pages.
 - `whatis` = `man -f`
 - `info` : give more informations about a specific command.
 
-## [5 - Create Your Own Command With Alias](https://www.youtube.com/watch?v=4-IngQNj0rQ&t=0s&index=7&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [6 - I/O Redirection of Standard Outputs](https://www.youtube.com/watch?v=y_UbStpJHpI&t=0s&index=8&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
 ## [7 - Redirecting Standard Terminal Errors in Linux](https://www.youtube.com/watch?v=faTXIBdZt-0&t=0s&index=9&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `stdin` < 0
+- `stdout` < 1
+- `stderr` < 2
+- `&` : both `stdout` + `stderr`
 
 ## [8 - Using CAT with Standard Inputs](https://www.youtube.com/watch?v=SfuEdUiEFtw&t=0s&index=10&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
