@@ -9,17 +9,11 @@
 - `free` : show the current free memory amount1
 - `cd ~username` : go to `/home/username`
 
-## [1 - File Manipulation](https://www.youtube.com/watch?v=e13o3DcjT6Y&t=0s&index=3&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [2 - Wildcards, Hard Links, and Symbolic Links](https://www.youtube.com/watch?v=WYTGgUZsI2w&t=0s&index=4&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [3 - Filenames, History, and Shortcuts](https://www.youtube.com/watch?v=K1PydaRGwgo&t=0s&index=5&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
 ## [4 - type, which, and apropos](https://www.youtube.com/watch?v=CQvkF4LHY58&t=0s&index=6&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+ 
+There is 8 section for man pages.
+- `whatis` = `man -f`
+- `info` : give more informations about a specific command.
 
 ## [5 - Create Your Own Command With Alias](https://www.youtube.com/watch?v=4-IngQNj0rQ&t=0s&index=7&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
