@@ -20,14 +20,10 @@ There is 8 section for man pages.
 - `stderr` < 2
 - `&` : both `stdout` + `stderr`
 
-## [8 - Using CAT with Standard Inputs](https://www.youtube.com/watch?v=SfuEdUiEFtw&t=0s&index=10&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [9 - Grep and Pipes!](https://www.youtube.com/watch?v=nCHjYP7kqYU&t=0s&index=11&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
 ## [10 - How to use echo](https://www.youtube.com/watch?v=FYJVlTQYvNY&t=0s&index=12&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `echo ~` : output `/home/username`
+- `echo $((2 + 2))` :  output 4
 
 ## [11 - Using Expansions Commands in the Linux Terminal Part 2](https://www.youtube.com/watch?v=cQHua6LPLyc&t=0s&index=13&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
