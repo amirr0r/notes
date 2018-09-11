@@ -32,40 +32,37 @@ There is 8 section for man pages.
 ```bash
 ls -l `which cp` 
 ```
-
-## [12 - The Importance of Quotes in the Terminal](https://www.youtube.com/watch?v=G0rfa299aYI&t=0s&index=14&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
 ## [13 - Your Favorite Tips and Tricks](https://www.youtube.com/watch?v=klP_Ik9NN7o&t=0s&index=15&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- to unalias --> put `\` before the command
 
 ## [14 - My Top Best Resources](https://www.youtube.com/watch?v=HT9I6nlsXzM&t=0s&index=16&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- [commandlinefu.com](https://www.commandlinefu.com/commands/browse)
+- [unixref.pdf](https://files.fosswire.com/2007/08/fwunixref.pdf)
 
 ## [15 - Typing Less with Keyboard Shortcuts](https://www.youtube.com/watch?v=b2l-Zz_m-W0&t=0s&index=17&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+> **Remind** : try on another terminal
 
 ## [16 - How to Use History](https://www.youtube.com/watch?v=zNelCx81TJA&t=0s&index=18&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
-
-## [17 - How to Use Permissions](https://www.youtube.com/watch?v=n0BkozSwcfM&t=0s&index=19&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- `!1` : run the first command of `history`
 
 ## [18 - How to Change Your Identity](https://www.youtube.com/watch?v=lQ4ycCA7FOQ&t=0s&index=20&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [19 - How to View Processes](https://www.youtube.com/watch?v=Udr-qE0NEO0&t=0s&index=21&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- `id`
+- `sudo -l` : show you how you can currently do
 
 ## [20 - Controlling Processes](https://www.youtube.com/watch?v=XUhGdORXL54&t=0s&index=22&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [21 - Viewer Tips! PID, History, and more!](https://www.youtube.com/watch?v=oOuO5uSe3jo&t=0s&index=23&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- `pstree` : display a tree of processes
+- `vmstat` : report virtual memory statistics
+- `tload` : graphic representation of system load average
 
 ## [22 - Viewer Tips Part 2!](https://www.youtube.com/watch?v=moOmrFc6J50&t=0s&index=24&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `uname -r` : Kernel version
+- `cat /etc/*release` : Distro version
 
+- [Learn Linux The Hard Way](https://archive.is/xDb8o)
 
 # Linux Terminal 201
 
