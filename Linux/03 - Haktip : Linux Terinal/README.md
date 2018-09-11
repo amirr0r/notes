@@ -27,6 +27,9 @@ There is 8 section for man pages.
 
 ## [11 - Using Expansions Commands in the Linux Terminal Part 2](https://www.youtube.com/watch?v=cQHua6LPLyc&t=0s&index=13&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `echo $(ls)` :  output the result of `ls`
+- `find $(ls /usr/bin* | grep zip)`
+- `ls -l `which cp` `
 
 ## [12 - The Importance of Quotes in the Terminal](https://www.youtube.com/watch?v=G0rfa299aYI&t=0s&index=14&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
