@@ -66,89 +66,81 @@ ls -l `which cp`
 
 # Linux Terminal 201
 
-## [23 - How to Configure Startup Files](https://www.youtube.com/watch?v=smCYN7o7OXk&t=0s&index=25&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [24 - Getting Started with Vi](https://www.youtube.com/watch?v=kI2naD_9WKg&t=0s&index=26&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
 ## [25 - Customize The Shell Prompt](https://www.youtube.com/watch?v=_kSCpNqKJbM&t=0s&index=27&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [26 - Installing and Updating Packages](https://www.youtube.com/watch?v=EJgXqQvqaIM&t=0s&index=28&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [27 - Working with Storage Media, ISO Images, and MD5 Checksums](https://www.youtube.com/watch?v=ZA5KMyuj5jk&t=0s&index=29&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [28 - Apt vs Apt-Get](https://www.youtube.com/watch?v=9jNcjdQxEV8&t=0s&index=30&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+> Nice to know ^_^
 
 ## [29 - Networking Commands You Should Know!](https://www.youtube.com/watch?v=F1geJWP4Yvs&t=0s&index=31&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `netstat -ie` :  display your current devices networks status and setting, similar to `ifconfig -a`
 
 ## [30 - Networking Commands You Should Know Pt 2!](https://www.youtube.com/watch?v=RrmWU_Hg9e4&t=0s&index=32&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `ifconfig wlp58s0 promisc`
+- `ifconfig wlp58s0 -promisc`
+- `route`
 
 ## [31 - ifconfig vs ip](https://www.youtube.com/watch?v=XiERevpBTAk&t=0s&index=33&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+`ip` is considered to be much  more powerful than `ifconfig` 
+- [ip command CHAT SHEET (redhat)](https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf)
 
 ## [32 - How To Use Man Pages](https://www.youtube.com/watch?v=BWLSqZZfKc4&t=0s&index=34&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [33 - How To Use tar, gzip, bzip2, and zip](https://www.youtube.com/watch?v=f8-7lhs4ky0&t=0s&index=35&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [34 - Searching and Locating Files](https://www.youtube.com/watch?v=paFtuRv4Fc0&t=0s&index=36&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [35 - How To Use Grep!](https://www.youtube.com/watch?v=KhCn_NwxmSo&t=0s&index=37&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- `f` : move forward
+- `b` : move backward
+- `man -u <command>` : update
 
 ## [36 - Grep and Metacharacters](https://www.youtube.com/watch?v=xXo1L28Jc6A&t=0s&index=38&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
-
-## [37 - Using Brackets with Grep](https://www.youtube.com/watch?v=sQNvg-zTEvA&t=0s&index=39&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- `grep -E` = `egrep`
 
 ## [38 - What is POSIX in Unix?](https://www.youtube.com/watch?v=U0GbJtnfqSM&t=0s&index=40&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+**P**ortable **O**perating **S**ystem **I**nterface or **POSIX** is a family of standards specified by the IEEE for maintaining compatibility between OS.
 
-## [39 - Using the Find Command!](https://www.youtube.com/watch?v=JYR_s4TIWSM&t=0s&index=41&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- [regular-expressions.info](https://www.regular-expressions.info/)
 
 ## [40 - Using the Find Command Pt 2](https://www.youtube.com/watch?v=WuZYqiais54&t=0s&index=42&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `-a` : and
+- `-o` : or
+- `!` : not
+- `\( \)` : parenthèses
+- `-exec` : execute a command
 
 ## [41 - Monitoring System Resources Pt 1](https://www.youtube.com/watch?v=xcR_FjAy1HI&t=0s&index=43&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `ps auxf` : tree view
+- `lsof` : list open files
 
 ## [42 - Monitoring System Resources Pt 2](https://www.youtube.com/watch?v=fwMTD9ghC3c&t=0s&index=44&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
-
-## [43 - How To Use ExFAT In Linux](https://www.youtube.com/watch?v=40DghDGuljQ&t=0s&index=45&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [44 - How to Use Cat, Sort, and Uniq](https://www.youtube.com/watch?v=bH1BDBzc3I0&t=0s&index=46&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- `dpkg -l linux-image*`
 
 ## [45 - How to Use Cut, Paste, and Join](https://www.youtube.com/watch?v=k014CkDmB2A&t=0s&index=47&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `paste` : merge lines of files
+- `join` : join lines of two files on a common field
 
 ## [46 - How to Use Comm, Diff, and Patch](https://www.youtube.com/watch?v=yIU92YySlW0&t=0s&index=48&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `comm` - compare two sorted files line by line
+- `patch` - apply a diff file to an original
 
 ## [47 - How to Use tr, sed, and aspell](https://www.youtube.com/watch?v=F7Brrn-L1Zg&t=0s&index=49&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `aspell` : Interactive spell checker.
 
 ## [48 - How to Use nl, fold, and fmt](https://www.youtube.com/watch?v=BksWPx-C8rg&t=0s&index=50&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `nl` : print line number
+- `fold` : Wraps each line in an input file to fit a specified width and prints it to the standard output.
+- `fmt` : format command
 
 ## [49 - How to Use pr and printf](https://www.youtube.com/watch?v=aLypSBf1TBY&t=0s&index=51&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
 
+- `pr` : paginate text
+- `printf` : print format
 
 ## [50 - Document Formatting with Groff](https://www.youtube.com/watch?v=NW5ZWN2b4zw&t=0s&index=52&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
-
-## [51 - How to Compile Source Code](https://www.youtube.com/watch?v=kMmmvhl_kzo&t=2s&index=53&list=PLW5y1tjAOzI2ZYTlMdGzCV8AJuoqW5lKB)
-
+- `groff` : Typesetting program that reads plain text mixed with formatting commands and produces formatted output. It is the GNU replacement for the troff and nroff Unix commands for text formatting.
+> Nice to know ^_^
