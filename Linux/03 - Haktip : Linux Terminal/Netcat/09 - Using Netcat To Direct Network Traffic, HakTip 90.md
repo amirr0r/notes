@@ -1,1 +1,0 @@
-# Netcat 101: Using Netcat To Direct Network Traffic, HakTip 90

@@ -1,1 +1,0 @@
-# Cryptcat: Netcat Using Two-Fish Encryption, HakTip 88

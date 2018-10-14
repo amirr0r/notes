@@ -1,1 +1,0 @@
-# Netcat 101: Remote Shells From Windows into Linux, HakTip 87

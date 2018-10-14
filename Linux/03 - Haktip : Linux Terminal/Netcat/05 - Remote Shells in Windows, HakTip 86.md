@@ -1,1 +1,0 @@
-# Netcat 101: Remote Shells in Windows, HakTip 86
