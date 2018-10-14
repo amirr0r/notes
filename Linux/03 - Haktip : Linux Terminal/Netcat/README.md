@@ -98,7 +98,9 @@ cryptcat -k $password $ip $port
 ## To verify if its really encrypted
 
 Open `Wireshark` :
-- Type ``tcp.port == $port` in the `filter bar`# Netcat 101: Making Processes Talk To Each Other, HakTip 89
+- Type `tcp.port == $port` in the `filter bar`
+
+# Making Processes Talk To Each Other, HakTip 89
 
 - Linux :
 ```bash
