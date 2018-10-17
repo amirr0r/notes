@@ -22,7 +22,7 @@
 - [ ] [Linux Security CheckList](https://www.ucd.ie/t4cms/UCD%20Linux%20Security%20Checklist.pdf)
 
 # Videos :
-- [ ] [Linux Security](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
+- [x] [Linux Security](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
 
 # Chouettes Liens :
 - [ ] [Kernel Map](http://www.makelinux.net/kernel_map/)
