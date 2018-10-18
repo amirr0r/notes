@@ -1,7 +1,7 @@
 # Guides :
  + **Français** :
     * [ANSSI: Recommandations de sécurité relatives à un système GNU/Linux](https://www.ssi.gouv.fr/guide/recommandations-de-securite-relatives-a-un-systeme-gnulinux/) :
-      + [ ] [Sécurité relatives à GNU/LINUX](https://www.ssi.gouv.fr/uploads/IMG/pdf/NP_Linux_NoteTech_1_1.pdf)
+      + [x] [Sécurité relatives à GNU/LINUX](https://www.ssi.gouv.fr/uploads/IMG/pdf/NP_Linux_NoteTech_1_1.pdf)
       + [ ] [Configuration](https://www.ssi.gouv.fr/uploads/2015/10/NP_Linux_Configuration.pdf)
     * [x] [Linuxtricks: Guide de la sécurité des systèmes](https://www.linuxtricks.fr/wiki/guide-de-la-securite-des-systemes)
 
