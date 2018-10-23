@@ -11,7 +11,7 @@
     * [x] [Gentoo Security Handbook](https://wiki.gentoo.org/wiki/Security_Handbook)
     * [ ] [Redhat Linux 7 Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index)
     * [ ] [HOWTOs linuxsecurity.com](http://www.linuxsecurity.com/content/section/9/161/)
-    * [ ] [Containers Security](https://linuxcontainers.org/lxc/security/)
+    * [ ] [Containers Security](https://linuxcontainers.org/lxc/security/) and [Container Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html/container_security_guide/index)
     * [ ] [Kali : Securing and Monitoring](https://kali.training/lessons/7-securing-and-monitoring-kali/)
 
 # Unix Binaries :
