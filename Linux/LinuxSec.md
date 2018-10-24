@@ -27,5 +27,5 @@
 - [x] [Linux Security PLaylist](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
 
 # Chouettes Liens :
-- [ ] [Kernel Map](http://www.makelinux.net/kernel_map/)
-- [ ] [Linux Internals](https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/sysinternals.md#linux-internals)
+- [Kernel Map](http://www.makelinux.net/kernel_map/)
+- [Linux Internals](https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/sysinternals.md#linux-internals)
