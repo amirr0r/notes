@@ -9,7 +9,7 @@
     * [ ] [Linux Security Quick Reference Guide](https://github.com/naf3a/notes/blob/master/Linux/Linux%20Security%20Quick%20Reference%20Guide.pdf)
     * [x] [ArchWiki Security](https://wiki.archlinux.org/index.php/security)
     * [x] [Gentoo Security Handbook](https://wiki.gentoo.org/wiki/Security_Handbook)
-    * [ ] [Redhat Linux 7 Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index)
+    * [x] [Redhat Linux 7 Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index)
     * [ ] [HOWTOs linuxsecurity.com](http://www.linuxsecurity.com/content/section/9/161/)
     * [ ] [Containers Security](https://linuxcontainers.org/lxc/security/) and [Container Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html/container_security_guide/index)
     * [ ] [Kali : Securing and Monitoring](https://kali.training/lessons/7-securing-and-monitoring-kali/)
