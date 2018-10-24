@@ -15,16 +15,16 @@
     * [ ] [Kali : Securing and Monitoring](https://kali.training/lessons/7-securing-and-monitoring-kali/)
 
 # Unix Binaries :
-- [ ] [List of Unix binaries that can be exploited](https://gtfobins.github.io/#)
+- [List of Unix binaries that can be exploited](https://gtfobins.github.io/#)
 
 # Securing Server :
-- [ ] [nixCraft: 40 Tips Linux Server Hardening Security](https://www.cyberciti.biz/tips/linux-security.html)
+- [nixCraft: 40 Tips Linux Server Hardening Security](https://www.cyberciti.biz/tips/linux-security.html)
 
 # CheckList :
-- [ ] [Linux Security CheckList](https://www.ucd.ie/t4cms/UCD%20Linux%20Security%20Checklist.pdf)
+- [Linux Security CheckList](https://www.ucd.ie/t4cms/UCD%20Linux%20Security%20Checklist.pdf)
 
 # Videos :
-- [x] [Linux Security PLaylist](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
+- [Linux Security PLaylist](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
 
 # Chouettes Liens :
 - [Kernel Map](http://www.makelinux.net/kernel_map/)
