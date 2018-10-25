@@ -1,11 +1,11 @@
 # Guides :
- + **Français** :
+- **Français** :
     * [ANSSI: Recommandations de sécurité relatives à un système GNU/Linux](https://www.ssi.gouv.fr/guide/recommandations-de-securite-relatives-a-un-systeme-gnulinux/) :
       + [x] [Sécurité relatives à GNU/LINUX](https://www.ssi.gouv.fr/uploads/IMG/pdf/NP_Linux_NoteTech_1_1.pdf)
       + [ ] [Configuration](https://www.ssi.gouv.fr/uploads/2015/10/NP_Linux_Configuration.pdf)
     * [x] [Linuxtricks: Guide de la sécurité des systèmes](https://www.linuxtricks.fr/wiki/guide-de-la-securite-des-systemes)
 
- + **English** :
+ - **English** :
     * [ ] [Linux Security Quick Reference Guide](https://github.com/naf3a/notes/blob/master/Linux/Linux%20Security%20Quick%20Reference%20Guide.pdf)
     * [x] [ArchWiki Security](https://wiki.archlinux.org/index.php/security)
     * [x] [Gentoo Security Handbook](https://wiki.gentoo.org/wiki/Security_Handbook)
@@ -20,9 +20,6 @@
 # Embedded
 - [ ] [Improving Your Embedded Linux Security Posture with Yocto](https://www.nccgroup.trust/us/our-research/improving-your-embedded-linux-security-posture-with-yocto/)
 
-# Unix Binaries :
-- [List of Unix binaries that can be exploited](https://gtfobins.github.io/#)
-
 # Securing Server :
 - [nixCraft: 40 Tips Linux Server Hardening Security](https://www.cyberciti.biz/tips/linux-security.html)
 
@@ -33,6 +30,7 @@
 - [Linux Security PLaylist](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
 
 # Chouettes Liens :
-- [HOWTOs linuxsecurity.com](http://www.linuxsecurity.com/content/section/9/161/)
+- [List of Unix binaries that can be exploited](https://gtfobins.github.io/#)
 - [Kernel Map](http://www.makelinux.net/kernel_map/)
 - [Linux Internals](https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/sysinternals.md#linux-internals)
+- [HOWTOs linuxsecurity.com](http://www.linuxsecurity.com/content/section/9/161/)
