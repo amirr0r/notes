@@ -10,9 +10,9 @@
     * [x] [ArchWiki Security](https://wiki.archlinux.org/index.php/security)
     * [x] [Gentoo Security Handbook](https://wiki.gentoo.org/wiki/Security_Handbook)
     * [x] [Redhat Linux 7 Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index)
-    * [ ] [HOWTOs linuxsecurity.com](http://www.linuxsecurity.com/content/section/9/161/)
-    * [ ] [Containers Security](https://linuxcontainers.org/lxc/security/) and [Container Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html/container_security_guide/index)
     * [ ] [Kali : Securing and Monitoring](https://kali.training/lessons/7-securing-and-monitoring-kali/)
+# Containers :
+
 
 # Unix Binaries :
 - [List of Unix binaries that can be exploited](https://gtfobins.github.io/#)
@@ -27,5 +27,6 @@
 - [Linux Security PLaylist](https://www.youtube.com/playlist?list=PLAcZG2tMJuWT67HWWpUpp9OVdXpMVvdTa)
 
 # Chouettes Liens :
+- [HOWTOs linuxsecurity.com](http://www.linuxsecurity.com/content/section/9/161/)
 - [Kernel Map](http://www.makelinux.net/kernel_map/)
 - [Linux Internals](https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/sysinternals.md#linux-internals)
