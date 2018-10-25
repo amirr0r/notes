@@ -11,10 +11,14 @@
     * [x] [Gentoo Security Handbook](https://wiki.gentoo.org/wiki/Security_Handbook)
     * [x] [Redhat Linux 7 Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index)
     * [ ] [Kali : Securing and Monitoring](https://kali.training/lessons/7-securing-and-monitoring-kali/)
+
 # Containers :
 - [ ] [Containers Security](https://linuxcontainers.org/lxc/security/)
 - [ ] [Container Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html/container_security_guide/index)
 - [ ] [Understanding and Hardening Linux Containers](https://www.nccgroup.trust/us/our-research/understanding-and-hardening-linux-containers/)
+
+# Embedded
+- [ ] [Improving Your Embedded Linux Security Posture with Yocto](https://www.nccgroup.trust/us/our-research/improving-your-embedded-linux-security-posture-with-yocto/)
 
 # Unix Binaries :
 - [List of Unix binaries that can be exploited](https://gtfobins.github.io/#)
