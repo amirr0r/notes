@@ -6,7 +6,7 @@
     * [x] [Linuxtricks: Guide de la sécurité des systèmes](https://www.linuxtricks.fr/wiki/guide-de-la-securite-des-systemes)
 
  - **English** :
-    * [ ] [Linux Security Quick Reference Guide](https://github.com/naf3a/notes/blob/master/Linux/Linux%20Security%20Quick%20Reference%20Guide.pdf)
+    * [x] [Linux Security Quick Reference Guide](https://github.com/naf3a/notes/blob/master/Linux/Linux%20Security%20Quick%20Reference%20Guide.pdf)
     * [x] [ArchWiki Security](https://wiki.archlinux.org/index.php/security)
     * [x] [Gentoo Security Handbook](https://wiki.gentoo.org/wiki/Security_Handbook)
     * [x] [Redhat Linux 7 Security Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index)
