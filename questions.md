@@ -1,6 +1,9 @@
 # Questions
 
 ## 0. Drivers ?
+
+a computer program that operates or controls a particular type of device that is attached to a computer (printer driver..)
+
 ## 1. Difference between  `sudo` & `su` ?
 
 - `su` allows you to do anything the given user can do *(which is often more than you need)*. 
