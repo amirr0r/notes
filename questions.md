@@ -42,7 +42,13 @@ Method of transporting arbitrary networking data over an encrypted SSH connectio
 
 ## 7. Containers ? What ? Why ? How ? *Docker*
 
-Linux containers are technologies that allow you to package and isolate applications with their entire runtime environment—all of the files necessary to run. This makes it easy to move the contained application between environments (dev, test, production, etc.) while retaining full functionality.
+Linux containers are technologies that allow you to **package** and **isolate applications** with their entire **runtime environment**—all of the files necessary to run. This makes it **easy to move** the contained application between environments (*dev, test, production, etc.*) while retaining full functionality.
+
+### Difference with virtualization ?
+- [Virtualization](https://www.redhat.com/en/topics/virtualization) lets your operating systems (Windows or Linux) run simultaneously on a single hardware system.
+- Containers share the same operating system kernel and isolate the application processes from the rest of the system.
+
+![virtualization-vs-containers](https://www.redhat.com/cms/managed-files/virtualization-vs-containers.png)
 
 ## 8. Audit (daemon / framework) ?
 
@@ -52,7 +58,6 @@ Try to detect and collect all malicious activity (denial of service attacks, por
 ## 9. Fail2Ban ?
 
 Scans the log files for too many failed login attempts and blocks the IP address which is showing malicious signs.
-
 
 ## 11. TCP Wrappers ?
 
