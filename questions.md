@@ -48,6 +48,8 @@ Linux containers are technologies that allow you to **package** and **isolate ap
 - [Virtualization](https://www.redhat.com/en/topics/virtualization) allows many operating systems to run simultaneously on a single system.
 - Containers share the same operating system kernel and isolate the application processes from the rest of the system.
 
+Virtualization uses a **hypervisor** to emulate hardware which allows multiple operating systems to run side by side. This isn’t as lightweight as using containers.
+
 ![virtualization-vs-containers](https://www.redhat.com/cms/managed-files/virtualization-vs-containers.png)
 
 ## 8. Audit (daemon / framework) ?
