@@ -40,7 +40,10 @@ Method of transporting arbitrary networking data over an encrypted SSH connectio
 
 > not specific to SSH - a competent programmer can write a tool to tunnel ports in a few hours. Any device on the internal network can do it - it just needs to be able to communicate with some (any) service on the Internet. The tool could be made to work over **SSL/TLS**, could **emulate HTTP**, or could **operate over UDP** and use **packets** that look **like DNS requests and responses**. SSH just makes it easier for non-programmers. [Source](https://www.ssh.com/ssh/tunneling/)
 
-## 7. Containers ? What ? Why ? How ?
+## 7. Containers ? What ? Why ? How ? *Docker*
+
+Linux containers are technologies that allow you to package and isolate applications with their entire runtime environment—all of the files necessary to run. This makes it easy to move the contained application between environments (dev, test, production, etc.) while retaining full functionality.
+
 ## 8. Audit (daemon / framework) ?
 
 Try to detect and collect all malicious activity (denial of service attacks, port scans...) by generating log entries and record as much information as possible.
