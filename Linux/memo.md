@@ -181,6 +181,8 @@ The `fsck` command is used to check the integrity of a filesystem.
 
 A **hardlink** just creates another file with a link to the same inode. So if I modified the contents of myfile2 or myhardlink, the change would be seen on both, but if I deleted myfile2, the file would still be accessible through myhardlink. Here is where our link count in the ls command comes into play. The link count is the number of **hardlinks** that an inode has, when you remove a file, it will decrease that link count. The inode only gets deleted when all **hardlinks** to the inode have been deleted. When you create a file, it's link count is 1 because it is the only file that is pointing to that inode. Unlike **symlinks**, hardlinks do not span filesystems because inodes are unique to the filesystem.
 
+![RECOMMENDED PARTITIONING SCHEME](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86)
+
 ## Boot process
 
 1. **BIOS**(stands for "Basic Input/Output System") initializes the hardware and makes sure with a Power-on self test (POST) that all the hardware is good to go. The main job of the BIOS is to load up the bootloader.
