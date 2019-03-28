@@ -1,8 +1,8 @@
-I do have to = Je recommande
-so on and so forth = et ainsi de suite/et plus encore
-insights = perspicacité/idée
-overwhelmed = submergé
-thus = ainsi
-plot = tracer point par point
-This begs the question though: = Cela pose la question suivante
-curvy = courbée
+- I do have to = Je recommande
+- so on and so forth = et ainsi de suite/et plus encore
+- insights = perspicacité/idée
+- overwhelmed = submergé
+- thus = ainsi
+- plot = tracer point par point
+- This begs the question though: = Cela pose la question suivante
+- curvy = courbée
