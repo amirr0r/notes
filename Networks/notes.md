@@ -190,6 +190,56 @@ tshark -r file.pcap -Y ' wlan.fc.type_subtype == 0x0008 ' -Tfields -e wlan.ssid
 
 - `-E <field print option>` : set an option controlling the printing of fields when -T fields is selected.
 
+## Play with statistics
+
+- `-z <statistics>`
+
+Examples:
+
+```bash
+tshark -r captures.pcap -z io,phs # give the protocol hierarchy
+tshark -r captures.pcap -z io,<filter> # give the protocol hierarchy filtered.
+tshark -r captures.pcap -z endpoints,wlan
+```
+
+## Multi-File Capture (Ring Buffer)
+
+This features comes in to resolve the _out of disk space_ issue.
+
+- `-b <capture ring buffer option>`: cause **tshark** to run in "multiple files" mode. Example:
+
+```bash
+tshark -i any -w captures.pcap -b filesize:1 -b files:10
+```
+
+## Decode as...
+
+- `-d <layer type>==<selector>,<decode-as protocol>`: like **Wireshark**'s `Decode As...` feature, this lets you specify how a layer type should be dissected.
+
+## SSL Decryption
+
+Example:
+```
+tshark -r HTTPS_traffic.pcap -o "ssl.keys_list:0.0.0.0,443,http,private.key" -q -z http,tree 
+```
+
+## [Pyshark](https://github.com/KimiNewt/pyshark)
+
+Basic code example:
+
+```py
+#!/usr/bin/python3
+
+import pyshark
+import sys
+
+capture = pyshark.LiveCapture(interface=sys.argv[1], bpf_filter=sys.argv[2])
+
+for packet in capture.sniff_continuously(packet_count=10):
+    packet.pretty_print()
+```
+
+
 ## Resources
 
 - [tshark tutorial and filter examples](https://hackertarget.com/tshark-tutorial-and-filter-examples/)
@@ -207,7 +257,7 @@ popular and powerful to capture and analyse network data.
       |
   (Frames)
       |
-  [Packets]
+ [ Packets ]
 ```
 
 ## Resources
