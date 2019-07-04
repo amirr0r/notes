@@ -134,7 +134,6 @@ To go further check :
 - [**Tcpdump Examples**](https://hackertarget.com/tcpdump-examples/).
 
 ___
-___
 
 # TSHARK
 
@@ -169,8 +168,6 @@ In `/usr/share/wireshark/`, there is a `pdml2html.xsl` file... :smirk: :
 
 **BPF** stands for (**B**erkeley **P**acket **F**ilter).
 
-[pcap filter](https://wireshark.org/man-pages/pcap-filter.html)
-
 - `-f` : filters
 
 ### Display Filters
@@ -182,13 +179,23 @@ Appliyed to alreday <u>captured packets</u>.
 - Display and Capture filters have different syntax
 - Display filter expression are more granular
 
-- [Syntax](https://wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html)
-- [Reference](https://wireshark.org/docs/dfref/)
+## Extract fields
+
+- `-e <field>`: add a field to the list of fields to display if `-T` is used. 
+- `-Y '<display filter>'`: apply a specific filter. Example:
+
+```bash
+tshark -r file.pcap -Y ' wlan.fc.type_subtype == 0x0008 ' -Tfields -e wlan.ssid
+```
+
+- `-E <field print option>` : set an option controlling the printing of fields when -T fields is selected.
 
 ## Resources
 
-- [tshark tutorial and filter examples
-](https://hackertarget.com/tshark-tutorial-and-filter-examples/)
+- [tshark tutorial and filter examples](https://hackertarget.com/tshark-tutorial-and-filter-examples/)
+- [Syntax](https://wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html)
+- [Reference](https://wireshark.org/docs/dfref/)
+- [pcap filter](https://wireshark.org/man-pages/pcap-filter.html)
 ___
 
 # Wireshark
