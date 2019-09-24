@@ -81,13 +81,13 @@ C'est donc les algorithmes basés sur des instances qui s'appuient sur une mesur
 
 > **TODO:** citer des algos.
 
-### 12. Quelle est la différence entre un paramètre de modèle et l'hyperparamètre d'un algorithme d'apprentissage ?
+### 12. Quelle est la différence entre un paramètre de modèle et l'hyper-paramètre d'un algorithme d'apprentissage ?
 
 La "magie" d'un algorithme d'apprentissage consiste à **ajuster les paramètres d'un modèle** de sorte à l'adapter aux données d'apprentissage et par extension aux données futures. 
 
 Ceci implique que les paramètres évoluent et sont donc le résultat de l'apprentissage|entraînement. 
 
-Un **hyperparamètre** d'un algorithme d'apprentissage est constant. Il définit comment se passe l'entraînement. 
+Un **hyper-paramètre** d'un algorithme d'apprentissage est constant. Il définit comment se passe l'entraînement. 
 
 > **TODO:** illustrer avec un exemple (θ, régularisation...)
 > **TODO:** ajouter image GIF ajustement des paramètres régression linéaire
@@ -134,7 +134,7 @@ En effet, si le modèle réalise de bonnes prédictions sur le training set mais
 
 Si le modèle réalise de bonnes prédictions sur le Training Set et sur le Training-dev Set mais pas sur le Validation Set, il y a clairement un problème de cohérence dans la séparation des données entre les différents sets. 
 
-### 19. Qu'est-ce qui peut mal tourner si vous réglez les hyperparamètres à l'aide de l'ensemble de test ?
+### 19. Qu'est-ce qui peut mal tourner si vous réglez les hyper-paramètres à l'aide de l'ensemble de test ?
 
 On risque de sur-entraîner le modèle sur le test set.
 ___
