@@ -2,14 +2,14 @@
 
 ## Main steps
 
-- [ ] 1. Définir l'objectif principal et les contraintes.
-- [ ] 2. Récolte de données.
-- [ ] 3. Étudier les données pour mieux les comprendre.
-- [ ] 4. Préparer les données pour les transmettre aux algorithmes de Machine learning.
-- [ ] 5. Sélectionner différents modèles prometteurs.
-- [ ] 6. Tester les modèles et les combiner en une solution optimale.
-- [ ] 7. Présenter la solution.
-- [ ] 8. Déployer, surveiller, et maintenir la solution.
+- [ ] [Étape 1: définir l'objectif principal et les contraintes](#%c3%89tape-1-d%c3%a9finir-lobjectif-principal-et-les-contraintes)
+- [ ] [Étape 2: récolter des données](#%c3%89tape-2-r%c3%a9colter-des-donn%c3%a9es)
+- [ ] [Étape 3: étudier les données pour mieux les comprendre.](#%c3%89tape-3-%c3%a9tudier-les-donn%c3%a9es-pour-mieux-les-comprendre)
+- [ ] [Étape 4: préparer les données](#%c3%89tape-4-pr%c3%a9parer-les-donn%c3%a9es)
+- [ ] [Étape 5: lister les modèles prometteurs](#%c3%89tape-5-lister-les-mod%c3%a8les-prometteurs)
+- [ ] [Étape 6: tester les modèles et les combiner en une solution optimale](#%c3%89tape-6-tester-les-mod%c3%a8les-et-les-combiner-en-une-solution-optimale)
+- [ ] [Étape 7: présenter la solution](#%c3%89tape-7-pr%c3%a9senter-la-solution)
+- [ ] [Étape 8: Déployer!](#%c3%89tape-8-d%c3%a9ployer)
 
 ___
 
@@ -25,7 +25,9 @@ ___
 8. Existe-t-il des problèmes similaires ?
 9. L'expertise humaine est-elle disponible ?
 10. Comment résoudre le problème manuellement ?
+
 ~~11. Énumérez les hypothèses que vous (ou d'autres) avez faites jusqu'à présent.~~
+
 ~~12. Vérifier les hypothèses si possible.~~
 
 ___
