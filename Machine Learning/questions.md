@@ -1,0 +1,4 @@
+- Qu'est-ce que le feature scaling ?
+- Quels sont les différents types de distribution (Gaussian, uniform, logarithmic, etc.) ?
+- Quels sont les différents types de bruit (stochastic, outliers, rounding errors, etc.) ? 
+- Quels sont les différents types d'erreurs ?
