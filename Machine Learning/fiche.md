@@ -10,6 +10,7 @@ The system can learn incrementally.
 
 Data has to be given sequentially, either individually or by mini groups called *mini-batches*.
 
+> Not to be confused with **cross-validation**.
 ___
 
 - Technique de [MapReduce](https://fr.wikipedia.org/wiki/MapReduce): diviser l'apprentissage sur plusieurs serveurs.
@@ -33,5 +34,13 @@ Some useful classes:
 
 - `SimpleImputer`: take care of missing values.
 - `TransformerMixin` & `BaseEstimator`: for creating a **Transformer** class.
+- `Pipeline`: merge Data Tranformers + model
+- `ColumnTransformer`: applying the appropriate transformations to each column.
+- `GridSearchCV`: (brute-force) finding the bests hyper-parameters _(and so the best(s) estimator(s))_.
 
+> If GridSearchCV is initialized with `refit=True` (which is the default), then once it finds the best estimator using cross-validation, **it retrains it on the whole training set**.
+
+- `RandomizedSearchCV`: instead of trying out all possible combinations, it evaluates a given number of random combinations by selecting a random value for each hyper-parameter at every iteration.
 ___
+
+[kaggle.com](kaggle.com) : ML contest
