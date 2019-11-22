@@ -26,3 +26,5 @@
     + l'erreur **MAE** (**M**ean **A**bsolute **E**rror) (&rarr; distance de manhattan):
     
       ![MAE formula](images/MAE.png)
+
+- Qu'est-ce que le **stratified sampling** ?
