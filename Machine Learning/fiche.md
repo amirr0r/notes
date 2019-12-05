@@ -123,3 +123,14 @@ But, there are two main strategies used to **perform multiclass classification u
 Train a binary classifier for every pair of class.
    
 > If there are **N** classes, you need to train **N × (N – 1) / 2** classifiers.
+
+## Multilabel classification
+
+outputs multiple binary tags.
+
+> **TODO:** give 2 examples
+
+## Multioutput classification
+
+Multiclass classification where each label can be multiclass.
+___
