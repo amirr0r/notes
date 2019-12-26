@@ -43,6 +43,12 @@ _"Field of study that gives computers the ability to **learn** without being exp
 
 In other words, **instead of adding rules in a program**, **machine learning algorithms rely on data seen during their training to perform a prediction** _(for instance &rarr; classify images as car photos or not)_ as explained in this [video part](https://www.youtube.com/embed/jmznx0Q1fP0?start=210&end=349).
 
+More precisely, a **ML algorithm will fit a mathematical function that will adjust its parameters with training data** _(or **Training set**)_.
+
+![ml algo fit model parameters](images/ml_fit_model_params.png)
+
+> In this example, the `classify` function adjust the parameters of a line equation. 
+
 ### Meaning of _"learning"_ for a machine ?
 
 _"A computer program is said to learn from **experience E** with respect to some class of **tasks T** and **performance measure P**, if its performance at tasks in T, as measured by P, improves with experience E." **Tom Mitchell (1998)**_.
