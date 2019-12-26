@@ -29,7 +29,7 @@ _"Field of study that gives computers the ability to **learn** without being exp
 
 > **Note**: As we can see, this is not a very recent definition. Contrary to popular belief, _**AI**, **Machine learning**, **Deep learning** and **Neural networks**_ are a source of interest for many years.
 
-In other words, **instead of adding rules in a program**, **machine learning algorithms rely on data seen during their training to perform a prediction** _(for instance &rarr; classify images as car photos or not)_.
+In other words, **instead of adding rules in a program**, **machine learning algorithms rely on data seen during their training to perform a prediction** _(for instance &rarr; classify images as car photos or not)_ as explained in this [video part](https://www.youtube.com/embed/jmznx0Q1fP0?start=210&end=349).
 
 ### Meaning of _"learning"_ for a machine ?
 
