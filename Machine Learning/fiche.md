@@ -197,7 +197,7 @@ ___
 
 - [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition **(Aurélien Géron)**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
 - [Coursera: Machine Learning Stanford Online **(Andrew Ng)**](https://fr.coursera.org/learn/machine-learning)
-- [Petit voyage au pays du machine learning **(Xavier Dupré)**](#http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html)
+- [Petit voyage au pays du machine learning **(Xavier Dupré)**](http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html)
 - [Machine Learning, Statistiques et Programmation **(Xavier Dupré)**](http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html)
 - [NOC-S17-2-Intelligence-Learning notes **(Daniel Shiffman)**](https://github.com/nature-of-code/NOC-S17-2-Intelligence-Learning/tree/master/week3-classification-regression)
 - [Udacity: school of ai](https://www.udacity.com/school-of-ai)
