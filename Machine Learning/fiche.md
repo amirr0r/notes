@@ -1,19 +1,131 @@
-# Batch learning *(apprentissage par lot)*
+# Summary
+
+- [Some definitions](#some-definitions)
+    * [Artificial intelligence](#artificial-intelligence)
+    * [What is Machine learning ?](#machine-learning)
+    * [Meaning of _"learning"_ for a machine [+ example]](#meaning-of-_learning_-for-a-machine)
+- [Classification](#classification)
+    * [Binary classification](#binary-classification)
+    * [Multiclass classification](#multiclass-classification)
+        + [One versus All or _one versus the rest_](#one-versus-all-or-_one-versus-the-rest_)
+        + [One versus One](#one-versus-one)
+    * [Multilabel classification](#multilabel-classification)
+    * [Multioutput classification](#multioutput-classification)
+- [Scikit-learn API](#scikit-learn-api)
+- [Useful links](#useful-links)
+___
+
+# Some Definitions
+
+## Artificial Intelligence
+
+No consensus on the very definition of intelligence, so we can say that it's the art of simulating **natural intelligence** _(human or animal tasks)_ by machines.
+
+![ai relates to ml](images/ai-relates-to-ml.png)
+
+## Machine Learning
+
+_"Field of study that gives computers the ability to **learn** without being explicitly programmed."_ **Arthur Samuels (1959)**.
+
+> **Note**: As we can see, this is not a very recent definition. Contrary to popular belief, _**AI**, **Machine learning**, **Deep learning** and **Neural networks**_ are a source of interest for many years.
+
+In other words, **instead of adding rules in a program**, **machine learning algorithms rely on data seen during their training to perform a prediction** _(for instance &rarr; classify images as car photos or not)_.
+
+### Meaning of _"learning"_ for a machine ?
+
+_"A computer program is said to learn from **experience E** with respect to some class of **tasks T** and **performance measure P**, if its performance at tasks in T, as measured by P, improves with experience E." **Tom Mitchell (1998)**_.
+
+- Example:
+    + **T** = playing chess.
+    + **E** = playing.
+    + **P** = wining _(The % of games won)_.
+
+#### Different types of learning/training
+
+There are 4 main different types of learning:
+
+- **Supervised**.
+- **Unsupervised**.
+- **Semi supervised**.
+- **Reinforcement**.
+
+On top of that, there are two ways of training machine learning models.
+
+##### Batch learning *(apprentissage par lot)*
 
 The system is trained with all available data and just applies what it has learned &rarr; *offline|batch learning*
 
 > **Disadvantage:** need to train a new version of the system from scracth on the full dataset
 
-# Online learning *(apprentissage en ligne)*
+##### Online learning *(apprentissage en ligne)*
 
 The system can learn incrementally.
 
 Data has to be given sequentially, either individually or by mini groups called *mini-batches*.
 
 > Not to be confused with **cross-validation**.
-___
+
 
 - Technique de [MapReduce](https://fr.wikipedia.org/wiki/MapReduce): diviser l'apprentissage sur plusieurs serveurs.
+
+___
+
+# Classification
+
+## Binary classification
+
+Detecting **positive class** and **negative class**.
+
+Examples:
+- Classifying mails as spam and non-spam.
+- Classifying images as cat or not cat.
+
+## Multiclass classification
+
+Some algorithms can handle multiple classes natively _(e.g, Naive Baye, SGD, Random Forests...)_.
+
+But, there are two main strategies used to **perform multiclass classification using multiple binary classifiers**:
+
+- One versus all
+- One versus one
+
+> If you want to force Scikit-Learn to use `one-versus-one` or `one-versus-all`, you can use the `OneVsOneClassifier` or `OneVsRestClassifier`
+
+### One-versus-All or _One-versus-the-rest_
+
+1. Train **_N_** binary classifiers for each class.
+2. For a given instance, get the decision score from each classifier. 
+3. Then, select the class whose classifier outputs the highest score.
+
+### One-versus-One
+
+Train a binary classifier for every pair of class.
+   
+> If there are _**N**_ classes, you need to train **_N_ × (_N_ – 1) / 2** classifiers.
+
+Example: **TODO**
+
+## Multilabel classification
+
+Outputs multiple binary tags.
+
+Example: **TODO**
+
+## Multioutput classification
+
+Multiclass classification where each label can be multiclass.
+
+## Some principles
+
+**A high-precision classifier is not very useful if its recall is too low!**
+
+> **Note**: increasing precision reduces recall, and vice versa.
+
+A perfect classifier will have a **ROC AUC equal to 1**, whereas a purely random classifier will have a ROC AUC equal to 0.5. 
+
+> **ROC** curve: receiver operating characteristic.
+
+> **AUC**: area under the curve.
 ___
 
 # Scikit-learn API:
@@ -40,7 +152,7 @@ ___
 - `ColumnTransformer`: applying the appropriate transformations to each column.
 - `GridSearchCV`: (brute-force) finding the bests hyper-parameters _(and so the best(s) estimator(s))_.
 
-> If GridSearchCV is initialized with `refit=True` (which is the default), then once it finds the best estimator using cross-validation, **it retrains it on the whole training set**.
+> If `GridSearchCV` is initialized with `refit=True` _(which is the default)_, then once it finds the best estimator using cross-validation, **it retrains it on the whole training set**.
 
 - `RandomizedSearchCV`: instead of trying out all possible combinations, it evaluates a given number of random combinations by selecting a random value for each hyper-parameter at every iteration.
 - `StandardScaler` : used for standardization _(feature scaling)_.
@@ -78,59 +190,14 @@ ___
 > the ROC curve otherwise.
 
 - **Scikit-Learn detects when you try to use a binary classification algorithm for a multiclass classification task, and it automatically runs OvA or OvR.**
+
 ___
 
-# Classification
+# Useful links
 
-**A high-precision classifier is not very useful if its recall is too low!**
-
-> **Note**: increasing precision reduces recall, and vice versa.
-
-A perfect classifier will have a **ROC AUC equal to 1**, whereas a purely random classifier will have a ROC AUC equal to 0.5. 
-
-> **ROC** curve: receiver operating characteristic.
-
-> **AUC**: area under the curve.
-
-## Binary classification
-
-Detecting positive class and negative class.
-
-Examples:
-- Spam and non-spam.
-- Cat or not ?
-- 5 or non-5 ?
-
-## Multiclass classification
-
-Some algorithms can handle multiple classes natively (e.g, NAive Baye, SGD, Random Forests...).
-
-But, there are two main strategies used to **perform multiclass classification using multiple binary classifiers**:
-
-- One versus All
-- One versus One
-
-> If you want to force Scikit-Learn to use one-versus-one or one-versus-all, you can use the `OneVsOneClassifier` or `OneVsRestClassifier`
-
-### One-versus-All (OvA) == One-versus-the-rest
-
-1. Train N binary classifiers for each class.
-2. For a given instance, get the decision score from each classifier. 
-3. Then, select the class whose classifier outputs the highest score.
-
-### **One-versus-One (OvO)**:
-
-Train a binary classifier for every pair of class.
-   
-> If there are **N** classes, you need to train **N × (N – 1) / 2** classifiers.
-
-## Multilabel classification
-
-outputs multiple binary tags.
-
-> **TODO:** give 2 examples
-
-## Multioutput classification
-
-Multiclass classification where each label can be multiclass.
-___
+- [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition **(Aurélien Géron)**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
+- [Coursera: Machine Learning Stanford Online **(Andrew Ng)**](https://fr.coursera.org/learn/machine-learning)
+- [Petit voyage au pays du machine learning **(Xavier Dupré)**](#http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html)
+- [Machine Learning, Statistiques et Programmation **(Xavier Dupré)**](http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html)
+- [NOC-S17-2-Intelligence-Learning notes **(Daniel Shiffman)**](https://github.com/nature-of-code/NOC-S17-2-Intelligence-Learning/tree/master/week3-classification-regression)
+- [Udacity: school of ai](https://www.udacity.com/school-of-ai)
