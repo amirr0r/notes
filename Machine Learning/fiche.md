@@ -1,16 +1,18 @@
 # Summary
 
 - [Some definitions](#some-definitions)
-    * [Artificial intelligence](#artificial-intelligence)
-    * [What is Machine learning ?](#machine-learning)
-    * [Meaning of _"learning"_ for a machine [+ example]](#meaning-of-_learning_-for-a-machine)
-- [Classification](#classification)
+  * [Artificial intelligence](#artificial-intelligence)
+  * [What is Machine learning ?](#machine-learning)
+  * [Meaning of _"learning"_ for a machine [+ example]](#meaning-of-_learning_-for-a-machine)
+- [Supervised learning](#supervised-learning)
+  + [Classification](#classification)
     * [Binary classification](#binary-classification)
     * [Multiclass classification](#multiclass-classification)
-        + [One versus All or _one versus the rest_](#one-versus-all-or-_one-versus-the-rest_)
-        + [One versus One](#one-versus-one)
+      + [One versus All or _one versus the rest_](#one-versus-all-or-_one-versus-the-rest_)
+      + [One versus One](#one-versus-one)
     * [Multilabel classification](#multilabel-classification)
     * [Multioutput classification](#multioutput-classification)
+  + [Regression](#regression)
 - [Scikit-learn API](#scikit-learn-api)
 - [Useful links](#useful-links)
 ___
@@ -42,14 +44,14 @@ _"A computer program is said to learn from **experience E** with respect to some
 
 #### Different types of learning/training
 
-There are 4 main different types of learning:
+There are 4 main families of machine learning algorithms:
 
-- **Supervised**.
-- **Unsupervised**.
-- **Semi supervised**.
-- **Reinforcement**.
+- **Supervised** = data are **already labelled** with the expected predictions when training the model.
+- **Unsupervised** = data are **not labelled** with the expected predictions when training the model.
+- **Semi supervised** = expected predictions **(labels) are not known for all the data**.
+- **Reinforcement** = models are **trained with a reward/punishment system**.
 
-On top of that, there are two ways of training machine learning models.
+On top of that, there are two types of learning: _online and offline_.
 
 ##### Batch learning *(apprentissage par lot)*
 
@@ -65,14 +67,25 @@ Data has to be given sequentially, either individually or by mini groups called 
 
 > Not to be confused with **cross-validation**.
 
-
 - Technique de [MapReduce](https://fr.wikipedia.org/wiki/MapReduce): diviser l'apprentissage sur plusieurs serveurs.
 
 ___
 
-# Classification
+# Supervised learning
 
-## Binary classification
+As explained [before](#different-types-of-learningtraining), supervised learning is ...
+
+Supervised learning algorithms can resolve two types of problem:
+
+- **classification**: assigning a sample of the dataset to a class.
+    + Example: **TODO**.
+
+- **regression**: predicting an amount, a quantity.
+    + Example: **TODO**.
+
+## Classification
+
+### Binary classification
 
 Detecting **positive class** and **negative class**.
 
@@ -80,9 +93,14 @@ Examples:
 - Classifying mails as spam and non-spam.
 - Classifying images as cat or not cat.
 
-## Multiclass classification
+> **TODO**: add code
 
-Some algorithms can handle multiple classes natively _(e.g, Naive Baye, SGD, Random Forests...)_.
+### Multiclass classification
+
+Definition: **TODO**.
+
+- Some algorithms can handle multiple classes natively _(e.g, Naive Baye, SGD, Random Forests...)_:
+    + Example: **TODO**
 
 But, there are two main strategies used to **perform multiclass classification using multiple binary classifiers**:
 
@@ -91,13 +109,13 @@ But, there are two main strategies used to **perform multiclass classification u
 
 > If you want to force Scikit-Learn to use `one-versus-one` or `one-versus-all`, you can use the `OneVsOneClassifier` or `OneVsRestClassifier`
 
-### One-versus-All or _One-versus-the-rest_
+#### One-versus-All or _One-versus-the-rest_
 
 1. Train **_N_** binary classifiers for each class.
 2. For a given instance, get the decision score from each classifier. 
 3. Then, select the class whose classifier outputs the highest score.
 
-### One-versus-One
+#### One-versus-One
 
 Train a binary classifier for every pair of class.
    
@@ -105,17 +123,19 @@ Train a binary classifier for every pair of class.
 
 Example: **TODO**
 
-## Multilabel classification
+### Multilabel classification
 
 Outputs multiple binary tags.
 
 Example: **TODO**
 
-## Multioutput classification
+### Multioutput classification
 
 Multiclass classification where each label can be multiclass.
 
-## Some principles
+Example: **TODO**
+
+### Some principles
 
 **A high-precision classifier is not very useful if its recall is too low!**
 
@@ -126,6 +146,10 @@ A perfect classifier will have a **ROC AUC equal to 1**, whereas a purely random
 > **ROC** curve: receiver operating characteristic.
 
 > **AUC**: area under the curve.
+
+## Regression
+
+> **TODO**
 ___
 
 # Scikit-learn API:
@@ -195,6 +219,7 @@ ___
 
 # Useful links
 
+- [Scikit-learn ML Glossary](https://scikit-learn.org/stable/glossary.html)
 - [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition **(Aurélien Géron)**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
 - [Coursera: Machine Learning Stanford Online **(Andrew Ng)**](https://fr.coursera.org/learn/machine-learning)
 - [Petit voyage au pays du machine learning **(Xavier Dupré)**](http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html)
