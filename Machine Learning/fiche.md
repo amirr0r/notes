@@ -4,6 +4,7 @@
   * [Artificial intelligence](#artificial-intelligence)
   * [What is Machine learning ?](#machine-learning)
   * [Meaning of _"learning"_ for a machine [+ example]](#meaning-of-_learning_-for-a-machine)
+- [Training models](#training-models)
 - [Supervised learning](#supervised-learning)
   + [Classification](#classification)
     * [Binary classification](#binary-classification)
@@ -13,17 +14,26 @@
     * [Multilabel classification](#multilabel-classification)
     * [Multioutput classification](#multioutput-classification)
   + [Regression](#regression)
+- [Unsupervised learning](#unsupervised-learning)
+- [Semi supervised learning](#semi-supervised-learning)
+- [Reinforcement learning](#reinforcement-learning)
 - [Scikit-learn API](#scikit-learn-api)
+- [Tensorflow API](#tensorflow-api)
+  + [Keras API](#keras-api)
 - [Useful links](#useful-links)
 ___
 
-# Some Definitions
+<!-- pagebreak -->
+
+# Some definitions
 
 ## Artificial Intelligence
 
 No consensus on the very definition of intelligence, so we can say that it's the art of simulating **natural intelligence** _(human or animal tasks)_ by machines.
 
 ![ai relates to ml](images/ai-relates-to-ml.png)
+
+<!-- pagebreak -->
 
 ## Machine Learning
 
@@ -38,9 +48,9 @@ In other words, **instead of adding rules in a program**, **machine learning alg
 _"A computer program is said to learn from **experience E** with respect to some class of **tasks T** and **performance measure P**, if its performance at tasks in T, as measured by P, improves with experience E." **Tom Mitchell (1998)**_.
 
 - Example:
-    + **T** = playing chess.
-    + **E** = playing.
-    + **P** = wining _(The % of games won)_.
+  + **T** = playing chess.
+  + **E** = playing.
+  + **P** = wining _(The % of games won)_.
 
 #### Different types of learning/training
 
@@ -51,15 +61,15 @@ There are 4 main families of machine learning algorithms:
 - **Semi supervised** = expected predictions **(labels) are not known for all the data**.
 - **Reinforcement** = models are **trained with a reward/punishment system**.
 
-On top of that, there are two types of learning: _online and offline_.
+On top of that, there are two ways to train a model: _online and offline learning_.
 
-##### Batch learning *(apprentissage par lot)*
+##### Offline _or Batch_ learning
 
 The system is trained with all available data and just applies what it has learned &rarr; *offline|batch learning*
 
 > **Disadvantage:** need to train a new version of the system from scracth on the full dataset
 
-##### Online learning *(apprentissage en ligne)*
+##### Online learning
 
 The system can learn incrementally.
 
@@ -71,17 +81,24 @@ Data has to be given sequentially, either individually or by mini groups called 
 
 ___
 
+# Training models
+
+> **TODO**
+___
+
+<!-- pagebreak -->
+
 # Supervised learning
 
 As explained [before](#different-types-of-learningtraining), supervised learning is ...
 
 Supervised learning algorithms can resolve two types of problem:
 
-- **classification**: assigning a sample of the dataset to a class.
-    + Example: **TODO**.
+- **classification**: assigning to a class.
+  + Example: **TODO**.
 
 - **regression**: predicting an amount, a quantity.
-    + Example: **TODO**.
+  + Example: **TODO**.
 
 ## Classification
 
@@ -99,8 +116,9 @@ Examples:
 
 Definition: **TODO**.
 
-- Some algorithms can handle multiple classes natively _(e.g, Naive Baye, SGD, Random Forests...)_:
-    + Example: **TODO**
+> Some algorithms can handle multiple classes natively _(e.g, Naive Baye, SGD, Random Forests...)_.
+
++ Example: **TODO**
 
 But, there are two main strategies used to **perform multiclass classification using multiple binary classifiers**:
 
@@ -152,7 +170,22 @@ A perfect classifier will have a **ROC AUC equal to 1**, whereas a purely random
 > **TODO**
 ___
 
-# Scikit-learn API:
+# Unsupervised learning
+
+> **TODO**
+___
+
+# Semi-supervised learning
+
+> **TODO**
+___
+
+# Reinforcement learning
+
+> **TODO**
+___
+
+# Scikit-learn API
 
 1. **Estimators**: has a `fit()` method.
 2. **Transformers**: has a `transform()` method.
@@ -164,7 +197,7 @@ ___
 
 **Some learning algorithms are sensitive to the order of the training instances, and they perform poorly if they get many similar instances in a row.**
 
-## Some useful classes:
+## Some useful classes
 
 - `OneHotEncoder` & `OrdinalEncoder`: for handling text and categorical attributes.
   
@@ -183,7 +216,7 @@ ___
 - `StratifiedKFold` : provides train/test indices to split data in train/test sets.
 
 
-## Some useful functions:
+## Some useful functions
 
 - `cross_val_score`: returns the evaluation scores on each test fold.
 - `cross_val_predict`: returns the predictions made on each test fold.
@@ -215,6 +248,11 @@ ___
 
 - **Scikit-Learn detects when you try to use a binary classification algorithm for a multiclass classification task, and it automatically runs OvA or OvR.**
 
+___
+
+# Tensorflow API
+
+## Keras API
 ___
 
 # Useful links
