@@ -12,3 +12,6 @@
 - to witness = assister
 - tremendous = énorme
 - doomed = condamné(e)
+- thus = ainsi
+- inhibit = entraver/inhiber
+- shallow = peu profond
