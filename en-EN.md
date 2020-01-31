@@ -6,3 +6,9 @@
 - plot = tracer point par point
 - This begs the question though: = Cela pose la question suivante
 - curvy = courbée
+- altogether = tout à fait
+- leading up to = menant à
+- landmark = point de repère
+- to witness = assister
+- tremendous = énorme
+- doomed = condamné(e)
