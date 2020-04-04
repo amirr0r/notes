@@ -37,8 +37,17 @@ ___
 
 ___
 
-## Qu'est-ce que le **stratified sampling** ?
+## Qu'est-ce que le stratified sampling ?
 
+___
+
+## Qu'est-ce que la descente de gradient ? 
+
+## Qu'est ce que la _backpropagation_ ? 
+
+## Qu'est-ce qu'_epoch_ signifie ?
+
+## Qu'est-ce qu'une fonction d'activation ?
 ___
 
 (Doubt) All machine learning algorithms can be train using the online/offline way ? I think that yes because it's oly a way to train and deploy a model.

@@ -8,3 +8,12 @@
 - curvy = courbée
 - that's kind of the pinnacle = c'est un peu l'apogee
 - two things can sometimes be at odds with each other = deux choses peuvent parfois être en désaccord.
+- altogether = tout à fait
+- leading up to = menant à
+- landmark = point de repère
+- to witness = assister
+- tremendous = énorme
+- doomed = condamné(e)
+- thus = ainsi
+- inhibit = entraver/inhiber
+- shallow = peu profond
