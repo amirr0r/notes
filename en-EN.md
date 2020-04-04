@@ -6,3 +6,5 @@
 - plot = tracer point par point
 - This begs the question though: = Cela pose la question suivante
 - curvy = courbée
+- that's kind of the pinnacle = c'est un peu l'apogee
+- two things can sometimes be at odds with each other = deux choses peuvent parfois être en désaccord.
