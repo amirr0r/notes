@@ -1,1 +1,2 @@
-[hacker101 videos by hackerone](https://www.hacker101.com/videos)
+- [hacker101 videos by **hackerone** _(bug bounty platform)_](https://www.hacker101.com/videos)
+- [**Zeecka** - Les Failles Applicatives Web](https://zeecka.fr/GARRIDO_Alex_VeilleTechno_2018.pdf)
