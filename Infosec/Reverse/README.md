@@ -6,7 +6,7 @@ De nos jours, les systèmes d'exploitation que nous utilisons sont dits **multi-
 
 Il faut savoir que lorsqu'un processus est exécuté, il ne manipule pas directement la mémoire physique de l'ordinateur.
 
-En effet, les processus sont placés dans des **sandbox** _("bac à sable" en français)_ auxquelles sont affectées des adresses de **mémoire virtuelle** _(2 * 32 -1 = 4 Go pour 32 bits)_.
+En effet, les processus sont placés dans des **sandbox** _("bac à sable" en français)_ auxquelles sont affectées des adresses de **mémoire virtuelle** ~~_(2 * 32 -1 = 4 Go pour 32 bits)_~~.
 
 Ceci permet au **kernel** _(noyau)_ de superviser l'accès à la mémoire physique de l'ordinateur et ainsi d'éviter les conflits de lecture/écriture.
 
@@ -22,7 +22,7 @@ Segment              | Description
 **heap** _("tas")_   | contient les **variables allouées dynamiquement** via les fonctions type `malloc`, `calloc` ou encore `realloc`.
 **stack** _("pile")_ | zone de stockage temporaire contenant les **variables locales** ainsi que les **arguments des fonctions**. 
 
-> Il existe d'autres segments tels que **.got** et **.plt** par exemple.
+> Il existe d'autres segments _(tels que **.got** et **.plt** par exemple)_ qui ne sont pas décrits ici.
 
 Ci-dessous un schéma récapitulatif de l'image d'un programme _(compilé)_ dans la mémoire:
 
@@ -94,7 +94,10 @@ _Les registres sont des emplacements mémoire qui sont à l'intérieur du proces
 
 ![KitchenMemoryFigureScale](images/KitchenMemoryFigureScale.png)
 
-## x86 Assembly
+
+> La taille d'un registre dépend du processeur. x86 &rarr; 32 bits | x86_64 &rarr; 64 bits
+
+## x86 Architecture 
 
 ### Registres généraux du processeur x86
 
@@ -133,42 +136,235 @@ Pour résumer:
 
 ![routine ebp eip](images/routine-ebp-eip.png)
 
-_L'instruction assembleur pour appeler une fonction `call` équivaut à placer `EIP` sur la stack et se rendre à l'adresse de la fonction:_
+_L'instruction assembleur (`call`) pour appeler une fonction  équivaut à placer `EIP` sur la stack et se rendre à l'adresse de la fonction:_
 
 ```nasm
 push EIP
 jmp <adresse de la fonction>
 ```
 
-### Opérations classiques
+> `push`, `pop`, `call` et `jmp` sont des intructions assembleur que nous allons voir dans la partie suivante. 
 
-- `mov`
-- `add` 
-- `sub` 
-- `lea`
-- `cmp` 
+## Assembly _(assembleur)_
 
-### Contrôle de flux _(Control flow)_
+Structure commune pour les instructions:
 
-- `call <address>`: appel de fonction. Alias de:
-
-```nasm
-push EIP
-jmp <adresse de la fonction>
+```
+OPERATION [ARG1 [, ARG2]]
 ```
 
-- `jmp <address>`: saut inconditionnel. _Similaire à_ `mov eip,<address>`
-- `je <address>`: saut conditionnel (_Si égal alors va à cette adresse_)
-- `jne` 
-- `jz` 
-- `beq` 
+### Syntaxes
 
-## x64 Assembly
 
-## `(GDB)`
+Ci-dessous nous désassemblons la même fonction mais dans **deux syntaxes différentes**:
 
-## ARM Assembly
+1. **intel**:
 
+    ```bash
+    gdb-peda$ set disassembly intel
+    gdb-peda$ disass main
+    Dump of assembler code for function main:
+    0x000011a5 <+0>:	push   ebp
+    0x000011a6 <+1>:	mov    ebp,esp
+    0x000011a8 <+3>:	sub    esp,0x10
+    0x000011ab <+6>:	call   0x11cd <__x86.get_pc_thunk.ax>
+    0x000011b0 <+11>:	add    eax,0x2e50
+    0x000011b5 <+16>:	push   0x2a
+    0x000011b7 <+18>:	push   0x8
+    0x000011b9 <+20>:	push   0x4
+    0x000011bb <+22>:	call   0x1189 <reponse>
+    0x000011c0 <+27>:	add    esp,0xc
+    0x000011c3 <+30>:	mov    DWORD PTR [ebp-0x4],eax
+    0x000011c6 <+33>:	mov    eax,0x0
+    0x000011cb <+38>:	leave  
+    0x000011cc <+39>:	ret    
+    End of assembler dump.
+    ```
+2. **at&t**:
+
+    ```bash
+    gdb-peda$ set disassembly att
+    gdb-peda$ disass main
+    Dump of assembler code for function main:
+    0x000011a5 <+0>:	push   %ebp
+    0x000011a6 <+1>:	mov    %esp,%ebp
+    0x000011a8 <+3>:	sub    $0x10,%esp
+    0x000011ab <+6>:	call   0x11cd <__x86.get_pc_thunk.ax>
+    0x000011b0 <+11>:	add    $0x2e50,%eax
+    0x000011b5 <+16>:	push   $0x2a
+    0x000011b7 <+18>:	push   $0x8
+    0x000011b9 <+20>:	push   $0x4
+    0x000011bb <+22>:	call   0x1189 <reponse>
+    0x000011c0 <+27>:	add    $0xc,%esp
+    0x000011c3 <+30>:	mov    %eax,-0x4(%ebp)
+    0x000011c6 <+33>:	mov    $0x0,%eax
+    0x000011cb <+38>:	leave  
+    0x000011cc <+39>:	ret    
+    End of assembler dump. 
+    ```
+
+#### INTEL
+
+La syntaxe **intel** a la **réputation d'être plus simple à lire et à comprendre**.
+
+- Structure d'une instruction assembleur avec la synatxe **at&t**:
+    ```
+    OPERATION <destination> <source> 
+    ```
+    + Exemple: insérer la valeur `42` dans le registre **`EAX`**
+        ```nasm
+        mov eax, 42 
+        ```
+
+> _**Note**: le `<destination> <source>` est semblable au langage de programmation de plus haut niveau._
+
+#### AT&T
+
+La syntaxe **at&t** est celle qui est **utilisée par défaut sur les outils de désassemblage sur Linux** _(`objdump` etc.)_.
+
+- Structure d'une instruction assembleur avec la synatxe **at&t**:
+    ```
+    OPERATION <source> <destination> 
+    ```
+    + Exemple: insérer la valeur `42` dans le registre **`EAX`**
+        ```nasm
+        mov $42, %eax 
+        ```
+
+**Particularité** de la syntaxe: 
+- `%` devant le nom des **registres**.
+- et `$` en préfixe des **valeurs**.
+
+#### Exemples de différences notoires
+
+**Par conséquent, il est possible d'écrire une même instruction de plusieurs façons différentes!**
+
+**INTEL**    | **AT&T**
+-------------|----------
+`mov eax, 1` | `mov $1, %eax`
+
+##### Taille des paramètres
+
+En assembleur, il est possible de **manipuler qu'une partie d'un registre**.
+
+###### at&t
+
+Pour **AT&T**, la taille doit etre spécifiée en suffixe de l'instruction selon les lettres suivantes:
+
+- **`l`**: _(long, double word)_ 32 premiers bits.
+- **`w`**: _(word)_ 16 premiers bits.
+- **`b`**: _(byte)_ 8 premiers bits (de 0 à 7).
+- **`s`**: _(short)_ bits 7 à 15. 
+
+> **`q`**: 64 premiers bits du registre.
+
+###### intel
+
+En **INTEL**, un registre est divisible en sous parties.
+
+- **`EAX`**: _(long, double word)_ 32 premiers bits du registre .
+- **`AX`**: _(word)_ 16 premiers bits.
+- **`AL`**: _(byte)_ 8 premiers bits (de 0 à 7).
+- **`AH`**: _(short)_ bits 7 à 15. 
+
+>  **`RAX`** (64 bits &rarr; _qword_) également (voir [x86_64 Architecture](#x86-64-architecture)).
+
+De ce fait, pour <u>déplacer la valeur 5 vers les 8 premiers bits du registre **`EAX`**</u>, on utilise `al` en **intel** et `b` en **at&t**:
+
+**INTEL**    | **AT&T**
+-------------|----------
+|`mov al, 5` | `movb $5, %eax`
+
+> EN **INTEL**, lorsqu'on souhaite manipuler une adresse et non un registre, la syntaxe suivante est utilisé: `mov DWORD PTR [addresse], 5`.  
+
+#### Instructions communes
+
+> _Nous avons déjà vu `push`, `pop`, `mov`, `jmp` et `call`_.
+
+#####  Assignations
+
+- `mov <address1>, <address2>`: place le contenu de la source _(**valeur**)_ vers l'adresse de destination _(le sens dépend de la syntaxe)_. 
+
+> `mov` <u>**copie** mais ne déplace pas le contenu!</u>
+
+- `lea <address>, [address]`: assigne l'**adresse** d'une variable à une variable.
+
+> [What is the difference between MOV and LEA?](https://stackoverflow.com/questions/1699748/what-is-the-difference-between-mov-and-lea) `mov`: value &rarr; address | `lea`: address &rarr; adress.
+
+##### Opérations
+
+- `add <value1>, <value2>`: additionne une valeur à une autre.
+- `sub <value1>, <value2>`: soustrait une valeur à une autre.
+
+- `and <value1>, <value2>`: performe un **ET logique**.
+
+![and](images/and.png)
+
+- `xor <value1>, <value2>`: effectue un **OU exclusif**.
+
+![xor](images/xor.png)
+
+##### Manipulation de la stack
+
+- `push <item>`: place l'élément au **sommet** de la pile.
+- `pop <item>`: retire l'élément au sommet de la pile ete remets **`ESP`** à la valeur au sommet sur la pile.
+
+> **Rappel**: le registre `ESP` pointe systématiquement vers le haut de la pile. 
+
+##### Contrôle de flux _(Control flow)_
+
+- `jmp <address>`: saut inconditionnel. _Similaire à_ `mov eip,<address>`.
+- `call <address>`: appel de fonction située à un espace mémoire différent. Alias de:
+
+```nasm
+push EIP ; sauvegarder l'instruction qui suit le call pour reprendre le fil d’exécution du programme
+jmp <adresse de la fonction> ; sauter à la fonction recherchée
+```
+
+- `leave`: détruit ce qu'il reste de la _stackframe_ courante. Alias de:
+
+```nasm
+mov ESP, EBP
+pop EBP
+```
+
+- `ret`: récupère l’adresse de l’instruction à exécuter après le `call`, la place dans **`EIP`** et saute à cette adresse. Alias de:
+
+```nasm
+pop EIP
+```
+
+- `nop`: no operation.
+
+##### Comparaisons
+
+- `cmp <value1>, <value2>`: compare une valeur à une autre en effectuant une soustraction signée.
+    + `test <value>, <value>`: permet de savoir si <value> est positif ou non via un `AND` _(plus rapide que la soustraction de `cmp`)_.
+- `je <address>`: _Si **égal** alors va à cette adresse_.
+- `jne <address>`: _Si **non égal** alors va à cette adresse_.
+- `jz <address>`: _Si **nul** alors va à cette adresse_.
+- `jnz <address>`: _Si **non nul** alors va à cette adresse_.
+- `jg <address>`: _(signé)_ supérieur strict (Greater).
+- `jl <address>`: _(signé)_ inférieur strict (Lower).
+- `ja <address>`: _(**non** signé)_ supérieur strict (Above).
+- `jb <address>`: _(**non** signé)_ inférieur strict (Below).
+- `jae <address>`: _(**non** signé)_ supérieur ou égal.
+- `jbe <address>`: _(**non** signé)_ inférieur ou égal.
+
+## x86_64 Architecture
+
+|**32** bits|**64** bits|
+|-----------|-----------|
+| **`EAX`** | **`RAX`** |
+| **`EDX`** | **`RDX`** |
+| **`EBX`** | **`RBX`** |
+| **`ECX`** | **`RCX`** |
+| **`ESI`** | **`RSI`** |
+| **`EDI`** | **`RDI`** |
+| **`ESP`** | **`RSP`** |
+| **`EBP`** | **`RBP`** |
+| **`EIP`** | **`RIP`** |
+___
 
 ## Tools
 
