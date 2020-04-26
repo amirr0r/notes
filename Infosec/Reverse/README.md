@@ -12,6 +12,31 @@ Ceci permet au **kernel** _(noyau)_ de superviser l'accès à la mémoire physiq
 
 > Ce méchanisme se fait par le biais de [_Page table_](https://en.wikipedia.org/wiki/Page_table). **Note**: Une partie de l'espace virtuel de chaque programme est réservée pour le mapping du kernel.
 
+## Sommaire
+
+1. [Segmentation de la mémoire](#segmentation-de-la-mémoire)
+2. [Fonctionnement de la "Stack"](#fonctionnement-de-la-stack-pile)
+3. [Un point sur les registres](#un-point-sur-les-registres)
+4. [Architecture `x86`](#x86-architecture) _(32 bits)_
+    + [Registres généraux du processeur **x86**](#registres-généraux-du-processeur-x86)
+5. [Assembly (assembleur)](#assembly-assembleur)
+    + [Syntaxes](#syntaxes)
+        * [Intel](#intel)
+        * [AT&T](#att)
+        * [Différences notoires](#exemples-de-différences-notoires)
+            - [Taille des paramètres](#taille-des-paramètres)
+        * [Instructions communes](#instructions-communes)
+            - [assignations](assignations)
+            - [opérations](#opérations)
+            - [manipulation de la stack](#manipulation-de-la-stack)
+            - [contrôle de flux](#contrôle-de-flux-control-flow) _(control flow)_
+            - [opérateurs de comparaisons](#comparaisons)
+6. [Architecture `x86_64`](#x86_64-architecture) _(supporte 32 et 64 bits)_
+7. [Architecture **ARM**](#arm)
+8. [Tools](#tools)
+    + [static](#static)
+    + [dynamic](#dynamic)
+
 ## Segmentation de la mémoire
 
 Segment              | Description
@@ -351,6 +376,8 @@ pop EIP
 - `jae <address>`: _(**non** signé)_ supérieur ou égal.
 - `jbe <address>`: _(**non** signé)_ inférieur ou égal.
 
+___
+
 ## x86_64 Architecture
 
 |**32** bits|**64** bits|
@@ -364,6 +391,10 @@ pop EIP
 | **`ESP`** | **`RSP`** |
 | **`EBP`** | **`RBP`** |
 | **`EIP`** | **`RIP`** |
+
+___
+
+## Architecture ARM
 ___
 
 ## Tools
