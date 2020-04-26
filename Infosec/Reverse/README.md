@@ -314,7 +314,7 @@ De ce fait, pour <u>déplacer la valeur 5 vers les 8 premiers bits du registre *
 
 - `lea <address>, [address]`: assigne l'**adresse** d'une variable à une variable.
 
-> [What is the difference between MOV and LEA?](https://stackoverflow.com/questions/1699748/what-is-the-difference-between-mov-and-lea) `mov`: value &rarr; address | `lea`: address &rarr; adress.
+> [What is the difference between MOV and LEA?](https://stackoverflow.com/questions/1699748/what-is-the-difference-between-mov-and-lea) `mov`: value &rarr; address | `lea`: address &rarr; address.
 
 ##### Opérations
 
