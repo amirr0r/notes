@@ -5,6 +5,7 @@
 - [**NagarroSecurity** - An interactive guide to buffer overflow](https://nagarrosecurity.com/blog/interactive-buffer-overflow-exploitation)
 - [LSE - Security Workshop](https://www.lse.epita.fr/teaching/epita/hts/workshop-secu.pdf)
 - [microcorruption.com](https://microcorruption.com/)
+- [ROP Emporium](https://ropemporium.com/) | [nasm - RE - pWn](https://www.youtube.com/playlist?list=PLcT0DaY68xGzD87AmjN4e9IuF4DfXUfsD)
 
 # [Pwn](https://en.wikipedia.org/wiki/Pwn)
 
