@@ -39,7 +39,7 @@ ___
             - [opérateurs de comparaisons](#comparaisons)
 6. [`gdb`](#gdb)
     + [charger un binaire](#charger-un-binaire)
-    + [syntaxes](#syntaxes)
+    + [choisir la syntaxe](#choisir-la-syntaxe)
     + [examiner la mémoire](#examiner-la-mémoire)
     + [breakpoints](#breakpoints)
     + [instruction par instruction](#instruction-par-instruction)
@@ -485,7 +485,7 @@ gdb --pid <PID> --symbols <binary>
 (gdb) quit
 ```
 
-### syntaxes
+### choisir la syntaxe
 
 ```bash
 # choisir la syntaxe intel
