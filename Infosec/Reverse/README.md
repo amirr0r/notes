@@ -1,6 +1,6 @@
 # Reverse
 
-> **TODO**: _définir le **reverse**_
+Le **reverse engineering**, _ou rétro-ingénierie en français_, est l'activité qui consiste à étudier un objet pour en déterminer le fonctionnement interne ou la méthode de fabrication. [Source: [Wikipedia](https://fr.wikipedia.org/wiki/R%C3%A9tro-ing%C3%A9nierie)] 
 
 <u>Objectif</u>: comprendre la **gestion de la mémoire** lors de **l'exécution d'un programme**.
 
@@ -206,7 +206,7 @@ jmp <adresse de la fonction>
 
 ## Assembly _(assembleur)_
 
-**L'assembleur est le langage du processeur.** Il est compose d'**instructions** dont la structure commune est généralement la suivante:
+**L'assembleur est le langage du processeur.** Il est composé d'**instructions** dont la structure commune est _généralement_ la suivante:
 
 ```
 OPERATION [ARG1 [, ARG2]]
@@ -805,6 +805,7 @@ ___
 
 ## Ressources
 
+- [**N0fix** - Reverse engineering et exploitation de binaires](https://github.com/N0fix/reverseIntro#veille-cyberd%C3%A9fense---victorien-blanchard)
 - [**Hackndo** - Gestion de la mémoire](https://beta.hackndo.com/memory-allocation/)
 - [**Hackndo** - Fonctionnement de la pile](https://beta.hackndo.com/stack-introduction/)
 - [**Hackndo** - Assembleur _(notions de base)_](https://beta.hackndo.com/assembly-basics/)
@@ -812,11 +813,11 @@ ___
 - [**Hackndo** - Fonctionnement de la pile](https://beta.hackndo.com/stack-introduction/)
 
 
-- [**N0fix** - Reverse engineering et exploitation de binaires](https://github.com/N0fix/reverseIntro#veille-cyberd%C3%A9fense---victorien-blanchard)
 - [**Microsoft** - RAM, mémoire virtuelle, fichier d'échange et gestion de la mémoire dans Windows](https://support.microsoft.com/fr-fr/help/2160852/ram-virtual-memory-pagefile-and-memory-management-in-windows)
+- [**Intel** - Advanced Computer Concepts for the (Not So) Common Chef: Memory Hierarchy: Of Registers, Cache & Memory](https://software.intel.com/en-us/blogs/2015/06/11/advanced-computer-concepts-for-the-not-so-common-chef-memory-hierarchy-of-registers)
+
 - [**stackoverflow** - what is kernel mapping in linux?](https://stackoverflow.com/questions/53301388/what-is-kernel-mapping-in-linux)
 - [**aldeid** Wiki - x86-assembly](https://www.aldeid.com/wiki/Category:Architecture/x86-assembly)
-- [**Intel** - Advanced Computer Concepts for the (Not So) Common Chef: Memory Hierarchy: Of Registers, Cache & Memory](https://software.intel.com/en-us/blogs/2015/06/11/advanced-computer-concepts-for-the-not-so-common-chef-memory-hierarchy-of-registers)
 
 - [GDB - Managing inputs for payload injection?](https://reverseengineering.stackexchange.com/questions/13928/managing-inputs-for-payload-injection)
 
@@ -827,3 +828,4 @@ ___
 - [**Sébastien Mériot** - Introduction à l'analyse des malwares](https://www.youtube.com/watch?v=hUdSp-kz_xI)
 - [**HackerSploit** - Malware Analysis](https://www.youtube.com/playlist?list=PLBf0hzazHTGMSlOI2HZGc08ePwut6A2Io)
 - [RTFM SigSegv1 - Analyse du Malware TinyNuke](https://youtu.be/K44tl9NMop0)
+- [malpedia](https://malpedia.caad.fkie.fraunhofer.de/)
