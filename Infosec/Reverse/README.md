@@ -175,9 +175,20 @@ Pour chaque fonction, le compilateur génère:
 
 > Avant l'appel d'une fonction, les arguments puis le registre `EIP` sont placés sur la stack. Ensuite, c'est au tour d'`EBP` d'être **push**. Enfin, `ESP` est écrasé avec la valeur d'`EBP` afin de créer la _stack frame_ de la fonction appelé.
 
+```nasm
+push   ebp
+mov    ebp,esp
+sub    esp,0x10
+```
+
 - et un **épilogue** qui s'occupe de <u>restituer ces informations sauvegardées pour que la fonction appelante puisse reprendre son cours d'exécution</u>.
 
 > Lorsqu'on <u>désassemble</u> une fonction _(avec `gdb` ou `objdump` par exemple)_, les deux dernières instructions sont `pop ebp` et `ret`. `pop ebp` permet de placer `EBP` sur le début de la _stack frame_ de la fonction appelante. `ret` revient à `pop eip` _(qu'on avait **push** au début lors de l'appel à la fonction)_ pour placer `EIP` à l'instruction qui se trouve après l'appel de la fonction.
+
+```nasm
+leave
+ret
+```
 
 Pour résumer:
 
@@ -194,18 +205,17 @@ jmp <adresse de la fonction>
 
 ## Assembly _(assembleur)_
 
-> **TODO**: _définir l'**assembleur**_
-
-Structure commune pour les instructions:
+**L'assembleur est le langage du processeur.** Il est compose d'**instructions** dont la structure commune est généralement la suivante:
 
 ```
 OPERATION [ARG1 [, ARG2]]
 ```
 
+> _Contrairement à ce qu'on pourrait penser, <u>il n'existe pas un seul langage assembleur</u>! Dans la mesure où il existe plusieurs architectures de processeur qui possèdent chacune d'entres elles des instructions différentes en langage machine, chaque architecture possède son propre langage assembleur_.
+
 ### Syntaxes
 
-
-Ci-dessous nous désassemblons la même fonction mais dans **deux syntaxes différentes**:
+Ci-dessous nous désassemblons _(c'est-à-dire qu'on réduit au code assembleur)_ la même fonction mais dans **deux syntaxes différentes**:
 
 1. **intel**:
 
