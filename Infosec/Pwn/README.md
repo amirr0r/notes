@@ -6,7 +6,7 @@ Quand un buffer est placé sur la pile, il grandit dans le sens inverse de la st
 
 En effet, le buffer peut potentiellement réécrire le contenu des registres qui ont été push sur la stack _({r,e}bp, {r,e}ip)_ et par conséquent contrôler le flux d'exécution de notre programme _(en gros il peut appeler les fonctions qu'il veut)_.
 
-> **Objectif:** comprendre les failles de type buffer overflow, étudier les protections mises en place ainsi que leurs contonrnements.
+> **Objectif:** comprendre les failles de type buffer overflow, étudier les protections mises en place au cours des dernières années ainsi que leurs contournements.
 
 ## Buffer overflow
 
