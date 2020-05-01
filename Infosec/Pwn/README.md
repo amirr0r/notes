@@ -69,7 +69,7 @@ pwndbg$ # on lance le programme avec le pattern généré
 Program received signal SIGSEGV, Segmentation fault.
 
 LEGEND: STACK | HEAP | CODE | DATA | RWX | RODATA
-────────────────────────────────────────────────────────────────[ REGISTERS ]────────────────────────────────────────────────────────────────
+────────────────────────────────────────[ REGISTERS ]──────────────────────────────────
  EAX  0x65
  EBX  0x41284141 ('AA(A')
  ECX  0xb7fb4890 (_IO_stdfile_1_lock) ◂— 0
@@ -79,9 +79,9 @@ LEGEND: STACK | HEAP | CODE | DATA | RWX | RODATA
  EBP  0x41414441 ('ADAA')
  ESP  0xbffff320 ◂— 'AAEAAaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
  EIP  0x2941413b (';AA)')
-────────────────────────────────────────────────────────────────[ DISASM ]───────────────────────────────────────────────────────────────────
+─────────────────────────────────────────[ DISASM ]─────────────────────────────────────
 Invalid address 0x2941413b
-────────────────────────────────────────────────────────────────[ STACK ]────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────[ STACK ]──────────────────────────────────────
 00:0000│ esp  0xbffff320 ◂— 'AAEAAaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
 01:0004│      0xbffff324 ◂— 'AaAA0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
 02:0008│      0xbffff328 ◂— '0AAFAAbAA1AAGAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
@@ -90,7 +90,7 @@ Invalid address 0x2941413b
 05:0014│      0xbffff334 ◂— 'GAAcAA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
 06:0018│      0xbffff338 ◂— 'AA2AAHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
 07:001c│      0xbffff33c ◂— 'AHAAdAA3AAIAAeAA4AAJAAfAA5AAKAAgAA6AAL'
-────────────────────────────────────────────────────────────────[ BACKTRACE ]────────────────────────────────────────────────────────────────
+────────────────────────────────────────[ BACKTRACE ]───────────────────────────────────
  ► f 0 2941413b
    f 1 41454141
    f 2 41416141
@@ -102,7 +102,7 @@ Invalid address 0x2941413b
    f 8 41414841
    f 9 33414164
    f 10 41494141
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────
 pwndbg$ # on calcul l'offset (d'autres méthodes existent comme ave pattern offset)
 pwndbg$ pattern search
 Registers contain pattern buffer:
