@@ -1,1 +1,2 @@
-[dCode](https://www.dcode.fr/)
+- [cryptohack.org](https://cryptohack.org/challenges/)
+- [dCode](https://www.dcode.fr/)
