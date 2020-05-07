@@ -829,3 +829,4 @@ ___
 - [**HackerSploit** - Malware Analysis](https://www.youtube.com/playlist?list=PLBf0hzazHTGMSlOI2HZGc08ePwut6A2Io)
 - [RTFM SigSegv1 - Analyse du Malware TinyNuke](https://youtu.be/K44tl9NMop0)
 - [malpedia](https://malpedia.caad.fkie.fraunhofer.de/)
+- [**John Hammond** - Reverse Engineering (CTF WU)](https://www.youtube.com/watch?v=xnGNStPg4GI&list=PL1H1sBF1VAKXYkYf20zni60THPxkbSC8i)

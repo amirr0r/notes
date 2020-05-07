@@ -318,9 +318,10 @@ pwndbg> find AAAA
 
 ## Exercises
 
-- [ROP Emporium](https://ropemporium.com/) | [nasm - RE - pWn](https://www.youtube.com/playlist?list=PLcT0DaY68xGzD87AmjN4e9IuF4DfXUfsD)
+- [ROP Emporium](https://ropemporium.com/)
 - [Protostar](https://exploit-exercises.lains.space/protostar/)
 - [microcorruption.com](https://microcorruption.com/)
+- [**pwnadventure** - VIDEO Game](http://www.pwnadventure.com/) + [_setup server_](https://github.com/LiveOverflow/PwnAdventure3)
 
 ## Ressources
 
@@ -330,6 +331,9 @@ pwndbg> find AAAA
 - [**Hackndo** - exploitation de binaires](https://www.youtube.com/watch?v=V7Gdc32XRhA&list=PL8mmTTrIt_anpC5jd8bCwTB5nLX7GFloq)
 - [**François Boisson** - explication de "une faille de type bufferoverflow ..."_](https://youtu.be/u-OZQkv2ebw)
 - [**LiveOverflow** - Binary Exploitation / Memory Corruption](https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN)
+- [**0x41414141** youtube channel](https://www.youtube.com/channel/UCPqes566OZ3G_fjxL6BngRQ/playlists)
+- [**nasm - RE** - pWn](https://www.youtube.com/playlist?list=PLcT0DaY68xGzD87AmjN4e9IuF4DfXUfsD)
+- [**John Hammond** - Binary exploitation (CTF WU)](https://www.youtube.com/watch?v=yH8kzOkA_vw&list=PL1H1sBF1VAKVg451vJ-rx0y_ZuQMHPamH)
 
 ### Articles/Cours
 
