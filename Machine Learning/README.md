@@ -1,11 +1,13 @@
-# Summary
+# My Machine learning cheatsheet
 
-- [Some definitions](#some-definitions)
+## Summary
+
+- [**Some definitions**](#some-definitions)
   * [Artificial intelligence](#artificial-intelligence)
   * [What is Machine learning ?](#machine-learning)
   * [Meaning of _"learning"_ for a machine [+ example]](#meaning-of-_learning_-for-a-machine)
 - [Training models](#training-models)
-- [Supervised learning](#supervised-learning)
+- [**Supervised learning**](#supervised-learning)
   + [Classification](#classification)
     * [Binary classification](#binary-classification)
     * [Multiclass classification](#multiclass-classification)
@@ -14,20 +16,21 @@
     * [Multilabel classification](#multilabel-classification)
     * [Multioutput classification](#multioutput-classification)
   + [Regression](#regression)
-- [Unsupervised learning](#unsupervised-learning)
-- [Semi supervised learning](#semi-supervised-learning)
-- [Reinforcement learning](#reinforcement-learning)
-- [Scikit-learn API](#scikit-learn-api)
-- [Tensorflow API](#tensorflow-api)
-  + [Keras API](#keras-api)
+- [**Unsupervised learning**](#unsupervised-learning)
+- [**Semi supervised learning**](#semi-supervised-learning)
+- [**Reinforcement learning**](#reinforcement-learning)
+- [Tips & Tools](#tips-tools)
+  + [Scikit-learn API](#scikit-learn-api)
+  + [Tensorflow API](#tensorflow-api)
+    * [Keras API](#keras-api)
 - [Useful links](#useful-links)
 ___
 
 <!-- pagebreak -->
 
-# Some definitions
+## Some definitions
 
-## Artificial Intelligence
+### Artificial Intelligence
 
 No consensus on the very definition of intelligence, so we can say that it's the art of simulating **natural intelligence** _(human or animal tasks)_ by machines.
 
@@ -35,7 +38,7 @@ No consensus on the very definition of intelligence, so we can say that it's the
 
 <!-- pagebreak -->
 
-## Machine Learning
+### Machine Learning
 
 _"Field of study that gives computers the ability to **learn** without being explicitly programmed."_ **Arthur Samuels (1959)**.
 
@@ -49,7 +52,7 @@ More precisely, a **ML algorithm will fit a mathematical function that will adju
 
 > In this example, the `classify` function adjust the parameters of a line equation. 
 
-### Meaning of _"learning"_ for a machine ?
+#### Meaning of _"learning"_ for a machine ?
 
 _"A computer program is said to learn from **experience E** with respect to some class of **tasks T** and **performance measure P**, if its performance at tasks in T, as measured by P, improves with experience E." **Tom Mitchell (1998)**_.
 
@@ -58,24 +61,24 @@ _"A computer program is said to learn from **experience E** with respect to some
   + **E** = playing.
   + **P** = wining _(The % of games won)_.
 
-#### Different types of learning/training
+##### Different types of learning/training
 
 There are 4 main families of machine learning algorithms:
 
-- **Supervised** = data are **already labelled** with the expected predictions when training the model.
-- **Unsupervised** = data are **not labelled** with the expected predictions when training the model.
-- **Semi supervised** = expected predictions **(labels) are not known for all the data**.
-- **Reinforcement** = models are **trained with a reward/punishment system**.
+1. **Supervised** = data are **already labelled** with the expected predictions when training the model.
+2. **Unsupervised** = data are **not labelled** with the expected predictions when training the model.
+3. **Semi supervised** = expected predictions **(labels) are not known for all the data**.
+4. **Reinforcement** = models are **trained with a reward/punishment system**.
 
 On top of that, there are two ways to train a model: _online and offline learning_.
 
-##### Offline _or Batch_ learning
+###### Offline _or Batch_ learning
 
 The system is trained with all available data and just applies what it has learned &rarr; *offline|batch learning*
 
 > **Disadvantage:** need to train a new version of the system from scracth on the full dataset
 
-##### Online learning
+###### Online learning
 
 The system can learn incrementally.
 
@@ -83,32 +86,34 @@ Data has to be given sequentially, either individually or by mini groups called 
 
 > Not to be confused with **cross-validation**.
 
-- Technique de [MapReduce](https://fr.wikipedia.org/wiki/MapReduce): diviser l'apprentissage sur plusieurs serveurs.
+> _[MapReduce](https://fr.wikipedia.org/wiki/MapReduce) technique: split learning through multiple servers._
 
 ___
 
-# Training models
+## Training models
 
 > **TODO**
 ___
 
 <!-- pagebreak -->
 
-# Supervised learning
+## Supervised learning
 
-As explained [before](#different-types-of-learningtraining), supervised learning is ...
+As explained [before](#different-types-of-learningtraining), when we use <u>data labeled with expected predictions during training</u>, we call this **supervised learning**.
 
 Supervised learning algorithms can resolve two types of problem:
 
-- **classification**: assigning to a class.
-  + Example: **TODO**.
+- **classification**: assigning data to a class.
+  + <u>Example</u>: classify emails and tell if these are spam or not.
+  ![classification-illustration](images/classification-illustration.png)
 
 - **regression**: predicting an amount, a quantity.
-  + Example: **TODO**.
+  + <u>Example</u>: predict the price of a house.
+  ![regression-illustration](images/regression-illustration.png)
 
-## Classification
+### Classification
 
-### Binary classification
+#### Binary classification
 
 Detecting **positive class** and **negative class**.
 
@@ -118,7 +123,7 @@ Examples:
 
 > **TODO**: add code
 
-### Multiclass classification
+#### Multiclass classification
 
 Definition: **TODO**.
 
@@ -133,13 +138,13 @@ But, there are two main strategies used to **perform multiclass classification u
 
 > If you want to force Scikit-Learn to use `one-versus-one` or `one-versus-all`, you can use the `OneVsOneClassifier` or `OneVsRestClassifier`
 
-#### One-versus-All or _One-versus-the-rest_
+##### One-versus-All or _One-versus-the-rest_
 
 1. Train **_N_** binary classifiers for each class.
 2. For a given instance, get the decision score from each classifier. 
 3. Then, select the class whose classifier outputs the highest score.
 
-#### One-versus-One
+##### One-versus-One
 
 Train a binary classifier for every pair of class.
    
@@ -147,19 +152,19 @@ Train a binary classifier for every pair of class.
 
 Example: **TODO**
 
-### Multilabel classification
+#### Multilabel classification
 
 Outputs multiple binary tags.
 
 Example: **TODO**
 
-### Multioutput classification
+#### Multioutput classification
 
 Multiclass classification where each label can be multiclass.
 
 Example: **TODO**
 
-### Some principles
+#### Some principles
 
 **A high-precision classifier is not very useful if its recall is too low!**
 
@@ -171,27 +176,28 @@ A perfect classifier will have a **ROC AUC equal to 1**, whereas a purely random
 
 > **AUC**: area under the curve.
 
-## Regression
+### Regression
 
 > **TODO**
 ___
 
-# Unsupervised learning
+## Unsupervised learning
 
 > **TODO**
 ___
 
-# Semi-supervised learning
+## Semi-supervised learning
 
 > **TODO**
 ___
 
-# Reinforcement learning
+## Reinforcement learning
 
 > **TODO**
 ___
+## Tips & Tools
 
-# Scikit-learn API
+### Scikit-learn API
 
 1. **Estimators**: has a `fit()` method.
 2. **Transformers**: has a `transform()` method.
@@ -203,7 +209,7 @@ ___
 
 **Some learning algorithms are sensitive to the order of the training instances, and they perform poorly if they get many similar instances in a row.**
 
-## Some useful classes
+#### Some useful classes
 
 - `OneHotEncoder` & `OrdinalEncoder`: for handling text and categorical attributes.
   
@@ -222,7 +228,7 @@ ___
 - `StratifiedKFold` : provides train/test indices to split data in train/test sets.
 
 
-## Some useful functions
+#### Some useful functions
 
 - `cross_val_score`: returns the evaluation scores on each test fold.
 - `cross_val_predict`: returns the predictions made on each test fold.
@@ -231,7 +237,7 @@ ___
 > **A perfect classifier would have only true positives and true negatives**, so its confusion matrix would have nonzero values only on its main diagonal (top left to bootom right).
 
 
-## Scikit-Learn's Datasets dictionary structure
+#### Scikit-Learn's Datasets dictionary structure
 
 - **DESCR**: dataset description.
 - **data**: array with one row per instance and one column per feature.
@@ -239,7 +245,7 @@ ___
 
 >  **skewed datasets**: some classes are much more frequent than others.
 
-## Some notes and tips
+#### Some notes and principles
 
 - The Scikit-Learn’s _Stochastic Gradient Descent Classifier_ (`SGDClassifier`) has the advantage of being capable of handling very large datasets efficiently. 
 
@@ -256,17 +262,36 @@ ___
 
 ___
 
-# Tensorflow API
+### Tensorflow API
 
-## Keras API
+#### Keras API
 ___
 
-# Useful links
+## Useful links
+
+### Books
+
+- [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition **(Aurélien Géron)**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
+
+### Documentation
 
 - [Scikit-learn ML Glossary](https://scikit-learn.org/stable/glossary.html)
-- [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition **(Aurélien Géron)**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
+
+### Courses
+
 - [Coursera: Machine Learning Stanford Online **(Andrew Ng)**](https://fr.coursera.org/learn/machine-learning)
 - [Petit voyage au pays du machine learning **(Xavier Dupré)**](http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html)
 - [Machine Learning, Statistiques et Programmation **(Xavier Dupré)**](http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html)
-- [NOC-S17-2-Intelligence-Learning notes **(Daniel Shiffman)**](https://github.com/nature-of-code/NOC-S17-2-Intelligence-Learning/tree/master/week3-classification-regression)
 - [Udacity: school of ai](https://www.udacity.com/school-of-ai)
+
+### Tutorials
+
+- [Tensorflow - tutorials](https://www.tensorflow.org/tutorials)
+- [NOC-S17-2-Intelligence-Learning notes **(Daniel Shiffman)**](https://github.com/nature-of-code/NOC-S17-2-Intelligence-Learning/tree/master/week3-classification-regression)
+
+### Exercises
+
+- [**42-AI** - bootcamp python](https://github.com/42-AI/bootcamp_python)
+- [**42-AI** - bootcamp machine learning](https://github.com/42-AI/bootcamp_machine-learning)
+- [**42-AI** - workshops_ml_2019](https://github.com/42-AI/workshops_ml_2019)
+- [**42-AI** - workshops_mathematics](https://github.com/42-AI/workshops_mathematics)
