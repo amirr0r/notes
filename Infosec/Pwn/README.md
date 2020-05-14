@@ -219,8 +219,6 @@ Well done! You exploited a buffer overflow ;)
 ```
 
 > **TODO:** voir comment automatiser le calcul de l'offset.
-___
-
 
 ### Exemple pratique nº2
 
@@ -276,38 +274,16 @@ $ cat /proc/sys/kernel/randomize_va_space
 
 ### PIE
 
-<!-- ## Heap overflow -->
-
-<!-- ## Format string exploit -->
 ___
 
-## Méthodologie
+## Heap overflow
 
-```bash
-$ # 1. Check binary protection
-$ r2 -I <bin>
-$ checksec <bin>
-$ # 2. List syscalls
-$ strace <bin>
-# 3. Debug
-$ pwndbg <bin>
-ppwndbg> p/d <value> # (print decimal)
-# 4. Calculer le padding necessaire pour faire crasher le programme
-ppwndbg> pattern create 100
-<str>
-ppwndbg> r <str> 
-ppwndbg> pattern offset <str>
-ppwndbg> ## ou alors ...
-ppwndbg> pattern search
-# 5. Exploit
-$ python -c "print 'A' * <offset> + pwn.p64(<address>)" | ./bin
-```
+> **TODO**
 
-```bash
-pwndbg> b *<address_ret_instrcution>
-pwndbg> r AAAA
-pwndbg> find AAAA
-```
+## Format string exploit
+
+> **TODO**
+___
 
 ## Tools
 
