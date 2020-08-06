@@ -1,5 +1,7 @@
 # [Pwn](https://en.wikipedia.org/wiki/Pwn)
 
+> _"Segmentation fault"_ est une erreur que tous ceux qui ont déjà programmé en C ont certainement rencontrés. Le **segfault** signifie que <u>le programme a tenté d'accéder à une zone mémoire auquel il n'est pas censé avoir accès</u>.
+
 L'objectif de ces notes est d'expliquer les failles de type **Buffer Overflow**, de passer en revue les protections mises en œuvres au cours de ces dernières années _(NX bit, canary, ASLR)_ ainsi que leurs contournements.
 
 <!-- ## Un peu d'histoire
@@ -52,8 +54,6 @@ void main(int argc, char *argv[])
 <u>**Question**</u>: Tout va bien si le buffer est inférieur à 8 octets mais que se passe-t-il s'il est supérieur ?
 
 ### Principe du _buffer overflow_
-
-_"Segmentation fault"_ est une erreur que tous ceux qui ont déjà programmé en C ont certainement rencontrés. Le **segfault** signifie que <u>le programme a tenté d'accéder à une zone mémoire auquel il n'est pas censé avoir accès</u>.
 
 Quand un buffer est placé sur la pile, il grandit dans le sens inverse de la stack, c'est-à-dire qu'il grandit des adresses basses vers les adresses hautes. De ce fait, **il y a danger !** 
 
