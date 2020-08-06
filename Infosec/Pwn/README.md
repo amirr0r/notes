@@ -17,7 +17,7 @@ L'objectif de ces notes est d'expliquer les failles de type **Buffer Overflow**,
 - **Buffer**: zone mémoire _(de taille prédéfinie)_ servant à stocker des données. _Exemple: `argv` est un buffer qui sert à stocker les arguments passées au programme_.
 
 
-- **Stack**: segment de la mémoire sur lequel s'empile des données locales _(variables, arguments)_ à <u>chaque appel de fonction</u>. Chaque nouvel appel de fonction créé une "zone de travail" appelée **_stackframe_**, délimitée par un pointeur vers le sommet de la _stack_ (**ESP**) et un pointeur vers le bas de la _stackframe_ (**EBP**). _La stack grandit des adresses hautes vers les adresses basses._ 
+- **Stack**: segment de la mémoire sur lequel s'empile des données locales aux fonctions _(variables, arguments)_ à <u>chaque nouvel appel</u>. Chaque nouvel appel de fonction créé une "zone de travail" appelée **_stackframe_**, délimitée par un pointeur vers le sommet de la _stack_ (**ESP**) et un pointeur vers le bas de la _stackframe_ (**EBP**). _La stack grandit des adresses hautes vers les adresses basses._ 
 
 > Sur une architecture 64 bits, **ESP** devient **RSP** et **EBP** devient **RBP**.
 
@@ -63,7 +63,8 @@ En effet, le buffer peut potentiellement réécrire le contenu des registres qui
 
 ![overflow example](images/overflow.png)
 
-![A table ASCII](images/A-41-ASCII.png)
+<!-- ![A table ASCII](images/A-41-ASCII.png) -->
 
 Nous sommes alors dans le cas d'un dépassement de tampon _(buffer overflow)_ et **on peut remplacer les 4 derniers octets du buffer par l'adresse que l'on souhaite** _(d'où le contrôle du flux d'execution)_. 
 
+___
