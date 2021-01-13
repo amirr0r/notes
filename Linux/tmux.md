@@ -39,3 +39,7 @@ $ tmux ls # list tmux sessions in current shell
 
 $ tmux attach -t $SESSION_NAME # attach the session to the current shell
 ```
+
+## tmux tricks
+
+- merge two windows: `join-pane -s 1 -t :0`
