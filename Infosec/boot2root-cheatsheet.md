@@ -1,4 +1,4 @@
-# pentest cheatsheet
+# Boot2Root cheatsheet
 
 > personal cheathsheet populated via my [HTB](https://www.hackthebox.eu/), [Vulnhub](https://www.vulnhub.com/) and CTF experience.
 
