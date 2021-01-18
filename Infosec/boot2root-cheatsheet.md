@@ -124,7 +124,8 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 
 ### Port 3306 (MySQL)
 
-- `mysql -u $USER --password -h $TARGET $DATABASE`
+- Remote connection: `mysql -u $USER --password -h $TARGET [$DATABASE]`
+- Dumping DB: `mysqldump -h $TARGET -u $USER -p $DATABASE > $DATABASE.sql`
 
 #### Useful links
 
