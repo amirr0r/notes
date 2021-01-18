@@ -132,6 +132,11 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 - [MySQL Commands](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
 - [SQl.sh](https://sql.sh/)
 
+### Port 5432 (PostgreSQL)
+
+- Connect to database; user will be prompted for password: 
+`psql -h {{host}} -p {{port}} -U {{username}} -W {{database}}`
+
 ___
 
 ## Windows
