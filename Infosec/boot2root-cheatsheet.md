@@ -122,6 +122,9 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 - `ldapsearch -h <IP> -x -s base namingcontexts` 
 - `ldapsearch -h <IP> -x -b "<distinguishedName>" | grep "^dn"`
 
+### Port 3306 (MySQL)
+
+- `mysql -u $USER --password -h $TARGET $DATABASE`
 ___
 
 ## Windows
