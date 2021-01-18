@@ -125,6 +125,12 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 ### Port 3306 (MySQL)
 
 - `mysql -u $USER --password -h $TARGET $DATABASE`
+
+#### Useful links
+
+- [MySQL Commands](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
+- [SQl.sh](https://sql.sh/)
+
 ___
 
 ## Windows
