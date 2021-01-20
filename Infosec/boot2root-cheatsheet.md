@@ -16,6 +16,7 @@ ___
 - Spawning TTY Shell: `python -c 'import pty; pty.spawn("/bin/bash")'`
 - Running an HTTP Server: `python3 -m http.server`
 - Password "cracking": `hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt`
+	+ `-r /usr/share/hashcat/rules/best64.rule` (Rule-based Attack)
 - Transfering file using **netcat**:	
 	+ Attacker's machine:
 	```bash
@@ -110,6 +111,8 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 4. Vulnerability scan:
 	- generic: `nikto -h $TARGET`
 	- WordPress: `wpscan --url http://$TARGET`
+
+5. Custom wordlist generator: `cewl http://$TARGET`
 
 ### Port 139/445 (SMB - Samba)
 
