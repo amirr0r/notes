@@ -117,6 +117,14 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 ### Port 139/445 (SMB - Samba)
 
 - Listing directories: `smbclient -L //<IP>/<Sharename> -U "username%password"`
+	+ In case of a smb shell, we can download all files by doing:
+	
+		```console
+		smb: \> recurse ON
+		smb: \> prompt OFF
+		smb: \> mget *
+		```
+	
 - (Recursive search) Listing directories and permissions: `smbmap -H $TARGET -R | tee smbmap.txt`
 - "Manual" bruteforce: `for u in $(cat usernames.txt); do echo "User: $u"; smbclient -L //<IP>/ -U "$u%$u"; done`
 
