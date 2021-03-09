@@ -1,14 +1,13 @@
-Every programing language follow **R.D.Tennent principles**:
-
-1. Abstraction
-2. Correspondence
-3. Data Type Completeness
+# Learning process
+> Every programing language follow **R.D.Tennent principles**: (1) Abstraction (2) Correspondence, (3) Data Type Completeness
 
 Sheer volume of information in IT so we cannot learn everything, so we have to develop our **research methodology** and our **learning process**.
 
 Have to learn how to find, choose, and adapt the information you need.
 
 Experience is built on failures, `mistakes are an essential part of the learning process`.
+
+We all started with zero knowledge!
 
 - [Don’t have 10,000 hours to learn something new? That’s fine — all you need is 20 hours](https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/)
 - [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle)
@@ -18,7 +17,7 @@ Experience is built on failures, `mistakes are an essential part of the learning
 
 Passive Learning vs Active Learning
 
-> Before we create documentation for our audience1, we can clarify which points are most important to them.
+> **Tip**: Before creating documentation for your audience, you can clarify which points are most important to them.
 
 **Progress is noticeable when the question that tortured us has lost its meaning.**
 
