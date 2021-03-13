@@ -17,3 +17,4 @@
 - thus = ainsi
 - inhibit = entraver/inhiber
 - shallow = peu profond
+- making up for the shortcomings = combler les lacunes
