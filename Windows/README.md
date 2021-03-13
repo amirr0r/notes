@@ -1,10 +1,10 @@
 # Windows
 
-- 1. [A bit of history...](#history)
+1. [A bit of history...](#history)
     + [Windows Desktop](#windows-desktop)
     + [Windows Server](#windows-server)
-- 2. [Boot partition directories (`C:\`)](#boot-partition-directories-c)
-- 3. [File systems](#file-systems)
+2. [Boot partition directories (`C:\`)](#boot-partition-directories-c)
+3. [File systems](#file-systems)
     + [Permissions](#permissions)
 - [Useful commands](#useful-commands)
 - [Useful links](#useful-links)
