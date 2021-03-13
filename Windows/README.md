@@ -5,7 +5,7 @@
     + [Windows Server](#windows-server)
 2. [Boot partition directories (`C:\`)](#boot-partition-directories-c)
 3. [File systems](#file-systems)
-    + [Permissions](#permissions)
+    + [`NTFS` permissions](#ntfs-permissions)
 - [Useful commands](#useful-commands)
 - [Useful links](#useful-links)
 
@@ -87,8 +87,41 @@ File system | Pros                                                              
 `FAT32`     | **compatibility** between OS and devices (computers, digital cameras, gaming consoles, smartphones, tablets) | <ul><li>File size must be **less than 4GB**</li><li>Need third-party tools for file encryption</li><li>Partitions are limited to a maximum capacity of 8TB</li><li>No built-in data protection or file compression features</li></ul>
 `NTFS`      |  <ul><li>**reliability** (can restore the consistency of the file system in case of power loss for instance)</li><li>**journaling** built-in: file modifications (addition, modification, deletion) are logged<li>**security**: possibility to set granular permissions (files + folders)</li></li>very large-sized partitions support</ul> | Not supported natively by most devices (plus, older media devices like TVs and digital cameras do not offer support at all)
 
+### `NTFS` permissions
 
-### Permissions
+- **Full Control**
+- **Modify**: read, write, and <u>delete</u> files/folders.
+- **List contents** (specific to folders): view and list (sub)folders + executing files.
+- **Read and Execute**
+- **Write** 
+- **Read** 
+- **Traverse Folder**: allows or denies the ability to move through folders to reach other files or folders _(even when listing and viewing permissions are not enable)_.
+
+> NTFS set permissions inheritance by default for folders and files. 
+> It can be manged from File Explorer GUI under the security tab.
+
+### Integrity Control Access Control List ([`icacls`](https://ss64.com/nt/icacls.html))
+
+`icacls` utility allows to manage (list out, add, remove) NTFS permissions on a specific directory.
+
+#### Inheritance settings
+
+- (`CI`): container inherit
+- (`OI`): object inherit
+- (`IO`): inherit only
+- (`NP`): do not propagate inherit
+- (`I`): permission inherited from parent container
+
+#### Permissions
+
+- `F`: full access
+- `D`:  delete access
+- `N`:  no access
+- `M`:  modify access
+- `RX`:  read and execute access
+- `R`:  read-only access
+- `W`:  write-only access
+
 
 ___
 
@@ -96,7 +129,7 @@ ___
 
 > See [PowerShell equivalents for common Linux/bash commands](https://mathieubuisson.github.io/powershell-linux-bash/)
 
-`dir`, `tree`
+`dir`, `tree`, `more` ...
 
 - RDP (Remote Desktop) connection from Linux:
 
@@ -130,11 +163,37 @@ Get-WmiObject -Class Win32_Bios
 
 - Start/Stop service on local/remote computers with `GetWmiObject`
 
+- View the permissions set on a directory
+
+```powershell
+icacls <directory>
+```
+
+- View the permissions set on a directory
+
+```powershell
+icacls <directory>
+```
+
+- Grant a user full permissions to a directory
+
+```powershell
+icacls c:\users /grant username:f:
+```
+
+- Remove a users' permissions on a directory:
+
+```powershell
+icacls c:\users /remove username
+```
+
+
 ___
 
-## Useful links
+## Resources
 
-- [Microsoft Windows version history](https://en.wikipedia.org/wiki/Microsoft_Windows_version_history)
-- [](https://www.theguardian.com/technology/2014/oct/02/from-windows-1-to-windows-10-29-years-of-windows-evolution)
+- [Command line reference](https://ss64.com/)
 - [HTB academy - Windows Fundamentals](https://academy.hackthebox.eu/course/preview/windows-fundamentals)
+- [Microsoft Windows version history](https://en.wikipedia.org/wiki/Microsoft_Windows_version_history)
+- [From Windows 1 to Windows 10: 29 years of Windows evolution](https://www.theguardian.com/technology/2014/oct/02/from-windows-1-to-windows-10-29-years-of-windows-evolution)
 - [Abatchy's tutorials - Windows Kernel Exploitation](https://www.abatchy.com/tag/Kernel%20Exploitation/)
