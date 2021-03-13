@@ -6,10 +6,15 @@
 2. [Boot partition directories (`C:\`)](#boot-partition-directories-c)
 3. [File systems](#file-systems)
     + [`NTFS` permissions](#ntfs-permissions)
+    + [Integrity Control Access Control List (`icacls`)](#integrity-control-access-control-list-icaclshttpsss64comnticaclshtml)
+4. [Services](#services)
+5. [Sessions](#sessions)
 - [Useful commands](#useful-commands)
-- [Useful links](#useful-links)
+- [Resources](#resources)
 
-## History
+## A bit of history...
+
+The concept of a graphical user interface (GUI) was introduced in the late 1970s by the Xerox Palo Alto research laboratory. It was added to Apple and Microsoft operating systems to address usability concerns for everyday users that would likely have difficulty navigating the command line. 
 
 ### Windows Desktop
 
@@ -22,7 +27,6 @@
 - **1995**: **Windows 95** wwith built-in Internet support _(with IE browwser)_.
 
 ![Windows 95](https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/10/2/1412248985311/1128a943-f6de-4c90-a777-501bebb80be6-620x374.png?width=620&quality=85&auto=format&fit=max&s=72e3f02e034ee176bf4f92fe58294935)
-
 
 Followed by other version of Windows: **XP** in 2001, **Vista** in 2007, **7** in 2009, **8** in 2012 and the current one **10** in 2015.
 
@@ -48,6 +52,7 @@ Organizations often find themselves running various older operating systems to s
 
 > Do not confuse versions and the various misconfigurations and vulnerabilities inherent to each.
 
+> Nowadays, systems administrators commonly use GUI-based systems for administering Active Directory, configuring IIS, or interacting with databases.
 ___
 
 ## Boot partition directories (`C:\`)
@@ -70,7 +75,6 @@ Directory               | Description
 `C:\Windows`         | Location of majority of the files required for the Windows operating system
 `C:\Windows\System`, `C:\Windows\System32`, `C:\Windows\SysWOW64`   | Location of all DLLs required for the core features of Windows. _The operating system searches these folders any time a program asks to load a DLL without specifying an absolute path._
 `C:\Windows\WinSxS`             | Windows Component Store contains a copy of all Windows components, updates, and service packs
-
 
 ___
 
@@ -122,19 +126,102 @@ File system | Pros                                                              
 - `R`:  read-only access
 - `W`:  write-only access
 
+___
 
+## Services
+
+> (usually) only be created, modified, and deleted by users with administrative privileges
+> Misconfigurations around service permissions are a common privilege escalation vector
+
+[Lis of Windows Services](https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_components#Services)
+
+3 categories of services: 
+
+1. **Local** Services
+2. **Network** Services
+3. **System** Services
+
+> [Critical System Services](https://docs.microsoft.com/en-us/windows/win32/rstmgr/critical-system-services) cannot be stopped and restarted without a system restart
+
+Service Control Manager (**SCM**)
+
+`services.msc` (MMC add-in) provides a GUI interface for interacting with and managing services.
+
+`lsass.exe` (Local Security Authority Subsystem Service) is the process that is responsible for enforcing the security policy.
+
+[`\\live.sysinternals.com\tools`](https://docs.microsoft.com/en-us/sysinternals/): set of portable Windows applications that can be used to administer Windows systems (for the most part without requiring installation) => **Process Explorer** (show which handles and DLL processes are loaded when a program runs), **Task Manager**, and **Process Monitor** 
+___
+
+## Sessions
+
+- **Interactive**: initiated by logging directly into the system, requesting secondary logon session using `runas` or via RDP.
+- **Non-interactive**: do not require login credentials, used by Windows to automatically start services and applications without requiring user interaction.
+    + `NT AUTHORITY\SYSTEM` (Local System Account): most powerful account in Windows systems.
+    + `NT AUTHORITY\LocalService` (Local Service Account): similar privileges to a local user account. Limited functionalities and can start some services.
+    + `NT AUTHORITY\NetworkService` (Network Service Account):   similar to a standard domain user account. Can establish authenticated sessions for certain network services.
+
+___
+
+## Windows Management Instrumentation (WMI)
+
+**WMI** is a subsystem of PowerShell that provides system administrators with powerful tools for system monitoring. 
+
+> It comes pre-installed since Windows 2000
+
+> Provides a wide variety of uses for both red and blue team. 
+
+`wmic` from cmd.
+
+Some of the common uses:
+- set up system logging
+- status information for both local and remote systems
+- security settings configuration (on remote machines/applications)
+- configure user and group permissions
+- configure system properties
+- executing code
+- schedule processes
+
+**WMI** can be leveraged offensively for both enumeration and lateral movement.
 ___
 
 ## Useful commands
 
+`dir`, `tree`, `more`, `help <command>` ...
+
+> `<command> /?` another wway to access certains commands help menus
+
 > See [PowerShell equivalents for common Linux/bash commands](https://mathieubuisson.github.io/powershell-linux-bash/)
 
-`dir`, `tree`, `more` ...
-
-- RDP (Remote Desktop) connection from Linux:
+- **RDP** (Remote Desktop) connection from Linux (port 3389):
 
 ```bash
 xfreerdp /v:<targetIp> /u:Username /p:Password
+```
+
+### Cmdlets
+
+**Cmdlets** are in the form of `Verb-Noun`.
+
+- Open the online help for a cmdlet or function in our web browser:
+
+```powershell
+Get-Help <cmdlet-name> -Online 
+```
+
+- Download and install help files locally
+
+```powershell
+Update-Help
+```
+
+- Show the contents of directories:
+
+```powershell
+# current directory and all subdirectories
+Get-ChildItem -Recurse
+
+# specify directory path
+Get-ChildItem -Path C:\Users\Administrator\Documents
 ```
 
 - Get information about the operating system (such as OS version and build number) using `WMI classes`:
@@ -153,6 +240,12 @@ Get-WmiObject -Class win32_Process
 
 ```powershell
 Get-WmiObject -Class win32_Service
+```
+
+- List running services: 
+
+```powershell
+Get-Service | ? {$_.Status -eq "Running"} |fl # | select -First 2
 ```
 
 - BIOS Information:
@@ -187,6 +280,18 @@ icacls c:\users /grant username:f:
 icacls c:\users /remove username
 ```
 
+- See the execution policy:
+
+```powershell
+Get-ExecutionPolicy -List
+```
+
+### Aliases
+
+```powershell
+get-alias # list all aliases
+New-Alias -Name "Show-Files" Get-ChildItem # creating a new alias
+```
 
 ___
 
@@ -197,3 +302,4 @@ ___
 - [Microsoft Windows version history](https://en.wikipedia.org/wiki/Microsoft_Windows_version_history)
 - [From Windows 1 to Windows 10: 29 years of Windows evolution](https://www.theguardian.com/technology/2014/oct/02/from-windows-1-to-windows-10-29-years-of-windows-evolution)
 - [Abatchy's tutorials - Windows Kernel Exploitation](https://www.abatchy.com/tag/Kernel%20Exploitation/)
+- [Microsoft: Windows Command Reference](https://download.microsoft.com/download/5/8/9/58911986-D4AD-4695-BF63-F734CD4DF8F2/ws-commands.pdf)
