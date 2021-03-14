@@ -9,8 +9,17 @@
     + [Integrity Control Access Control List (`icacls`)](#integrity-control-access-control-list-icaclshttpsss64comnticaclshtml)
 4. [Services](#services)
 5. [Sessions](#sessions)
+6. [Windows Management Instrumentation (WMI)](#windows-management-instrumentation-wmi)
+7. [Security](#security)
+    + [SID: Security Identifier](#sid-security-identifier)
+    + [Security Accounts Manager (SAM) and Access Control Entries (ACE)](#security-accounts-manager-sam-and-access-control-entries-ace)
+    + [UAC: User Account Control](#uac-user-account-control)
+    + [AppLocker](#applocker)
+    + [Defender (Antivirus)](#defender-antivirus)
 - [Useful commands](#useful-commands)
 - [Resources](#resources)
+
+___
 
 ## A bit of history...
 
@@ -182,6 +191,65 @@ Some of the common uses:
 - schedule processes
 
 **WMI** can be leveraged offensively for both enumeration and lateral movement.
+
+___
+
+## Security
+
+> Due to the many built-in applications, features, and layers of settings, Windows systems can be easily misconfigured, thus opening them up to attack even if they are fully patched.
+
+### SID: Security Identifier
+
+SIDs are added to the user's access token to identify all actions that the user is authorized to take.
+
+```
+(S)-(revision level)-(identifier-authority)-(subauthority1)-(subauthority2)-(etc)-(relative-id)
+            |                   |                  |              |                     |
+            ⌄                   |                  |              |                     |
+    has always been 1.          |                  ⌄              |                     |
+                                | describe user or group's relation with the authority (in what order this authority created the user's account.)
+                                ⌄                                 |                     |
+                authority (computer/network) that created the SID |                     |               
+                                                                  |                     ⌄
+                                                                  |  whether this user is a normal user, a guest, an administrator, etc.
+                                                                  ⌄
+                                              which computer (or domain) created the number
+```
+
+### Security Accounts Manager (SAM) and Access Control Entries (ACE)
+
+**SAM** grants rights to a network to execute specific processes.
+
+Access Control Entries (**ACE**) define which user/process/group have which rights.
+
+These ACEs are stored in in Access Control Lists (**ACL**).
+
+### UAC: User Account Control
+
+> <u>Example of UAC:</u> Admin Approval Mode ask for administrator rights in order to allow a software to be installed.
+
+[How User Account Control works](https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/how-user-account-control-works)
+
+
+> See also: [Windows Registry](https://en.wikipedia.org/wiki/Windows_Registry) and [Run and RunOnce registry keys](https://docs.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys).
+
+### AppLocker
+
+**AppLocker** is Microsoft's application whitelisting solution.
+
+### Group Policy
+
+`gpedit.msc`
+
+### Defender (Antivirus)
+
+> First released as a downloadable anti-spyware tool for Windows XP and Server 2003 then started coming prepackaged as part of the operating system with Windows Vista/Server 2008.
+
+Features:
+- **real-time detection** against known threats
+- **sample submission** for suspicious file analysis
+- **tamper protection**: prevents security settings from being changed through the Registry, PowerShell cmdlets, or group policy)
+
 ___
 
 ## Useful commands
@@ -285,6 +353,25 @@ icacls c:\users /remove username
 ```powershell
 Get-ExecutionPolicy -List
 ```
+
+- Show applications running under the current user while logged in to a system:
+
+```powershell
+reg query HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+```
+
+- Check which protection settings are enabled:
+
+```powershell
+Get-MpComputerStatus
+```
+
+- Instal [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/):
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
 
 ### Aliases
 
