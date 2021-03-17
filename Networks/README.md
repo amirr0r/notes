@@ -362,11 +362,7 @@ For example, HTTP is a service that runs on port 80, however we can have many HT
 
 - **QoS** (Quality of Service): prioritize their traffic to prevent high latency more easily)
 
-- **NAT**
-
-Host only
-
-Bridge
+- **NAT** (Network Address Translation)
 
 ___
 
