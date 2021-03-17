@@ -210,6 +210,12 @@ ___
 
 It is composed of 48-bit/6 bytes represented in hexadecimal format. Example: `00:C4:B5:45:B2:43`
 
+The first half (3 bytes / 24 bit) is the so-called Organization Unique Identifier (`OUI`) defined by the Institute of Electrical and Electronics Engineers (`IEEE`) for the respective manufacturers.
+
+The last half of the MAC address is called the Individual Address Part or Network Interface Controller (`NIC`), which the manufacturers assign. 
+
+The Address Resolution Protocol (`ARP`) is used in IPv4 to determine the MAC addresses associated with the IP addresses.
+
 ### IP
 
 - **IP address**: variable identifier of a machine on a network. (IPv4 example: `192.168.1.241/24`; IPv6 example: `fe80::2f7c:73ff:4397:121f/64`)
