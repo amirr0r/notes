@@ -5,13 +5,12 @@
 [Introdution](#introduction)
 
 1. [Equipments](#1-networking-equipment) (router, switch...)
-2. [Structures](#n2-etworking-structures)
+2. [Structures](#2-etworking-structures)
     + [Types](#21-types) (LAN/WAN, VPN/Proxy...)
     + [Topologies](#22-topologies) (Mesh, Tree, Star, Ring...)
 3. [Protocols](#3-protocols) (TCP/UDP/IP...)
 4. [Models](#4-models) (OSI, TCP/IP)
-5. [Addressing](#5-addressing)
-    + [Subnetting](#subnetting)
+5. [Addressing](#5-addressing) (MAC, IPv4/IPv6 ...)
 6. [Web](#6-web)
 7. [Security](#7-security)
 8. [+Concepts](#8-concepts)
@@ -19,7 +18,6 @@
 [Resources](#resources)
 
 ___
-
 
 ## Introduction
 
@@ -202,27 +200,61 @@ Layer            | Description
 
 ___
 
-## 5. Adressing
+## 5. Addressing
 
-- **MAC address**: unique identifier of the hardware. (Example: `00:C4:B5:45:B2:43`)
+### MAC
+
+> `MAC` stands for Media Access Control.
+
+- **MAC address**: unique identifier of the hardware.
+
+It is composed of 48-bit/6 bytes represented in hexadecimal format. Example: `00:C4:B5:45:B2:43`
+
+### IP
+
 - **IP address**: variable identifier of a machine on a network. (IPv4 example: `192.168.1.241/24`; IPv6 example: `fe80::2f7c:73ff:4397:121f/64`)
 
 Just like a home address has a country, a city, a street, and a house number, an IP address has many parts:
 
 - Earlier numbers usually identify the country and regional network of the device.
 - Then come the subnetwork.
-- And finally the address of the specific device on this subnetwwork.
+- And finally the address of the specific host on this subnetwwork.
 
-This is the **IPv4** version which provides more than 4 billion unique adresses.
-**IPv6** has recently appeared to fill the void of available addresses. It uses 128 bits/16 bytes per address and provides over 340 undecillion unique addresses.
+#### IPv4
 
-IP **public** vs **private** (RFC 1918, `10.0.0.0/8`, `176.16.10.0/10`, `192.168.0.0/16`)
+The **IPv4** version which provides more than 4 billion unique adresses. It uses 32-bit/4 bytes, each is an number ranging from 0-255.
 
-### 5.X. Subnetting
+The IP address is divided into a `host part` and a `network part`. 
 
-#### Mask
+The process of dividing a network into small networks is called **subnetting**.
 
-> The `/24` network allows computers to talk to each other as long as the first three octets of an IP Address are the same (ex: 192.168.1.xxx)
+A **netmask** (which is as long as an IPv4 address) to perform this mathematical operation.
+
+IPs are distinguished between **public** vs **private** classes (RFC 1918, `10.0.0.0/8`, `176.16.10.0/10`, `192.168.0.0/16`):
+
+Most of the time, the all _first IPv4 address_ of the subnets is used for the default **gateway**, and the all _last IPv4 address_ of the subnets is used for **broadcast**.
+
+> Broadcast in a network is a message that is transmitted simultaneously to all participants of a network and does not require any response.
+
+> `+ 2` indicates the broadcast address and the gateway address.
+
+Classless Inter-Domain Routing (`CIDR`) is a suffix that indicates how many bits from the beginning of the IPv4 address belong to the network.
+
+- The `/24` network allows computers to talk to each other as long as the first three octets (8 + 8 + 8 = 24) of an IP Address are the same (ex: 192.168.1.xxx)
+
+Class  | Network Address | First Address  | Last Address      | Subnetmask      | CIDR      | Subnets       | IPs
+------ | --------------- | -------------- | ----------------- | --------------- | --------- | --------------| -------
+**A**  | `1.0.0.0`       | `1.0.0.1`      | `127.255.255.255` | `255.0.0.0`     | `/8`      | **127**       | 16,777,214 + 2
+**B**  | `128.0.0.0`     | `128.0.0.1`    | `191.255.255.255` | `255.255.0.0`   | `/16`     | **16,384**    | 65,534 + 2
+**C**  | `192.0.0.0`     | `192.0.0.1`    | `223.255.255.255` | `255.255.255.0` | `/24`     | **2,097,152** | 254 + 2
+**D**  | `224.0.0.0`     | `224.0.0.1`    | `239.255.255.255` | Multicast       | Multicast | Multicast     | Multicast
+**E**  | `240.0.0.0`     | `240.0.0.1`    | `255.255.255.255` | reserved        | reserved  | reserved      | reserved
+
+- [Subnet Calculator for IPV4](https://www.site24x7.com/tools/ipv4-subnetcalculator.html)
+
+#### IPv6
+
+**IPv6** has recently appeared to fill the void of available addresses. It uses 128-bit/16 bytes per address and provides over 340 undecillion unique addresses.
 
 ___
 
