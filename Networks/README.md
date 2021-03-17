@@ -5,7 +5,7 @@
 [Introdution](#introduction)
 
 1. [Equipments](#1-networking-equipment) (router, switch...)
-2. [Structures](#2-etworking-structures)
+2. [Structures](#2-networking-structures)
     + [Types](#21-types) (LAN/WAN, VPN/Proxy...)
     + [Topologies](#22-topologies) (Mesh, Tree, Star, Ring...)
 3. [Protocols](#3-protocols) (TCP/UDP/IP...)
