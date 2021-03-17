@@ -6,7 +6,7 @@
 
 1. [Equipments](#1-networking-equipment) (router, switch...)
 2. [Structures](#n2-etworking-structures)
-    + [Types](#21-types) (LAN/WAN, VPN...)
+    + [Types](#21-types) (LAN/WAN, VPN/Proxy...)
     + [Topologies](#22-topologies) (Mesh, Tree, Star, Ring...)
 3. [Protocols](#3-protocols) (TCP/UDP/IP...)
 4. [Addressing](#4-addressing)
@@ -47,15 +47,17 @@ To enable communication, we need mediums (ethernet/fiber/coax/wireless...) and e
 
 > Crossover cables are used to directly connect two computers while straight cables are used to connect a computer to another device such as a hub or a switch.
 
-Equipment                                  | Definition
--------------------------------------------|-------------
-**Router**                                 | allows communication between different networks (exemple: local network and Internet)|
-**Switch**                                 | allows to link several computers together. By relying on their physical addresses (MAC addresses), the switch transmits to each machine only what is addressed to it (unlike the **Hub**)|
-Network interface controller/card (**NIC**)| deals with everything related to network communication|
+Equipment                                  | Image | Definition     |
+-------------------------------------------|-------|----------------|
+**Router**/Modem                           | ![](img/router.jpg) | allows communication between different networks (exemple: local network and Internet) |
+**Switch**                                 | ![](img/switch.jpg) | allows to link several computers together. By relying on their physical addresses (MAC addresses), the switch transmits to each machine only what is addressed to it (unlike the **Hub**) |
+Network interface controller/card (**NIC**)| ![](img/nic.jpg) | deals with everything related to network communication |
+
+MAC are physical addresses while IP are logical addresses. These notions will be discussed in more detail later.
 
 > Of course, there are also repeaters.
 
-> MAC are physical addresses while IP are logical addresses. These notions will be discussed in more detail later.
+> _A router does not necessarily have antennas as in the image below._
 
 **Wired connections**: Coaxial cabling, Glass fiber cabling, Twisted-pair cabling etc.
 
@@ -72,7 +74,7 @@ Network Type 	            | Definition
 Local Area Network (`LAN`)  | Internal Networks (Ex: Home or Office)
 Wide Area Network (`WAN`)   | a large number of LANs joined together (Internet/Intranet for instance)
 
-> **Note**: Generally, in an internal network (LAN), machines are not directly exposed to the Internet. They only have **Private IP Addresses** while the router may have a <u>LAN Address</u> (Private IP) to communicate with them, and a <u>WAN Address</u> (**Public IP**) to communicate with Internet. These notions will be discussed in more detail later.
+**Note**: Generally, in an internal network (LAN), machines are not directly exposed to the Internet. They only have **Private IP Addresses** while the router may have a <u>LAN Address</u> (Private IP) to communicate with them, and a <u>WAN Address</u> (**Public IP**) to communicate with Internet. These notions will be discussed in more detail later.
 
 > **WLAN** is the acronym of Wireless Local Area Network.
 
@@ -80,13 +82,37 @@ Wide Area Network (`WAN`)   | a large number of LANs joined together (Internet/I
 
 > A way to identify if the network is a WAN is to use a WAN Specific routing protocol such as `BGP` and if the IP Schema in use is not within **RFC 1918** (`10.0.0.0/8`, `176.16.10.0/10`, `192.168.0.0/16`).
 
-**VPN** (Virtual Private Networks) is just a way to access to another LAN (like you were plugged into it), although you are connected to a primary network.
+#### VPN
+
+- **VPN** (Virtual Private Networks) is just a way to access to another LAN (like you were plugged into it), although you are connected to a primary network.
 
 There 3 main types of VPNs:
 
-1. **Site-To-Site**: (most commonly used to join company networks) Both the client and server are Network Devices and share entire network ranges..
+1. **Site-To-Site**: (most commonly used to join company networks) both the client and server are Network Devices and share entire network ranges..
 2. **Remote access VPN**: client's computer create a virtual interface that behaves as if it is on a client's network (`tun0` on Linux for example).
 3. **SSL VPN**: stream applications or entire desktop sessions within the web browser.
+
+A VPN can be used to obfuscate/"hide" your location, because your IP address used for web requests will be located in the other LAN you are connected to.
+
+#### Proxy
+
+- A **proxy** is when a device or service sits in the middle of a connection and acts as a <u>mediator</u> (inspects traffic's content). A proxy does not necessary change your IP address!
+
+> Without the ability to be a mediator, the device is technically not a proxy, just a **gateway**.
+
+Key types of proxy services:
+
+Type of proxy                     | Image          | Definition
+--------------------|----------------|-----------
+`Forward Proxy`     | ![](img/forward_proxy.png) | client makes a request to the proxy, and that proxy carries out the request. (Mainly used in companies networks)|
+`Reverse Proxy`     | ![](img/reverse_proxy.png) | The reverse of a `Forward Proxy`, instead of being designed to filter outgoing requests, it filters incoming ones. (Examples: `CloudFlare`, `ModSecurity`) |
+
+> **Note**: Malwares that want to bypass `forward proxy` need to be `proxy aware` or use a non-traditional `C2` (a way to receive tasking information) like `DNS`. On Windows, web browsers like Internet Explorer, Edge, or Chrome all obey the "System Proxy" settings by default. If the malware utilizes `WinSock` (Native Windows API), it will likely be `proxy aware` <u>without any additional code</u>. Firefox rely on `libcurl` instead (enables to use the same code on any OS). In that case, in order to be `proxy aware`, malwares would need to look for Firefox and pull the proxy settings.
+
+>  Monitoring DNS can be done with [`Sysmon`](https://medium.com/falconforce/sysmon-11-dns-improvements-and-filedelete-events-7a74f17ca842)
+
+Proxies act either **non-transparently** (communication partner) or **transparently** (client doesn't know about its existence).
+
 
 ### 2.2. Topologies
 
@@ -147,11 +173,13 @@ ___
 
 Taking the time to map out and document each network's purpose
 
-Firewalls
+**Firewalls**
 
-Intrusion Detection Systems like Suricata or Snort
+**Web Application Firewalls** (`WAF`) inspect web requests for malicious content and block the request if it is malicious. _(Read: [OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/) to get started)_
 
-DMZ (Demilitarized Zone)
+**Intrusion Detection Systems** (`IDS`) like `Suricata` or `Snort`
+
+**DMZ** (Demilitarized Zone)
 
 **Spoofing**
 
@@ -159,7 +187,7 @@ DMZ (Demilitarized Zone)
 
 eavesdrop
 
-Man In The Middle (MITM)
+**Man In The Middle** (MITM)
 
 **DoS** (Denial of Service)
 
