@@ -226,13 +226,15 @@ Just like a home address has a country, a city, a street, and a house number, an
 - Then come the subnetwork.
 - And finally the address of the specific host on this subnetwwork.
 
+The IP address is divided into a `host part` and a `network part`. 
+
+The process of dividing a network into small networks is called **subnetting**.
+
 #### IPv4
 
 The **IPv4** version which provides more than 4 billion unique adresses. It uses 32-bit/4 bytes, each is an number ranging from 0-255.
 
-The IP address is divided into a `host part` and a `network part`. 
-
-The process of dividing a network into small networks is called **subnetting**.
+It is represented either in binary or decimal separated by dots.
 
 A **netmask** (which is as long as an IPv4 address) to perform this mathematical operation.
 
@@ -262,11 +264,25 @@ Class  | Network Address | First Address  | Last Address      | Subnetmask      
 
 **IPv6** has recently appeared to fill the void of available addresses. It uses 128-bit/16 bytes per address and provides over 340 undecillion unique addresses.
 
+In the long term, IPv6 is expected to completely replace IPv4, which is currently still predominantly used on the Internet. 
+Note that IPv4 and IPv6 can be made available simultaneously.
+
+
+The 128 bits are divided into **8 blocks** times 16 bits (or 4 hex numbers). 
+All 4 hex numbers are grouped and separated by a colon (`:`) instead of a simple dot (`.`) as in IPv4. 
+
+To simplify the notation, two colons (`::`) can be used to represent at least 4 zeros in the blocks (but we can use this notation only once as aforementioned in **RFC 5952**).
+
+> `SLAAC`/`DHCPv6` is used for address self-configuration.
+
+> `IPSec` is mandatory with IPv6 (unlike IPv4)
+
+> The default prefix length is `/64`. However, other typical prefixes are `/32`, `/48`, and `/56`.
 ___
 
 ## 6. Web
 
-**HTTP**
+`HTTP`
 
 Uniform Resource Locator (**URL**)
 
@@ -296,14 +312,22 @@ eavesdrop
 
 **DoS** (Denial of Service)
 
-OSPF (Open Shortest Path First) advertisements
+`OSPF` (Open Shortest Path First) advertisements
 
 > routers should have a trusted network
+
 ___
 
 ## 8. +Concepts
 
-QoS (Quality of Service: prioritize their traffic to prevent high latency more easily)
+**QoS** (Quality of Service: prioritize their traffic to prevent high latency more easily)
+
+**NAT**
+
+Host only
+
+Bridge
+
 ___
 
 ## Resources
