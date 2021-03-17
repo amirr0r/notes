@@ -98,7 +98,7 @@ A VPN can be used to obfuscate/"hide" your location, because your IP address use
 
 - A **proxy** is when a device or service sits in the middle of a connection and acts as a <u>mediator</u> (inspects traffic's content). A proxy does not necessary change your IP address!
 
-> Without the ability to be a mediator, the device is technically not a proxy, just a **gateway**.
+> Without the ability to be a mediator, the device is technically not a proxy, just a **gateway** (where are packets routed to if our routing table doesn't know).
 
 Key types of proxy services:
 
@@ -169,6 +169,8 @@ They are representation of the **layers** through which the data goes when it is
 > `OSI` stands for **O**pen **S**ystems **I**nterconnection. This model was published by published by the International Telecommunication Union (**ITU**) and the International Organization for Standardization (**ISO**).
 
 When a Packet is transferred, it is processed layer by layer. Each layer is adding its **headers** and perform its assigned functions.
+
+> header = information about where the package is going and where it came from (+ metadata).
 
 This is called [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(networking)).
 
@@ -282,11 +284,24 @@ ___
 
 ## 6. Web
 
-`HTTP`
+Websites rely on `HTTP` HyperText Transfer Protocol.
 
-Uniform Resource Locator (**URL**)
+The website address or Uniform Resource Locator (**URL**) which we enter into our browser is also known as Fully Qualified Domain Name (**FQDN**).
 
-Domain Name(**DN**) translated into an IP address via **DNS**
+Then it's translated into an IP address via Domain Name System (**DNS**).
+
+Examples:
+
+- FQDN (`example.com`)
+- an URL (`http://http://example.com/`)
+
+The Web is completely open. All of its connection are shared and information is sent in plain text. This makes it possible for "hackers" to snoop on any personal information that you send over the internet.
+
+Safe websites prevent **snooping** and **tampering**, by asking your web browser to communicate on a secure channel which is `HTTP`**S** a combination of HTTP and `TLS` (Transport Layer Security).
+
+When a website asks your browser to engage in a secure connection, it first provides a **digital certificate**. A digital certificate is an official ID card proving that it's the website it claims to be.
+
+> Digital certificates are published by certificate authorities, which are trusted entities that verify the identities of websites and issue certificates for them. Just like a government can issue IDs or passports. Now if a website tries to start a secure connection without a properly issued digital certificate, your browser will warn you.
 
 ___
 
@@ -319,6 +334,12 @@ eavesdrop
 ___
 
 ## 8. +Concepts
+
+A **socket** is an interface that allows programs to send and receive data while a port is used to identify which application should send or receive data.
+
+Every connection between a host and destination requires a unique socket.
+
+For example, HTTP is a service that runs on port 80, however we can have many HTTP connections and to maintain each connection a socket gets created per connection.
 
 **QoS** (Quality of Service: prioritize their traffic to prevent high latency more easily)
 
