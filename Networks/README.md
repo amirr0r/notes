@@ -9,15 +9,17 @@
     + [Types](#21-types) (LAN/WAN, VPN/Proxy...)
     + [Topologies](#22-topologies) (Mesh, Tree, Star, Ring...)
 3. [Protocols](#3-protocols) (TCP/UDP/IP...)
-4. [Addressing](#4-addressing)
+4. [Models](#4-models) (OSI, TCP/IP)
+5. [Addressing](#5-addressing)
     + [Subnetting](#subnetting)
-5. [Web](#5-web)
-6. [Security](#6-security)
-7. [+Concepts](#7-concepts)
+6. [Web](#6-web)
+7. [Security](#7-security)
+8. [+Concepts](#8-concepts)
 
 [Resources](#resources)
 
 ___
+
 
 ## Introduction
 
@@ -139,19 +141,84 @@ ___
 
 ## 3. Protocols
 
-A **protocol** corresponds to the rules for communication.
+A **protocol** corresponds to a set of rules for communication between hosts.
 
->  IoT (Internet of Things) protocols: `Insteon`, `Z-Wave`, and `ZigBee`.
+One of the most important protocols used in Internet communication is simply call `IP` (**I**nternet **P**rotocol).
+
+Each **packet** has the IP (internet address) of **where it came from and where it's going** !
+
+`TCP` or Transmission Control Protocol, manages the sending and receiving of all you data as packets.
+
+Unlike `UDP` (User Datagram Protocol) that doesn't support acknowledgment of receipt.
+
+The Internet is entirely based on the TCP/IP protocol family.
+
+A protocol that you are probably familiar with is `HTTP` (Hypertext Transfer Protocol) which is used for websites.
+
+As you may guessed, the WEB isn't the only way to communicate though Internet, there are a lot of protocols for a lot of different uses such as `FTP` for File Transfer Protocol.
+
+>  Some IoT (Internet of Things) specific protocols: `Insteon`, `Z-Wave`, and `ZigBee`.
 ___
 
-## 4. Adressing
+## 4. Models
 
-MAC
+`OSI` and `TCP/IP` models both describe packets workflow. 
 
-IP public vs private  (RFC 1918, 10.0.0.0/8, 176.16.10.0/10, 192.168.0.0/16)
+They are representation of the **layers** through which the data goes when it is transferred from host to another.
+
+![](img/net_models.png)
+
+> `OSI` stands for **O**pen **S**ystems **I**nterconnection. This model was published by published by the International Telecommunication Union (**ITU**) and the International Organization for Standardization (**ISO**).
+
+When a Packet is transferred, it is processed layer by layer. Each layer is adding its **headers** and perform its assigned functions.
+
+This is called [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(networking)).
+
+The receiver reverses the process and unpacks the data on each layer with the header information.
+
+![](img/packet_transfer.png)
+
+### OSI model
+
+Layer           | Description
+----------------|------------
+`1.Physical`    | **Bitstreams** transmission takes place on **wired** or **wireless** transmission lines: electrical signals, optical signals, or electromagnetic waves. 
+`2.Data Link`   | Enables reliable and error-free transmissions on the respective medium. Bitstreams are divided into blocks or **frames**.
+`3.Network`     | Connections are established in circuit-switched networks, and data **packets** are forwarded in packet-switched networks.
+`4.Transport`   | End-to-end control of the transferred data. It can detect and avoid _congestion_ situations. Packets become **segments** / **datagrams**.
+`5.Session`     | Controls the logical connection between two systems and prevents, connection breakdowns or other problems.
+`6.Presentation`| Transfers the system-dependent presentation of data into a form independent of the application.
+`7.Application` | Controls the input and output of data and provides the application functions (among other things).
+
+### TCP/IP model
 
 
-### 4.X. Subnetting
+Layer            | Description
+---------------- | -------
+`1.Link`         | Responsible for placing the TCP/IP packets on the network medium and receiving corresponding packets from the network medium. It is designed to work independently of the network access method, frame format, and medium.
+`2.Internet`     | Responsible for host addressing, packaging, and routing functions.
+`3.Transport`    | Provides (TCP) session and (UDP) datagram services for the Application Layer.
+`4.Application`  | Allows applications to access the other layers' services and defines the protocols applications use to exchange data.
+
+___
+
+## 5. Adressing
+
+- **MAC address**: unique identifier of the hardware. (Example: `00:C4:B5:45:B2:43`)
+- **IP address**: variable identifier of a machine on a network. (IPv4 example: `192.168.1.241/24`; IPv6 example: `fe80::2f7c:73ff:4397:121f/64`)
+
+Just like a home address has a country, a city, a street, and a house number, an IP address has many parts:
+
+- Earlier numbers usually identify the country and regional network of the device.
+- Then come the subnetwork.
+- And finally the address of the specific device on this subnetwwork.
+
+This is the **IPv4** version which provides more than 4 billion unique adresses.
+**IPv6** has recently appeared to fill the void of available addresses. It uses 128 bits/16 bytes per address and provides over 340 undecillion unique addresses.
+
+IP **public** vs **private** (RFC 1918, `10.0.0.0/8`, `176.16.10.0/10`, `192.168.0.0/16`)
+
+### 5.X. Subnetting
 
 #### Mask
 
@@ -159,7 +226,7 @@ IP public vs private  (RFC 1918, 10.0.0.0/8, 176.16.10.0/10, 192.168.0.0/16)
 
 ___
 
-## 5. Web
+## 6. Web
 
 **HTTP**
 
@@ -169,7 +236,7 @@ Domain Name(**DN**) translated into an IP address via **DNS**
 
 ___
 
-## 6. Security
+## 7. Security
 
 Taking the time to map out and document each network's purpose
 
@@ -196,7 +263,7 @@ OSPF (Open Shortest Path First) advertisements
 > routers should have a trusted network
 ___
 
-## 7. +Concepts
+## 8. +Concepts
 
 QoS (Quality of Service: prioritize their traffic to prevent high latency more easily)
 ___
