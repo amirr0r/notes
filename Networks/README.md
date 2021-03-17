@@ -10,10 +10,17 @@
     + [Topologies](#22-topologies) (Mesh, Tree, Star, Ring...)
 3. [Protocols](#3-protocols) (TCP/UDP/IP...)
 4. [Models](#4-models) (OSI, TCP/IP)
-5. [Addressing](#5-addressing) (MAC, IPv4/IPv6 ...)
+5. [Addressing](#5-addressing)
+    + [Media Access Control (MAC)](#mac)
+    + [IP](#ip)
+        * [IPv4](#ipv4)
+        * [IPv6](#ipv6)
 6. [Web](#6-web)
 7. [Security](#7-security)
-8. [+Concepts](#8-concepts)
+    + [some networking attacks](#some-attacks)
+    + [some countermeasures](#some-countermeasures)
+    + [some tools](#some-tools)
+8. [+Concepts](#8-concepts) (QoS, NAT, Socket ...)
 
 [Resources](#resources)
 
@@ -307,43 +314,55 @@ ___
 
 ## 7. Security
 
-Taking the time to map out and document each network's purpose
+### Some attacks
 
-**Firewalls**
+- (`ARP`) **Spoofing**
 
-**Web Application Firewalls** (`WAF`) inspect web requests for malicious content and block the request if it is malicious. _(Read: [OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/) to get started)_
+- **Snooping**/**eavesdropping** on communication between these devices
 
-**Intrusion Detection Systems** (`IDS`) like `Suricata` or `Snort`
+- **DoS** (Denial of Service)
 
-**DMZ** (Demilitarized Zone)
+- **Fuzzing**
 
-**Spoofing**
+> `OSPF` (Open Shortest Path First) **advertisements** can leads to **Man In The Middle** (MITM)
 
-**Snooping** in on any communication between these devices
+> Routers should have a **trusted network** to prevent this.
 
-eavesdrop
+### Some Countermeasures
 
-**Man In The Middle** (MITM)
+> Taking the time to map out and document each network's purpose
 
-**DoS** (Denial of Service)
+- If a machine is directly accessible on the Internet, it is more likely to become compromised. Putting it in a **DMZ** (Demilitarized Zone) allows to put networking protections between the machine and other devices/Internet.
 
-`OSPF` (Open Shortest Path First) advertisements
+- Putting workstations on dedicated networks via Virtual LAN (`VLAN`) for instance
 
-> routers should have a trusted network
+- Using encryption
+
+- Filtering packets
+
+### Some Tools
+
+- **Firewalls**: filters incoming/outgoing traffic based on rules.
+
+- **Web Application Firewalls** (`WAF`) inspect web requests for malicious content and block the request if it is malicious. _(Read: [OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/) to get started)_
+
+- **Intrusion Detection Systems** (`IDS`) like `Suricata` or `Snort`.
+
+> We distinguish **NIDS** (Network IDS) and HIDS (Host IDS).
 
 ___
 
 ## 8. +Concepts
 
-A **socket** is an interface that allows programs to send and receive data while a port is used to identify which application should send or receive data.
+- **Socket**: interface that allows programs to send and receive data while a port is used to identify which application should send or receive data.
 
 Every connection between a host and destination requires a unique socket.
 
 For example, HTTP is a service that runs on port 80, however we can have many HTTP connections and to maintain each connection a socket gets created per connection.
 
-**QoS** (Quality of Service: prioritize their traffic to prevent high latency more easily)
+- **QoS** (Quality of Service): prioritize their traffic to prevent high latency more easily)
 
-**NAT**
+- **NAT**
 
 Host only
 
