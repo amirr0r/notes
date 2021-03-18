@@ -40,7 +40,7 @@ ___
 
 ___
 
-Top 20 mistakes web developers do:
+## Top 20 mistakes web developers do
 
 **1.** 	Permitting Invalid Data to Enter the Database
 
@@ -82,7 +82,7 @@ Top 20 mistakes web developers do:
 
 **20.** Web Application Firewall misconfigurations
 
-Last OWASP Top 10:
+## Last OWASP Top 10:
 
 **1.** 	Injection
 
