@@ -22,6 +22,7 @@
 ## General resources
 
 - [**Haax** - cheatsheet](https://cheatsheet.haax.fr/)
+- [The Hacker Recipes](https://www.thehacker.recipes/)
 - [Ethical Hacking - Greycampus](https://www.greycampus.com/opencampus/ethical-hacking/what-is-hacking)
-- [Techniques de hacking - **Jon Erickson**](https://www.pearson.fr/fr/book/?GCOI=27440100296090#h2tabtableContents)
 - [aldeid wiki](https://www.aldeid.com/wiki/Main_Page)
+- [Techniques de hacking - **Jon Erickson**](https://www.pearson.fr/fr/book/?GCOI=27440100296090#h2tabtableContents)
