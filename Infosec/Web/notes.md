@@ -97,7 +97,7 @@ ID      | Vuln                                 | Description |
 **9.**  | Using Components with Known Vulns    | |
 **10.** | Insufficient Logging & Monitoring    | |
 
-![Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+[Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 
 Three types of XSS:
 
@@ -115,7 +115,7 @@ ____
 
 **Sanitization**: Removing special characters and non-standard characters from user input before displaying it or storing it.
 
-![Web stacks](https://en.wikipedia.org/wiki/Solution_stack)
+[Web stacks](https://en.wikipedia.org/wiki/Solution_stack)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 [HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 
-![OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
+[OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
 
 >  URL's should be kept to below 2,000 characters.
 
