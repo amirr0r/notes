@@ -99,7 +99,7 @@ ID      | Vuln                                 | Description |
 
 ![Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 
-Tree types of XSS:
+Three types of XSS:
 
 - **Reflected**: Occurs when user input is displayed on the page after processing (e.g., search result or error message).
 - **Stored**: Occurs when user input is stored in the back end database and then displayed upon retrieval (e.g., posts or comments).
