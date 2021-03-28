@@ -1,4 +1,5 @@
 # Learning process
+
 > Every programing language follow **R.D.Tennent principles**: (1) Abstraction (2) Correspondence, (3) Data Type Completeness
 
 Sheer volume of information in IT so we cannot learn everything, so we have to develop our **research methodology** and our **learning process**.
