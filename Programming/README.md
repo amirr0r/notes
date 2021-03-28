@@ -138,17 +138,25 @@ A queue is the opposite of a stack whose elements follow the **FIFO** principle:
 
 ___
 
-### Trees
+### Graphs
 
 ___
 
-### Graphs
+### Trees
 
 ___
 
 ## 2. Algorithms
 
-## Complexity analysis
+### Operations
+
+- Conditions: `if`, `else if/elif`, `else`
+- Loop: `while`, `for ... in ...`
+- Elementary operations: `+`, `-`, `*`, `/`, `%` &rarr; remainder of a division
+
+___
+
+### Complexity analysis
 
 A problem can have multiple solutions.
 All these solutions are not equal, some are better than the others. 
@@ -160,7 +168,7 @@ Two concepts help programmers to analyze algorithms:
 1. **Time complexity**: how fast an algorithm runs.
 2. **Space complexity**: how much memory/space an algorithm uses up.
 
-### Big O notation
+#### Big O notation
 
 We care about how fast an algorithm runs as the size of the input increase.
 
@@ -175,17 +183,22 @@ We're interested in the **worst-case scenario** as well as the **average case sc
 - **Exponential**: O(2<sup>n</sup>)
 - **Factorial**: `O(n!)`
 
-## Operations
+____
 
-- Conditions: `if`, `else if/elif`, `else`
-- Loop: `while`, `for ... in ...`
-- Elementary operations: `+`, `-`, `*`, `/`, `%` &rarr; remainder of a division
+### Sorting algorithms
 
-## Sorting algorithms
+#### Bubble sort 
+#### Insert sort 
+#### Selection sort 
+#### Quick sort 
+#### Heap sort 
+#### Merge sort 
 
-## Searching algorithms
+___
 
-## Greedy algorithms
+### Searching algorithms
+
+#### Binary search
 
 ___
 
