@@ -15,7 +15,8 @@ An **algorithm** is a set of instructions that we need to follow to achieve a go
         + [Singly Linked List](#singly-linked-list)
         + [Doubly Linked List](#doubly-linked-list)
     - [Hash tables](#hash-tables)
-    - [Stacks & Queues](#stacks-queues)
+    - [Stacks](#stacks)
+    - [Queues](#queues)
     - [Graphs](#graphs)
     - [Trees](#trees)
 2. [Algorithms](#2-algorithms)
@@ -97,9 +98,43 @@ ___
 
 ### Hash tables
 
+Also known as dictionary in Python or object in Javascript, hash tables allows us to store data with **key/value pairs**.
+
+**Example:** `{ "name": "amir", "age": 23 }`
+
+> Under the hood, a hash table uses a **dynamic array** of **linked lists** to store key/value pairs. When inserting a key/value pair, the hash of the key (a number) becomes an index in the dynamic array, and the value is added to the linked list at that index in the dynamic array (+ a reference to the key).
+
+#### Hash tables standard operations complexities
+
+- **Inserting a key/value pair**: `O(1)` on average; `O(n)` in the worse case
+- **Removing a key/value pair**: `O(1)` on average; `O(n)` in the worse case
+- **Looking up a key**: `O(1)` on average; `O(n)` in the worse case
+
 ___
 
-### Stacks & Queues
+### Stacks
+
+A stack is data structure whose elements follow the **LIFO** order: **L**ast **I**n **F**irst **O**ut.
+
+![stack](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Data_stack.svg/220px-Data_stack.svg.png)
+
+#### Stack standard operation complexities
+
+- **Pushing an element onto the stack**: `O(1)`
+- **Popping an element off the stack**: `O(1)`
+- **Searching for an element in the stack**: `O(n)`
+
+___
+
+### Queues
+
+A queue is the opposite of a stack whose elements follow the **FIFO** principle: **F**irst **I**n **F**irst **O**ut.
+
+#### Queue standard operation complexities
+
+- **Enqueuing an element into the queue**: `O(1)`
+- **Dequeuing an element out of the queue**: `O(1)`
+- **Searching for an element in the queue**: `O(n)`
 
 ___
 
@@ -144,7 +179,7 @@ We're interested in the **worst-case scenario** as well as the **average case sc
 
 - Conditions: `if`, `else if/elif`, `else`
 - Loop: `while`, `for ... in ...`
-- Elementary operations: `+`, `-`, `*`, `/`, `%` &rarr; remainder or of a division
+- Elementary operations: `+`, `-`, `*`, `/`, `%` &rarr; remainder of a division
 
 ## Sorting algorithms
 
