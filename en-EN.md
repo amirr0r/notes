@@ -20,3 +20,4 @@
 - making up for the shortcomings = combler les lacunes
 - realm = domaine?
 - invaluable experience = expérience inestimable
+- broadly speaking = d'une manière générale
