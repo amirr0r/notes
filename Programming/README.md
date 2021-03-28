@@ -35,6 +35,8 @@ An **algorithm** is a set of instructions that we need to follow to achieve a go
 
 > 32-bit integer (4 bytes); 64-bit integer (8 bytes)
 
+___
+
 ### Arrays
 
 Collection of data accessible by numbered index starting at 0. 
@@ -58,6 +60,8 @@ Collection of data accessible by numbered index starting at 0.
 - **Removing a value in the middle**: `O(n)`
 - **Removing a value at the end**: `O(1)`
 - **Copying the array**: `O(n)`
+
+___
 
 ### Linked Lists
 
@@ -89,11 +93,19 @@ Each **node** of the list has a `value`, a pointer to the `next` node and a poin
 - **Inserting / Removing a middle node**: `O(n)` to access + `O(1)`
 - **Searching for a value**: `O(n)`
 
+___
+
 ### Hash tables
+
+___
 
 ### Stacks & Queues
 
+___
+
 ### Trees
+
+___
 
 ### Graphs
 
