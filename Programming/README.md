@@ -24,6 +24,7 @@ An **algorithm** is a set of instructions that we need to follow to achieve a go
     - [Trees](#trees)
 2. [Algorithms](#2-algorithms)
     - [Complexity analysis](#complexity-analysis) (Time/Space complexity, Big O Notation)
+[Useful links](#useful-links)
 
 ## 1. Data Structures
 
