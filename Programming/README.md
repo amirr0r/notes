@@ -14,10 +14,13 @@ An **algorithm** is a set of instructions that we need to follow to achieve a go
     - [Linked lists](#linked-lists)
         + [Singly Linked List](#singly-linked-list)
         + [Doubly Linked List](#doubly-linked-list)
-    - [Hash tables](#hash-tables)
+    - [Hash tables](#hash-tables) (dictionaries/objects)
     - [Stacks](#stacks)
     - [Queues](#queues)
     - [Graphs](#graphs)
+        + [Directed Graph](#directed-graph)
+        + [Connected Graph](#connected-graph)
+        + [Cyclic Graph](#cyclic-graph)
     - [Trees](#trees)
 2. [Algorithms](#2-algorithms)
     - [Complexity analysis](#complexity-analysis) (Time/Space complexity, Big O Notation)
@@ -140,6 +143,37 @@ ___
 
 ### Graphs
 
+Collection of nodes that may or may not be connected together.
+
+> Example in real life: social medias.
+
+Nodes are called **vertices**. Every node is a **vertex** in the graph.
+Relations between them are called **edges**.
+
+#### Directed Graph
+
+Edges can have a direction, then we talk a **directed graph**. Otherwise the graph is **undirected**. 
+
+> Undirected edges mean that we can go from a vertex to another in both directions.
+
+#### Connected Graph
+
+If there is some path between any two nodes/vertices in the graph, we say that the graph is **connected**.
+
+If this isn't case, the graph is **disconnected**. 
+
+#### Cyclic Graph
+
+A **cycle** is a closed path (loop) that do not pass through several nodes/vertices.
+
+If a graph has at least a cycle, then wwe call it a **cyclic graph**.
+If it doesn't have any cycles, we call it an acyclic graph.
+
+> Example in real life: wikipedia links (graph -> data structures -> complexity analysis -> graph) 
+
+
+
+
 ___
 
 ### Trees
@@ -200,11 +234,18 @@ ___
 
 #### Binary search
 
+#### Graph search
+
+##### BFS (Breadth first search)
+##### DFS (Depth first search)
+
 ___
 
-> Object-oriented programming (OOP), Functional programming, Thread, mutex, Metaprogramming etc.
+> Object-oriented programming (OOP), Functional programming, Threads, mutex, Metaprogramming etc.
 ___
 
 ## Useful links
 
 - [**CS Dojo**: Data Structures and Algorithms](https://youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)
+- [**HackerRank**: Data Structures](https://www.youtube.com/playlist?list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX)
+- [**HackerRank**: Algorithms](https://www.youtube.com/playlist?list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL)
