@@ -21,7 +21,7 @@ An **algorithm** is a set of instructions that we need to follow to achieve a go
         + [Directed Graph](#directed-graph)
         + [Connected Graph](#connected-graph)
         + [Cyclic Graph](#cyclic-graph)
-    - [Trees](#trees)
+    - :evergreen_tree: [Trees](#evergreen_tree-trees)
 2. [Algorithms](#2-algorithms)
     - [Complexity analysis](#complexity-analysis) (Time/Space complexity, Big O Notation)
 
@@ -168,17 +168,60 @@ If this isn't case, the graph is **disconnected**.
 
 A **cycle** is a closed path (loop) that do not pass through several nodes/vertices.
 
-If a graph has at least a cycle, then wwe call it a **cyclic graph**.
-If it doesn't have any cycles, we call it an acyclic graph.
+If a graph has at least a cycle, then we call it a **cyclic graph**.
+If it doesn't have any cycles, the graph is an **acyclic graph**.
 
 > Example in real life: wikipedia links (graph -> data structures -> complexity analysis -> graph) 
 
-
-
-
 ___
 
-### Trees
+### :evergreen_tree: Trees
+
+A **tree** is a **connected acyclic graph**.
+
+A tree has a **root node** and may or may not has **child nodes**.
+
+The nodes with no child nodes are referred as **leaves** _(**leaf node**)_ :leaves:.
+
+> **Note**: Each node can only have one parent.
+
+> Example in real life: hierarchy in a company
+ 
+#### K-ary tree
+
+- A **binary tree** is a tree whose **nodes can have up to two child nodes**. 
+
+```
+      9
+    /   \
+   4   -26
+  / \   / \
+73   6 0   12
+    /
+   1
+```
+
+- A **ternary tree** is a tree whose **nodes can have up to three child nodes**, and so on and so for. 
+
+We can generalize this as **k-ary trees**.
+
+> A path between two nodes is called a **branch**.
+
+> **BST** (Binary search trees) are special types of binary trees, where every node satisfies a specific BST property.
+
+> A **binary tree** is **balanced** if it maintains roughly a `O log(N)` time complexity when traversing the tree by peeking a subtree at a time. Advanced types of trees: Red-black trees, AVL trees can rebalance themselves.
+
+A **binary tree** is **complete** if every level is filled up with nodes (except for the last level which has to be filled up from left to right).
+
+A **full k-binary tree** whose nodes have either exactly k child nodes or zero child nodes.
+
+A **perfect binary tree** whose all of the leaf nodes have the same depth _(number of levels/height)_.
+
+##### Heaps & Ties
+
+- **Min-Heaps** and **Max-Heaps** are special types of binary trees, where every node satisfies the Min or Max Heap property.
+
+- **Tries** is a tree-like data structure that typically stores characters in a string and allows to do some fancy string manipulation.
 
 ___
 
