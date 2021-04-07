@@ -1,0 +1,247 @@
+<mxfile>
+    <diagram id="qM1Av40VN0eDiZpWbbjC" name="Page-1">
+        <mxGraphModel dx="1936" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;strokeColor=#111926;fillColor=#111926;" vertex="1" parent="1">
+                    <mxGeometry x="-100" y="220" width="1010" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://academy.hackthebox.eu/storage/modules/18/NEW_filesystem.png;" vertex="1" parent="1">
+                    <mxGeometry x="0.21000000000000085" y="220" width="809.58" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Essential binaries &lt;br&gt;such as:&amp;nbsp;&lt;font color=&quot;#9fef00&quot;&gt;ls&lt;/font&gt;, &lt;font color=&quot;#9fef00&quot;&gt;mkdir&lt;/font&gt;, &lt;font color=&quot;#9fef00&quot;&gt;cp ...&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-79.78999999999999" y="392" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="59.21" y="420" as="sourcePoint"/>
+                        <mxPoint x="59.21" y="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="110.21000000000001" y="463" as="sourcePoint"/>
+                        <mxPoint x="110.21000000000001" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="160.21" y="500" as="sourcePoint"/>
+                        <mxPoint x="160.21" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-80.78999999999999" y="420" as="sourcePoint"/>
+                        <mxPoint x="59.21" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-10.79" y="540.5" as="sourcePoint"/>
+                        <mxPoint x="209.21" y="541" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="Files required to boot:&amp;nbsp;&lt;font color=&quot;#9fef00&quot;&gt;bootloader&lt;/font&gt;, &lt;font color=&quot;#9fef00&quot;&gt;kernel executables&lt;/font&gt;&lt;font color=&quot;#ffffff&quot;&gt;,&lt;/font&gt;&lt;font color=&quot;#9fef00&quot;&gt; configurations&amp;nbsp;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-79.78999999999999" y="434" width="190" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-79.78999999999999" y="463" as="sourcePoint"/>
+                        <mxPoint x="110.21000000000001" y="463" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span&gt;Device files to facilitate access to every hardware device attached to the system&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-79.78999999999999" y="471" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-79.78999999999999" y="500" as="sourcePoint"/>
+                        <mxPoint x="160.21" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="Configuration files for both local system and installed applications" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-9.79" y="511" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="209.21" y="541" as="sourcePoint"/>
+                        <mxPoint x="209.21" y="494" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="Shared library files used by binaries" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="50.21" y="544" width="195" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="50.21" y="570" as="sourcePoint"/>
+                        <mxPoint x="250.21" y="571" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250.21" y="571" as="sourcePoint"/>
+                        <mxPoint x="250.21" y="534" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="101.21000000000001" y="619" as="sourcePoint"/>
+                        <mxPoint x="308.21" y="620" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="200.21" y="651" as="sourcePoint"/>
+                        <mxPoint x="350.21" y="651" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="200.21" y="696" as="sourcePoint"/>
+                        <mxPoint x="400.21" y="697" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="Mounting points for external removable media devices (USB, SD)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="95.21000000000001" y="592" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="308.21" y="620" as="sourcePoint"/>
+                        <mxPoint x="308.21" y="578" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="350.21" y="651" as="sourcePoint"/>
+                        <mxPoint x="350.21" y="614" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400.21" y="697" as="sourcePoint"/>
+                        <mxPoint x="400.21" y="647" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="455.21" y="697" as="sourcePoint"/>
+                        <mxPoint x="655.21" y="698" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500.21" y="658" as="sourcePoint"/>
+                        <mxPoint x="700.21" y="659" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500.21" y="658" as="sourcePoint"/>
+                        <mxPoint x="500.21" y="611" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550.21" y="613.5" as="sourcePoint"/>
+                        <mxPoint x="750.21" y="614.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550.21" y="614" as="sourcePoint"/>
+                        <mxPoint x="550.21" y="558" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="600.21" y="574" as="sourcePoint"/>
+                        <mxPoint x="800.21" y="575" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="600.21" y="574" as="sourcePoint"/>
+                        <mxPoint x="600.21" y="526" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="646.21" y="532.5" as="sourcePoint"/>
+                        <mxPoint x="846.21" y="533.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="646.21" y="532" as="sourcePoint"/>
+                        <mxPoint x="646.21" y="495" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="696.21" y="484" as="sourcePoint"/>
+                        <mxPoint x="896.21" y="485" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="42" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="696.21" y="484" as="sourcePoint"/>
+                        <mxPoint x="696.21" y="447" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="745.21" y="459" as="sourcePoint"/>
+                        <mxPoint x="895.21" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="745.21" y="459" as="sourcePoint"/>
+                        <mxPoint x="745.21" y="413" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="Temporary mounting point" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="202.21" y="627" width="149" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Optional files such as third-party tools" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190.21" y="670" width="210" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Each user has a subdirectory here" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="710" width="210" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="455.21" y="697" as="sourcePoint"/>
+                        <mxPoint x="455.21" y="647" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="Variable data files such as log, cron files, web application related files, etc." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="461.21" y="670" width="400" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Executables, libraries, man files, etc." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="510.21" y="631" width="210" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="Temporary files cleared upon system boot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="557.21" y="590" width="233" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="System binaries" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="609.21" y="550" width="210" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="information about currently running processes." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="652.21" y="508" width="258" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Home directory of &lt;font color=&quot;#9fef00&quot;&gt;root&lt;/font&gt; user" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="464" width="210" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Information about the &lt;br&gt;system since the last boot." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="751.21" y="420" width="170.21" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;b&gt;&lt;font color=&quot;#9fef00&quot; style=&quot;background-color: rgb(17 , 25 , 38) ; font-size: 13px&quot;&gt;/sbin&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="609.21" y="530" width="30.79" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
