@@ -14,8 +14,8 @@ L'objectif de ces notes est d'expliquer les failles de type **Buffer Overflow**,
 ## Sommaire
 
 1. [Stack Buffer Overflow](#stack-buffer-overflow)
-2. [Heap Buffer Overflow](#heap-buffer-overflow)
-3. [Format strings](#format-strings)
+2. [Format strings](#format-strings)
+3. [Heap Buffer Overflow](#heap-buffer-overflow)
 4. [Tips](#tips)
 5. [Tools](#tools)
 6. [Exercices](#exercices)
@@ -127,7 +127,7 @@ ___
 ## Exercices
 
 - [ROP Emporium](https://ropemporium.com/)
-- [Protostar](https://exploit-exercises.lains.space/protostar/)
+- [Exploit exercises](https://exploit.education/)
 - [microcorruption.com](https://microcorruption.com/)
 - [**pwnadventure** - VIDEO Game](http://www.pwnadventure.com/) + [_setup server_](https://github.com/LiveOverflow/PwnAdventure3)
 
@@ -155,3 +155,4 @@ ___
 - [LSE - Security Workshop](https://www.lse.epita.fr/teaching/epita/hts/workshop-secu.pdf)
 - [ctf101 - buffer-overflow](https://ctf101.org/binary-exploitation/buffer-overflow/)
 - [**xpn** - Exploiting with pwndbg - Solving PlaidCTF 2016 SmartStove](https://blog.xpnsec.com/pwndbg/)
+- ["Exploiting Format String Vulnerabilities" paper](https://cs155.stanford.edu/papers/formatstring-1.2.pdf)
