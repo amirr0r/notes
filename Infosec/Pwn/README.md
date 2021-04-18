@@ -14,12 +14,17 @@ L'objectif de ces notes est d'expliquer les failles de type **Buffer Overflow**,
 ## Sommaire
 
 1. [Stack Buffer Overflow](#stack-buffer-overflow)
+    + [NX bit & ret2libc](#)
+    + [Canary (stack cookie) & bruteforce](#)
+    + [ASLR](#)
 2. [Format strings](#format-strings)
 3. [Heap Buffer Overflow](#heap-buffer-overflow)
-4. [Tips](#tips)
-5. [Tools](#tools)
-6. [Exercices](#exercices)
-7. [Ressources](#ressources)
+    + [Use After Free](#use-after-free)
+4. [ROP: Return Oriented Programming](#rop-return-oriented-programming)
+5. [Tips](#tips)
+6. [Tools](#tools)
+7. [Exercices](#exercices)
+8. [Ressources](#ressources)
 
 ___
 
@@ -87,9 +92,6 @@ En effet, le buffer peut potentiellement réécrire le contenu des registres qui
 
 Nous sommes alors dans le cas d'un dépassement de tampon _(buffer overflow)_ et **on peut remplacer les 4 derniers octets du buffer par l'adresse que l'on souhaite** _(d'où le contrôle du flux d'execution)_. 
 
-___
-
-
 <!-- 
 L'article SMASHSTACK decrit l'exploitation d'un buffer overflow en 3 parties:
 
@@ -100,12 +102,25 @@ L'article SMASHSTACK decrit l'exploitation d'un buffer overflow en 3 parties:
 
 ### NX bit ? ret2libc
 ### Stack Canary ? bypass
-### ASLR ? ROP
+### ASLR ?
 
 ### PIC?
 ### PIE
  -->
 
+___
+
+## Format strings
+ 
+___
+
+## Heap Buffer Overflow
+
+### Use after free
+ 
+___
+
+## ROP: Return Oriented Programming
 ___
 
 ## Tips
@@ -126,8 +141,8 @@ ___
 
 ## Exercices
 
-- [ROP Emporium](https://ropemporium.com/)
 - [Exploit exercises](https://exploit.education/)
+- [ROP Emporium](https://ropemporium.com/)
 - [microcorruption.com](https://microcorruption.com/)
 - [**pwnadventure** - VIDEO Game](http://www.pwnadventure.com/) + [_setup server_](https://github.com/LiveOverflow/PwnAdventure3)
 
