@@ -171,3 +171,4 @@ ___
 - [ctf101 - buffer-overflow](https://ctf101.org/binary-exploitation/buffer-overflow/)
 - [**xpn** - Exploiting with pwndbg - Solving PlaidCTF 2016 SmartStove](https://blog.xpnsec.com/pwndbg/)
 - ["Exploiting Format String Vulnerabilities" paper](https://cs155.stanford.edu/papers/formatstring-1.2.pdf)
+- [Les failles Format String](https://repo.zenk-security.com/Techniques%20d.attaques%20%20.%20%20Failles/Les%20failles%20Format%20String.pdf)
