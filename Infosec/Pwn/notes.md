@@ -44,7 +44,7 @@ First documented heap exploit around the 2000s:
 
 > Alternative C library implementations exist such as `musl` or `uclibc`
 
-On an average Linux distro, is it possible to find a process that doesn't map a GLIBC shared object into memory.
+On an average Linux distro, it is impossible to find a process that doesn't map a GLIBC shared object into memory, doesn't it?
 
 Command | Description                                                          |
 --------|----------------------------------------------------------------------|
@@ -54,7 +54,7 @@ Command | Description                                                          |
 
 > ABI versioning convention = **soname**. Increment over the years
 
-Generally linux operating systems are distributed with a specific version of GLI which will not change for the support period.
+Generally, linux operating systems are distributed with a specific version of GLIBC, which will not change for the support period.
 
 **Tip**: we can run libc.so to figure out which version is used and what version of `gcc` it was compiled with:
 
@@ -85,13 +85,35 @@ Unlike programming langages such as `Rust`, memory corruption is still an issue 
 
 > This type of vulnerability can lead to info leak, denial of service or even arbitrary code execution. 
 
+```c
+void *ptr = malloc(wanted_size_of_allocated_memory)
+```
+
+- It uses an inline metadata (or header) to indicates the size of the next allocated chunk (total of bytes) plus a flag that tell if the following chunk is allocated or not (`+ 0x1` &rarr; least significant bit).
+
+> This flag is called **prev_inuse**
+
+`free(ptr)` is used to recycle the heap. 
+
 [**LiveOverflow**: what does `malloc()` do?](https://www.youtube.com/watch?v=HPDBOhiKaD8&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&index=26)
 
+### The Heap
+
+- **Minimum size chunk**: 3 quadwords at 24 bytes _(even if we ask less)_.
+
+- A **Top chunk** resides at the highest address of the heap. When a new chunk is allocated, this top chunk is reduced. 
+
+> As the other chunks, it has a size field.
+
+- <https://sourceware.org/glibc/wiki/MallocInternals>
 ___
 
 ### Exploitation techniques
 
 #### House of Force
+
+In many versions of **GLIBC**, top chunk size field are not subject to integrity checks. This forms the basis of the House of Force...
+
 #### House of Orange
 #### House of Spirit
 #### House of Lore
@@ -104,3 +126,12 @@ ___
 #### Safe Unlink
 #### Unsortedbin Attack
 #### Tcache Dup
+
+___
+
+## `pwndbg`:
+
+- `set context-sections <regs, disasm, args, code, stack, backtrace, expressions, ghidra>`: change the context displayed at each iteration (default: `registers, disasm, code, stack and backtrace`)
+- `context`: print the context
+- `vmmap`: prints memory map for current process
+- `vis_heap_chunks`: inspect heap memory
