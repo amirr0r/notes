@@ -28,7 +28,11 @@ Some Web attacks:
 
 ___
 
-- Using `Many Servers - Many Databases` Infrastructure may require tools like [load balancers](https://en.wikipedia.org/wiki/Load_balancing_(computing))  to function appropriately
+- Using `Many Servers - Many Databases` Infrastructure may require tools like [load balancers](https://en.wikipedia.org/wiki/Load_balancing_(computing)) to function appropriately
+
+> A load balancer uses different algorithms (such as **round-robin** or **weighted**) to decide which server is best to deal with the request. In order to guarantee a **high availability**, periodic checks are performed, they're called **health check**.
+
+- **CDN** (Content Delivery Networks) are used to host static files (css, js, images, etc.) and speed up a clients visit to a website.
 
 - There are web application models available such as [serverless](https://aws.amazon.com/lambda/serverless-architectures-learn-more/) web applications or web applications that utilize [microservices](https://aws.amazon.com/microservices).
 
