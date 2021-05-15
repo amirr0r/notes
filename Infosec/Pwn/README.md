@@ -111,7 +111,8 @@ L'article SMASHSTACK decrit l'exploitation d'un buffer overflow en 3 parties:
 ___
 
 ## Format strings
- 
+
+![](images/format_string_parameters.png)
 ___
 
 ## Heap Buffer Overflow
