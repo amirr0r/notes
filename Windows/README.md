@@ -102,16 +102,17 @@ File system | Pros                                                              
 
 ### `NTFS` permissions
 
-- **Full Control**
+- **Full Control**: allows the user/users/group/groups to set the ownership of the folder, set permission for others, modify, read, write, and execute files.
 - **Modify**: read, write, and <u>delete</u> files/folders.
 - **List contents** (specific to folders): view and list (sub)folders + executing files.
 - **Read and Execute**
-- **Write** 
+- **Write** (specific to folders and automatically set when "Modify" right is checked)
 - **Read** 
 - **Traverse Folder**: allows or denies the ability to move through folders to reach other files or folders _(even when listing and viewing permissions are not enable)_.
 
-> NTFS set permissions inheritance by default for folders and files. 
-> It can be manged from File Explorer GUI under the security tab.
+> NTFS set permissions inheritance by default for folders and files.
+
+> It can be manged from File Explorer GUI under the security tab or with the tools `icacls`
 
 ### Integrity Control Access Control List ([`icacls`](https://ss64.com/nt/icacls.html))
 
@@ -128,12 +129,14 @@ File system | Pros                                                              
 #### Permissions
 
 - `F`: full access
-- `D`:  delete access
-- `N`:  no access
-- `M`:  modify access
-- `RX`:  read and execute access
-- `R`:  read-only access
-- `W`:  write-only access
+- `D`: delete access
+- `N`: no access
+- `M`: modify access
+- `RX`: read and execute access
+- `R`: read-only access
+- `W`: write-only access
+- `AD`: append data (add subdirectories)
+- `WD`: write data and add files
 
 ___
 
@@ -229,7 +232,6 @@ These ACEs are stored in in Access Control Lists (**ACL**).
 > <u>Example of UAC:</u> Admin Approval Mode ask for administrator rights in order to allow a software to be installed.
 
 [How User Account Control works](https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/how-user-account-control-works)
-
 
 > See also: [Windows Registry](https://en.wikipedia.org/wiki/Windows_Registry) and [Run and RunOnce registry keys](https://docs.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys).
 
