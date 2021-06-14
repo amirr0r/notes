@@ -222,4 +222,7 @@ ___
 - [Hackndo - Active Directory articles](https://beta.hackndo.com/archives/#active-directory)
 - [THM - intro2windows room](https://tryhackme.com/room/intro2windows)
 - [Academy HTB - Active Directory LDAP](https://academy.hackthebox.eu/course/preview/active-directory-ldap)
+- [Attacking Active Directory: 0 to 0.9](https://zer1t0.gitlab.io/posts/attacking_ad/)
+- [ANSSI - Recommandations de sécurité relatives à Active Directory](https://www.ssi.gouv.fr/guide/recommandations-de-securite-relatives-a-active-directory/)
+- [CERT-FR - Points de contrôle Active Directory](https://www.cert.ssi.gouv.fr/uploads/guide-ad.html)
 - [PowerView-3.0-tricks.ps1](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
