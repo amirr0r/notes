@@ -1138,6 +1138,7 @@ ___
 
 ## Resources
 
+- [fuzzysecurity - Windows Privilege Escalation Fundamentals](http://www.fuzzysecurity.com/tutorials/16.html)
 - [THM - Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
 - [THM - Windows PrivEsc Arena](https://tryhackme.com/room/windowsprivescarena)
 - [PayloadAllTheThings - Windows - Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#windows---privilege-escalation)
