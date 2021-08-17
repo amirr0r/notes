@@ -294,7 +294,7 @@ xfreerdp /u:<USER> /p:<PASS> /v:<IP> /cert:ignore
 rdesktop -u <USER> -p <PASS> <IP>:3389
 ```
 
-### Kerberos (port 88, 484, etc.)
+### Kerberos (port 88)
 
 #### Enumerating users
 
