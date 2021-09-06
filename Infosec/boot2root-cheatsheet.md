@@ -560,7 +560,7 @@ ___
 	+ Retrieve all of the password hashes that a user account (that is synced with the domain controller) has to offer:
 
 	```bash
-	python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -just-dc-ntlm <domainName>/<username>[:<password>]@<IP>
+	python3 /usr/share/doc/python3-impacket/examples/secretsdump.py [-just-dc-ntlm] <domainName>/<username>[:<password>]@<IP>
 	```
 
 ### Tools
