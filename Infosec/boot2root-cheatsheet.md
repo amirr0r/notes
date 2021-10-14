@@ -155,7 +155,7 @@ wpscan --url http://<IP>/ --enumerate u
 wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top10000.txt -t 50
 ```
 
-### Port 139/445 (SMB - Samba)
+### Port 445 (SMB - Samba)
 
 - Listing directories: `smbclient -L //<IP>/<Sharename> -U "username%password"`
 	+ In case of a smb shell, we can download all files by doing:
@@ -168,6 +168,7 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
 	
 - (Recursive search) Listing directories and permissions: `smbmap -H $TARGET -R | tee smbmap.txt`
 - "Manual" bruteforce: `for u in $(cat usernames.txt); do echo "User: $u"; smbclient -L //<IP>/ -U "$u%$u"; done`
+- Enumerating shares: `crackmapexec smb $TARGET --shares`
 
 ### Port 389 (LDAP)
 
@@ -299,6 +300,57 @@ rpcclient $> getdompwinfo  # get SMB password policy
 rpcclient $> querydispinfo # get users info
 ```
 
+### Port 139 (NetBIOS)
+
+```bash
+nmap -sU --open -p 161 <IP>
+nbtscan -r <IP>
+```
+
+### UDP Port 161 (SNMP)
+
+- Enumerating the Entire MIB Tree:
+    
+    ```bash
+    snmpwalk -c public -v1 -t 10 <IP>
+    ```
+    
+- Enumerating Windows Users:
+    
+    ```bash
+    snmpwalk -c public -v1 <IP> 1.3.6.1.4.1.77.1.2.25
+    ```
+    
+- Enumerating Running Windows Processes:
+    
+    ```bash
+    snmpwalk -c public -v1 <IP> 1.3.6.1.2.1.25.4.2.1.2
+    ```
+    
+- Enumerating open TCP ports:
+    
+    ```bash
+    snmpwalk -c public -v1 <IP> 1.3.6.1.2.1.6.13.1.3
+    ```
+    
+- Enumerating Installed Software:
+    
+    ```bash
+    snmpwalk -c public -v1 <IP> 1.3.6.1.2.1.25.6.3.1.2
+    ```
+    
+> `snmpcheck` 
+
+### Port 1521 (Oracle TNS Listener)
+
+```bash
+git clone https://github.com/quentinhardy/odat.git
+cd oda
+pip3 install python-libnmap
+pip3 install cx_oracle
+python3 odat.py all -s <IP> -p <PORT>
+```
+
 ### Port 3389 (RDP)
 
 ```bash
@@ -307,7 +359,7 @@ xfreerdp /u:<USER> /p:<PASS> /v:<IP> /cert:ignore
 rdesktop -u <USER> -p <PASS> <IP>:3389
 ```
 
-### Kerberos (port 88)
+### Port 88 (Kerberos)
 
 #### Enumerating users
 
@@ -608,14 +660,22 @@ ___
 
 ## Linux
 
-> [Linux Privesc notes](https://github.com/amirr0r/notes/blob/master/Linux/Privesc.md#privesc)
+### Port 2049 (NFS)
 
-`sudo -l`
+```bash
+nmap --script=nfs-showmount $TARGET 
+showmount -e  $TARGET
+mount -t nfs [-o vers=2] <ip>:<remote_folder> <local_folder> -o nolock
+# -o nolock (to disable file locking) is often needed for older NFS servers
+```
 
 > **TODO**...
 
-### Post-exploitation
+### Privesc
 
+> [Linux Privesc notes](https://github.com/amirr0r/notes/blob/master/Linux/Privesc.md#privesc)
+
+- `sudo -l`
 - [GTFOBins](https://gtfobins.github.io/)
 - [PEASS - Privilege Escalation Awesome Scripts SUITE](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite#peass---privilege-escalation-awesome-scripts-suite)
 	+ [linPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
