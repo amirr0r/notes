@@ -5,8 +5,8 @@
 ## Summary
 
 1. [Common tasks](#user-content-️-common-tasks)
-2. [Common services/ports](#user-content-️-common-servicesports)
-3. [Windows](#user-content-️-windows)
+2. [Common services/ports](#user-content--common-servicesports)
+3. [Windows](#windows)
 4. [Linux](#user-content-️-linux)
 
 ___
@@ -255,7 +255,7 @@ psql -h {{host}} -p {{port}} -U {{username}} -W {{database}}
 
 ---
 
-# 🪟 Windows
+# Windows
 
 ## Shell
 
