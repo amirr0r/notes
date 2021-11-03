@@ -13,7 +13,7 @@
   - [💉 Stack Buffer Overflow Shellcode Exploit (Skeleton)](#-stack-buffer-overflow-shellcode-exploit-skeleton)
   - [🦾 Miscellaneous](#-miscellaneous)
 - [👀 **Enumeration / Reconnaissance**](#-enumeration-reconnaissance)
-  - [👁️ Port Scanning (Active **Information Gathering)**](#user-content-️-port-scanning-active-information-gathering)
+  - [👁️ Port Scanning (Active Information Gathering)](#user-content-️-port-scanning-active-information-gathering)
     - [`nmap`](#nmap)
     - [`masscan`](#masscan)
   - [🔍 OSINT Tools (Passive Information Gathering)](#-osint-tools-passive-information-gathering)
