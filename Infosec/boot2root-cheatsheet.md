@@ -427,6 +427,8 @@ a web site. Searches like `ext:jsp`, `ext:cfm`, `ext:pl` will find indexed **Jav
 
 **SSH port forwards can be run as non-root users as long as we only bind unused non-privileged local ports (above 1024).**
 
+> In case we don't have a fully interactive shell: `-o "UserKnownHostsFile=/dev/null"` prevents ssh from attempting to save the host key and `-o "StrictHostKeyChecking=no"` will instruct ssh to not prompt us to accept the host.
+
 - Remote Port forwarding:
     
     `ssh -N -R $RHOST:$RPORT:127.0.0.1:$LPORT $USER@$RHOST`
