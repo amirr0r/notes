@@ -987,7 +987,7 @@ bloodhound-python -d $DOMAIN -u $USER -p $PASSWORD -c all -ns $TARGET
 ### 🕵️ Enumeration
 
 - List information about current: `net user <username>`
-- List groups I belonged to: `net user /domain <username>`
+- List groups I belonged to: `whoami /groups` or `net user /domain <username>`
 - List users: `net user`
 - `systeminfo`
 - `tasklist`
