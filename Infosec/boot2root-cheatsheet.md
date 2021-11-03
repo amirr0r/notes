@@ -1342,7 +1342,7 @@ Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/prev
 ### 🖥️ Office documents
 
 - Malicious macros:
-    - Go to *View > Macros* to add macros
+    - Go to *View > Macros* to add macros. Do not forget to embed the macros in the doc via *Macros in: Document1 (document)*!
     - Add Macro(s):
         - The `AutoOpen` procedure is executed when a new document is opened
         - The `Document_Open` procedure is executed when an already-open document is re-opened
