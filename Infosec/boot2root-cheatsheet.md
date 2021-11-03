@@ -1079,7 +1079,7 @@ SAM and SYSTEM files in:
     mimikatz # lsadump::lsa /patch
     ```
     
-    - Cracking them with `hashcat` (or [Pass-The-Hash](https://github.com/amirr0r/notes/blob/master/Infosec/boot2root-cheatsheet.md#shell) directly): `hashcat -m 1000 ntlm-hashes.txt <WORDLIST>`
+    - Cracking them with `hashcat` (or [Pass-The-Hash](https://github.com/amirr0r/notes/blob/master/Infosec/boot2root-cheatsheet.md#%EF%B8%8F-post-exploitation-pivoting-and-lateral-movement) directly): `hashcat -m 1000 ntlm-hashes.txt <WORDLIST>`
 - dumping the credentials of all logged-on users:
     
     ```
@@ -1195,7 +1195,7 @@ SAM and SYSTEM files in:
     ```
     
 
-> **TODO**: speak about ZeroLogon, [NTLM Relay](https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html), LLMNR, `[Responder.py](https://github.com/SpiderLabs/Responder)`, AD-CS.
+> **TODO**: speak about ZeroLogon, [NTLM Relay](https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html), LLMNR, [`Responder.py`](https://github.com/SpiderLabs/Responder), AD-CS.
  
 
 ## 🔁 Port forwarding and Tunneling
@@ -1233,7 +1233,7 @@ netsh interface portproxy add v4tov4 listenport=$PORT listenaddress=$IP connectp
 
 ⚠️ If we visit a URL containing a HTML application, IE will trigger two popups. One that asks us if we want to open or save the file. Another security warning to inform the application will be opened outside the Protected mode.
 
-Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/aew9yb99(v=vs.84)) opening **calc.exe** via [**ActiveXObjects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Microsoft_Extensions/ActiveXObject):**
+Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/windows-scripting/aew9yb99(v=vs.84)) opening **calc.exe** via [ActiveXObjects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Microsoft_Extensions/ActiveXObject):
 
 ```html
 <html>
