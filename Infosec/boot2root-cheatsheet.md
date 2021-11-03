@@ -21,6 +21,8 @@
 - [🌐 Common services/ports](#-common-servicesports)
   - [TCP Port 21 (FTP)](#tcp-port-21-ftp)
   - [TCP Port 22 (SSH)](#tcp-port-22-ssh)
+    - [Transferring files via `scp`](#transferring-files-via-scp)
+    - [Port forwarding](#port-forwarding)
     - [Bruteforce](#bruteforce)
   - [TCP Port 53 (DNS)](#tcp-port-53-dns)
     - [Subdomains enumeration](#subdomains-enumeration)
