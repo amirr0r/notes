@@ -792,7 +792,7 @@ New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentL
 
 ➡️ [PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 
-➡️ [PowerView-3.0-tricks.ps1](https://www.notion.so/184f9822b195c52dd50c379ed3117993)
+➡️ [PowerView-3.0-tricks.ps1](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
 
 ### 🐶 `SharpHound` + `Bloodhound`
 
@@ -975,7 +975,7 @@ bloodhound-python -d $DOMAIN -u $USER -p $PASSWORD -c all -ns $TARGET
     ⚠️ OverPass the Hash with `PsExec` when using hostname, otherwise (IP) NTLM authentication would be blocked
     
 
-➡️ [Golden Ticket - Mimikatz alternative (impacket)](https://www.notion.so/2f221924fef8c14a1d8e29f3cb5c5c4a)
+➡️ [Golden Ticket - Mimikatz alternative (impacket)](https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a#golden-ticket)
 
 ---
 
@@ -1486,7 +1486,7 @@ Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/prev
 - [Hackndo - Windows articles](https://beta.hackndo.com/archives/#windows)
 - [Fuzzysecurity - Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html)
 - [zer1t0 - Attacking Active Directory: 0 to 0.9](https://zer1t0.gitlab.io/posts/attacking_ad/)
-- [RedTeam_CheatSheet.ps1](https://www.notion.so/c354eaaf3019352ce32522f916c03d70)
+- [RedTeam_CheatSheet.ps1](https://gist.github.com/jivoi/c354eaaf3019352ce32522f916c03d70)
 - [adsecurity.org](https://adsecurity.org/)
 
 ---
