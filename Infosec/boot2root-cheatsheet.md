@@ -964,7 +964,7 @@ SAM and SYSTEM files in:
 - `C:\Windows\Repair`
 - `C:\Windows\System32\config\RegBack`
 
-> Copy them to Kali and crack them using `hashcat` or just try [Pass-the-hash]()
+> Copy them to Kali and crack them using `hashcat` or just try [Pass-the-hash](https://github.com/amirr0r/notes/blob/master/Infosec/boot2root-cheatsheet.md#%EF%B8%8F-post-exploitation-pivoting-and-lateral-movement)
  
 
 ### 🧐 Checking Privileges
@@ -983,7 +983,7 @@ SAM and SYSTEM files in:
 
 ### 💥 Kernel exploits
 
-`systeminfo` + [Windows exploit suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester) or `[wesng](https://github.com/bitsadmin/wesng)`
+`systeminfo` + [Windows exploit suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester) or [`wesng`](https://github.com/bitsadmin/wesng)
 
 ### 🏹 Exploiting services
 
