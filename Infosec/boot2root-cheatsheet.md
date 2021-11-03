@@ -1,6 +1,6 @@
 # Boot2Root cheatsheet
 
-> personal cheathsheet populated via my [HTB](https://www.hackthebox.eu/), [Vulnhub](https://www.vulnhub.com/) and CTF experience.
+> personal cheathsheet populated via my [HTB](https://www.hackthebox.eu/), [Vulnhub](https://www.vulnhub.com/), [THM](https://tryhackme.com/dashboard), [OSCP](https://www.offensive-security.com/pwk-oscp/) and CTF experience.
 
 ## Summary
 
