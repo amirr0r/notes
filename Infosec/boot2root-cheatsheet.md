@@ -423,7 +423,14 @@ a web site. Searches like `ext:jsp`, `ext:cfm`, `ext:pl` will find indexed **Jav
 - Fix common key exchange issue:
     
     `ssh -oKexAlgorithms=+diffie-hellman-group1-sha1`
+
+### Transferring files via `scp`
     
+- Copy a local file to a remote host: `scp $LFILE $USER@$TARGET:$RFILE`
+        
+- Copy a file from a remote host to a local directory: `scp $USER@$TARGET:$RFILE $LDIR`
+    
+### Port forwarding
 
 **SSH port forwards can be run as non-root users as long as we only bind unused non-privileged local ports (above 1024).**
 
@@ -453,20 +460,9 @@ a web site. Searches like `ext:jsp`, `ext:cfm`, `ext:pl` will find indexed **Jav
         socks4 127.0.0.1 9050 # for instance
         ```
         
-        We can also write a `proxychains.conf` in our current directory or in the user's home directory (`$(HOME)/.proxychains`)
-        
+        We can also write a `proxychains.conf` in our current directory or in the user's home directory (`$(HOME)/.proxychains`)    
     
-    💡`nmap` with `proxychains`: `proxychains nmap -sT -Pn $TARGET`
-    
-- Transferring files via `scp`:
-    - Copy a local file to a remote host:
-        
-        `scp $LFILE $USER@$TARGET:$RFILE`
-        
-    - Copy a file from a remote host to a local directory:
-        
-        `scp $USER@$TARGET:$RFILE $LDIR`
-        
+    💡`nmap` with `proxychains`: `proxychains nmap -sT -Pn $TARGET`      
 
 ### Bruteforce
 
