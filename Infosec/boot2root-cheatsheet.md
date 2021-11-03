@@ -72,7 +72,7 @@
     - [`Netsh`](#netsh)
   - [🤠 Client-side attack](#-client-side-attack)
     - [🖱️HTA application](#user-content-️hta-application)
-    - [🖥️ Office documents](#user-content-office-documents)
+    - [🖥️ Office documents](#user-content-️-office-documents)
   - [🛡️ Antivirus Evasion](#user-content-antivirus-evasion)
     - [Types of Detection](#types-of-detection)
     - [Methods to Bypass Detection](#methods-to-bypass-detection)
