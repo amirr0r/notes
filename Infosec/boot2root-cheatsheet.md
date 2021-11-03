@@ -1363,7 +1363,7 @@ Example [Windows Script Host Shell object](https://docs.microsoft.com/en-us/prev
             
     - Save the document as `.docm` (Word Macro-Enabled Document) or older `.doc` (Word 97-2003 Document) and **NOT** as `.docx` format
     
-    💡 We can use the base64-encoded PowerShell payload of `MSFvenom` when generating a malicious HTA application (for a reverse shell for instance) [Link]
+    💡 We can use the base64-encoded PowerShell payload of `MSFvenom` when generating a malicious HTA application (for a reverse shell for instance) [Link](https://github.com/amirr0r/notes/blob/master/Infosec/boot2root-cheatsheet.md#msfvenom)
     
     ⚠️ VBA has a 255-character limit for literal strings
     
