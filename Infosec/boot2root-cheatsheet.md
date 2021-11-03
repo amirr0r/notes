@@ -66,7 +66,7 @@
     - [💥 Kernel exploits](#-kernel-exploits)
     - [🏹 Exploiting services](#-exploiting-services)
   - [🥝 Dumping hashes and tickets with `Mimikatz`](#-dumping-hashes-and-tickets-with-mimikatz)
-  - [↔️ Post-exploitation, Pivoting and Lateral Movement](#-post-exploitation-pivoting-and-lateral-movement)
+  - [↔️ Post-exploitation, Pivoting and Lateral Movement](#user-content-️-post-exploitation-pivoting-and-lateral-movement)
   - [🔁 Port forwarding and Tunneling](#-port-forwarding-and-tunneling)
     - [`plink.exe`](#plinkexe)
     - [`Netsh`](#netsh)
