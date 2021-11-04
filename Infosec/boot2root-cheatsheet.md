@@ -1286,6 +1286,10 @@ SAM and SYSTEM files in:
 
 ## 🔁 Port forwarding and Tunneling
 
+### Metasploit `autoroute`
+
+- With a `meterpreter` session: `use multi/manage/autoroute` + `auxiliary/server/socks_proxy`
+
 ### `plink.exe`
 
 ⚠️The first time we connect to a host, we need to prefix the command with `cmd.exe /c echo y |` because `plink` will attempt to cache the host key in registry.⚠️
