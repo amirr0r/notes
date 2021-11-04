@@ -1137,7 +1137,7 @@ SAM and SYSTEM files in:
 
 ## 🥝 Dumping hashes and tickets with `Mimikatz`
 
-> Other hash dumping tools: `pwdump`,`fgdump`,**Windows Credential Editor** (`wce`)
+> Other hash dumping tools: `pwdump`,[`fgdump`](http://foofus.net/goons/fizzgig/fgdump/downloads.htm),[**Windows Credential Editor**](https://www.ampliasecurity.com/research/windows-credentials-editor/) (`wce`) for older versions of Windows
  
 - ask for **SeDebugPrivilege** in order to interact with the LSASS process and processes owned by other accounts (to be executed as administrator):
     
