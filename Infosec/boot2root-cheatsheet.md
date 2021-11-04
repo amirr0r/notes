@@ -1206,6 +1206,7 @@ SAM and SYSTEM files in:
 - Add user to the domain: `net user $USERNAME $PASSWORD /add /domain`
 - Add user to a group: `net group "$GROUPNAME" /add $USERNAME`
 - Change user Password: `net user $USERNAME $NEW_PASSWORD`
+- Execute command with: `.\PsExec.exe -accepteula [\\$HOSTNAME] -u $USERNAME -p $PASSWORD $COMMAND`
 - [Silver tickets](https://github.com/amirr0r/notes/blob/master/Infosec/boot2root-cheatsheet.md#%EF%B8%8F-silver-ticket-mimikatz)
 - **DCOM** (Distributed Component Object Model): interaction between multiple computers over a network
     - Old technology dating back to the very first editions of Windows
