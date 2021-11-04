@@ -68,6 +68,7 @@
   - [🥝 Dumping hashes and tickets with `Mimikatz`](#-dumping-hashes-and-tickets-with-mimikatz)
   - [↔️ Post-exploitation, Pivoting and Lateral Movement](#user-content-️-post-exploitation-pivoting-and-lateral-movement)
   - [🔁 Port forwarding and Tunneling](#-port-forwarding-and-tunneling)
+    - [MSF `autoroute`](#metasploit-autoroute) 
     - [`plink.exe`](#plinkexe)
     - [`Netsh`](#netsh)
   - [🤠 Client-side attack](#-client-side-attack)
