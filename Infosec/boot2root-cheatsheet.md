@@ -523,7 +523,7 @@ host -l $DOMAIN $SUBDOMAIN
 # dirb
 dirb http://$IP -o dirb.txt
 # gobuster
-gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -o gobuster.txt
+[HTTP_PROXY="socks5://127.0.0.1:1080/"] gobuster dir -u http://$IP -w /usr/share/dirb/wordlists/common.txt -o gobuster.txt
 ```
 
 - specific extension:
