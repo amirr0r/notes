@@ -1640,9 +1640,9 @@ pass_arg $RANDOM
 
 ```bash
 nmap --script=nfs-showmount $TARGET
-showmount -e  $TARGETmount -t nfs [-o vers=2] <ip>:<remote_folder> <local_folder> -o nolock
+showmount -e  $TARGET
+mount -t nfs [-o vers=2] <ip>:<remote_folder> <local_folder> -o nolock
 # -o nolock (to disable file locking) is often needed for older NFS servers
-mount -t nfs -o vers=2 $TARGET:/$DIRECTORY /mnt/$DIRECTORY
 ```
 
 ## 🧗‍♂️ Privesc
