@@ -93,7 +93,7 @@
         * [Functions](#functions)
         * [Passing arguments](#passing-arguments)
     + [TCP Port 2049 (NFS)](#tcp-port-2049-nfs)
-    + [🧗‍♂️ Privesc](#user-content--privesc-1)
+    + [🧗‍♂️ Privesc](#user-content-️-privesc-1)
         * [🕵️ Enumeration](#user-content-️-enumeration-1)
         * [🛠️ Linux Privesc Tools](#user-content-️-linux-privesc-tools)
 - [Useful links](#useful-links)
