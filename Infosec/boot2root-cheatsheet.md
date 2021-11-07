@@ -133,7 +133,23 @@ ___
             ```   
     
 ➡️ [File transfer techniques](https://github.com/amirr0r/notes/blob/master/Infosec/Pentest/file-transfer.md)
-    
+
+- Quick Port scanner:
+  ```python
+  #!/usr/bin/env python3
+  import socket
+
+  host = str(input("Host: "))
+  #port = int(input("Port: "))
+  print(f"Scanning \033[92m{host}\033[0m")
+  for port in range(1,65535):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    result = s.connect_ex((host,port))
+    if result == 0:
+      print(f'{port} is \033[92mopen\033[0m')
+    #else: 
+    #    print(f'{port} is \033[93mclosed\033[0m')
+  ```
 
 ## 💀`MSFvenom`
 
