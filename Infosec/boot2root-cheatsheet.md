@@ -35,9 +35,9 @@
         * [Vulnerability scan](#vulnerability-scan)
         * [Wordpress (`wpscan`)](#wordpress-wpscan)
         * [Examples of common SQLi payloads](#examples-of-common-sqli-payloads)
-    + [TCP Port 445 (SMB - Samba)](#tcp-port-445-smb---samba)
     + [TCP Port 110/995 (POP3)](#tcp-port-110995-pop3)
     + [TCP Port 389 (LDAP)](#tcp-port-389-ldap)
+    + [TCP Port 445 (SMB - Samba)](#tcp-port-445-smb---samba)
     + [TCP Port 3306 (MySQL)](#tcp-port-3306-mysql)
     + [TCP Port 5432 (PostgreSQL)](#tcp-port-5432-postgresql)
 - [**Windows**](#windows)
@@ -620,6 +620,11 @@ do ( echo USER ${user}; sleep 2s; echo PASS password; sleep 2s; echo LIST; sleep
 done
 ```
 
+## TCP Port 389 (LDAP)
+
+- `ldapsearch -h <IP> -x -s base namingcontexts`
+- `ldapsearch -h <IP> -x -b "<distinguishedName>" | grep "^dn"`
+
 ## TCP Port 445 (SMB - Samba)
 
 - Listing directories: `smbclient -L //<IP>/<Sharename> -U "username%password"`
@@ -640,11 +645,6 @@ done
     
 - Enumerating shares: `crackmapexec smb $TARGET --shares`
 - Bruteforce usernames and passwords: `crackmapexec smb $IP -u usernames.txt -p passwords.txt`
-
-## TCP Port 389 (LDAP)
-
-- `ldapsearch -h <IP> -x -s base namingcontexts`
-- `ldapsearch -h <IP> -x -b "<distinguishedName>" | grep "^dn"`
 
 ## TCP Port 3306 (MySQL)
 
