@@ -36,6 +36,7 @@
         * [Wordpress (`wpscan`)](#wordpress-wpscan)
         * [Examples of common SQLi payloads](#examples-of-common-sqli-payloads)
     + [TCP Port 445 (SMB - Samba)](#tcp-port-445-smb---samba)
+    + [TCP Port 110/995 (POP3)](#tcp-port-110995-pop3)
     + [TCP Port 389 (LDAP)](#tcp-port-389-ldap)
     + [TCP Port 3306 (MySQL)](#tcp-port-3306-mysql)
     + [TCP Port 5432 (PostgreSQL)](#tcp-port-5432-postgresql)
