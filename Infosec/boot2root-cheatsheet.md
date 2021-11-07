@@ -631,6 +631,7 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
     ```
     
 - Enumerating shares: `crackmapexec smb $TARGET --shares`
+- Bruteforce usernames and passwords: `crackmapexec smb $IP -u usernames.txt -p passwords.txt`
 
 ## TCP Port 110/995 (POP3)
 
