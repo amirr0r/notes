@@ -645,6 +645,7 @@ done
     
 - Enumerating shares: `crackmapexec smb $TARGET --shares`
 - Bruteforce usernames and passwords: `crackmapexec smb $IP -u usernames.txt -p passwords.txt`
+- NMAP SMB user: `--script=smb-enum-users`
 
 ## TCP Port 3306 (MySQL)
 
