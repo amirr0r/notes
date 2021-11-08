@@ -432,6 +432,7 @@ a web site. Searches like `ext:jsp`, `ext:cfm`, `ext:pl` will find indexed **Jav
 `ftp $TARGET`
 
 - Check if you can log in as `annonymous`
+- Download all folders recursively: `wget -r ftp://user:pass@server.com/`
 
 ## TCP Port 22 (SSH)
 
