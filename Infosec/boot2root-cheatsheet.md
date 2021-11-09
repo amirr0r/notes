@@ -310,6 +310,29 @@ ___
 
 ➡️ [My skeleton script](https://github.com/amirr0r/notes/blob/master/Infosec/Pwn/shellcode-stack-buffer-overflow-exploit-skeleton.py) (for both Linux and Windows)
 
+- Pattern create + offset:
+	+ `msf-pattern_create -l $PATTERN_SIZE` (or `pattern_create.rb`)
+	+ `msf-pattern_offset -q $EIP_ADDRESS` (or `pattern_offset.rb`)
+
+- **Mona.py** tricks (using Immunity Debugger):
+	+ `!mona modules` => get information about all DLLs (or modules) loaded by the program 	
+	+ `!mona bytearray` => generate an array with all characters
+	+ `!mona compare -f bytearray.bin -a [address where array begins -> ESP]` => byte by byte comparison between **bytearray.bin** and an area in memory
+	+ `!mona find -s "\xff\xe4" -m "<suitable_module>"` => find specific opcode in 
+		* Find opcode of an assembly instruction (`JMP ESP` example):
+		```bash
+		kali@kali:~$ msf-nasm_shell
+		nasm > jmp esp
+		00000000 FFE4
+		jmp esp
+		```
+
+- `ERC.Xdbg` tricks (using `x64dbg`):
+	+ `ERC --ModuleInfo -NXCompat` => list of all loaded files by the program
+	+ `ERC --config SetWorkingDirectory C:\Users\user\Desktop\` => set a default working directory to have all output files saved to
+	+ `ERC --bytearray` => generate an array with all characters into two files **ByteArray_1.txt** and **ByteArray_1.bin**
+	+ `ERC --compare <ESP_ADDRESS> C:\Users\user\Desktop\ByteArray_1.bin` => byte by byte comparison between an area in memory and the bytes of the file generated with the command above
+
 ## 🦾 Miscellaneous
 
 - Metasploit:
