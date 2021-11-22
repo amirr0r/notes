@@ -1354,6 +1354,7 @@ SAM and SYSTEM files in:
 ### Metasploit `autoroute`
 
 - With a `meterpreter` session: `use multi/manage/autoroute` + `auxiliary/server/socks_proxy`
+	* `set ReverseAllowProxy true` + `set Proxies socks5:127.0.0.1:1080` (for example)
 
 ### `plink.exe`
 
