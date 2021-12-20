@@ -23,3 +23,4 @@
 - broadly speaking = d'une manière générale
 - As a general rule of thumb = En règle générale
 - "**Low-hanging fruit**" is a common metaphor in business that refers to **doing the easiest task first**
+- Scrutiny =  examen minutieux
