@@ -295,6 +295,17 @@ ___
     Rule-based Attack:
     - `-r /usr/share/hashcat/rules/best64.rule`
     - `-r /usr/share/hashcat/rules/add-year.rule`
+    
+    Mask based attack:
+    - `?u?l?l?l?l?l?l?l?d` (uppers, lowers and numbers) => `hashcat --help` to see the charset
+    - `-1 ?d?s` defines a custom charset (digits and specials)
+    
+    > We can combine them: `hashcat ... -1 ?d?s ?u?l?l?l?l?l?l?l?1`
+    
+    - `.hcmask` files can be used to try different lengths
+    - Masks can even have static strings defined such as `Mimiron?d?s` for instance
+    
+    > Check also combinator (`-j`, `-k`) and hybrid mask (`-a 6`, `-a 7`) as well as [`kwprocessor`](https://github.com/hashcat/kwprocessor)
 
 - `john` aka "John The Ripper":
     
