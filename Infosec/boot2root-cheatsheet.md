@@ -292,8 +292,9 @@ ___
     ```bash
     hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt
     ```
-    
-    - `r /usr/share/hashcat/rules/best64.rule` (Rule-based Attack)
+    Rule-based Attack:
+    - `-r /usr/share/hashcat/rules/best64.rule`
+    - `-r /usr/share/hashcat/rules/add-year.rule`
 
 - `john` aka "John The Ripper":
     
