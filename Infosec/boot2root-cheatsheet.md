@@ -1386,9 +1386,18 @@ plink.exe -L $VICTIM_IP:$VICTIM_PORT:$ATTACKER_IP:$ATTACKER_PORT kali@$ATTACKER_
 
 ⚠️**IP Helper service** must be running and IPv6 support must be enabled for the interface we will use⚠️
 
-```powershell
-netsh interface portproxy add v4tov4 listenport=$PORT listenaddress=$IP connectport=$PORT connectaddress=$IP
-```
+- Add a v4tov4 proxy:
+	```powershell
+	netsh interface portproxy add v4tov4 listenport=$PORT listenaddress=$IP connectport=$PORT connectaddress=$IP
+	```
+- Check:
+	```powershell
+	netsh interface portproxy show v4tov4
+	```
+- Remove the proxy:
+	```powershell
+	netsh interface portproxy delete v4tov4 listenaddress=$IP listenport=$PORT
+	```
 
 ## 🤠 Client-side attack
 
